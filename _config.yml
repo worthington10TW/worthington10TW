@@ -1,34 +1,20 @@
-title: M Z Worthington
-email: matt@siliconpanda.com
+title: Ramblings of a developer
+author:
+  name: M Z Worthington
+  email: matt@siliconpanda.com
 description: >- 
   Hi folks 👋👋
   My name is Matthew, I'm a dev. Thanks for popping by.
 baseurl: ""
 url: "https://mzworthington.co.uk"
-twitter_username: worthington10
-github_username:  worthington10tw
-
-# Build settings
-theme: minima
+social_links:
+  twitter: worthington10
+  github:  worthington10tw
+  instagram: worthington10
 plugins:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+ - jekyll-feed
+ - jekyll-seo-tag
+skin: dark
+sass:
+    sass_dir: _sass
+    style: compact 
