@@ -34,6 +34,11 @@ header h2 {
   color: rgb(176, 202, 219);
 }
 
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -200,7 +205,7 @@ article section {
   }
 
   aside header {
-    margin: 80% 3em 0;
+    margin: 20% 3em 0;
     text-align: right;
   }
 
