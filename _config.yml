@@ -14,7 +14,6 @@ social_links:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
-skin: dark
 sass:
     sass_dir: _sass
     style: compact 

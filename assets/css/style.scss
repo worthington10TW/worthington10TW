@@ -4,5 +4,5 @@
 ---
 
 @import
-  "skins/{{ site.skin | default: 'classic' }}",
+  "skins/dark",
   "initialize";
