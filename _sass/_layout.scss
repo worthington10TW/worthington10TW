@@ -37,18 +37,16 @@ nav ul li {
   zoom: 1;
 }
 
-nav ul li .pure-button {
-  background: transparent;
+nav ul li .button {
+  padding: 0.5em 1em;
   border: 2px solid rgb(176, 202, 219);
   color: #fff;
-  margin-top: 1em;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 85%;
 }
 
-nav ul > li .pure-button:hover,
-nav ul > li .pure-button :focus {
+nav ul > li .button:hover,
+nav ul > li .button :focus {
   border: 2px solid rgb(61, 146, 201);
   text-decoration: none;
 }
