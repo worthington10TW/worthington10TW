@@ -36,4 +36,11 @@
       </a>
    </li>
    {%- endif -%}
+   <li>
+      <a href="{{ 'feed.xml' | relative_url }}">
+         <svg class="svg-icon">
+            <use xlink:href="{{ 'assets/social-icons.svg#rss' | relative_url }}"></use>
+         </svg>
+      </a>
+   </li>
 </ul>

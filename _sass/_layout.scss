@@ -1,5 +1,10 @@
 footer {
   padding: $spacing-unit 0;
+  padding: 10px 0;
+  bottom: 0;
+  position: fixed;
+  background-color: $table-zebra-color; 
+  width: 100%;
 }
 
 header {
@@ -14,7 +19,11 @@ aside {
 }
 
 aside header {
-  max-width: 14em;
+  max-width: 100%
+}
+
+aside header h2 {
+  font-size: 1em;
 }
 
 header h1 {
@@ -23,7 +32,7 @@ header h1 {
 
 header img {
   border-radius: 50%;
-  max-width: 150px;
+  max-width: 50px;
 }
 
 nav ul {
@@ -180,9 +189,6 @@ article section {
   }
 }
 
-/**
- * Grid helpers
- */
 @media screen and (min-width: $on-large) {
   .one-half {
     width: calc(50% - (#{$spacing-unit} / 2));
@@ -190,6 +196,10 @@ article section {
   main {
     padding: 2em 3em 0;
     margin-left: 30%;
+  }
+
+  aside header {
+    max-width: 14em;
   }
 
   aside header {
@@ -209,5 +219,14 @@ article section {
 
   footer {
     text-align: center;
+    position: absolute;
+  }
+
+  header img {
+    max-width: 150px;
+  }
+
+  aside header h2 {
+    font-size: 1.5em;
   }
 }
