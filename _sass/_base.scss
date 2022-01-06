@@ -2,9 +2,6 @@ html {
   font-size: $base-font-size;
 }
 
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -13,11 +10,6 @@ dl, dd, ol, ul, figure {
 
 }
 
-
-
-/**
- * Basic styling
- */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
@@ -34,11 +26,6 @@ body {
   overflow-wrap: break-word;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -51,28 +38,15 @@ hr {
   margin-bottom: $spacing-unit;
 }
 
-/**
- * `main` element
- */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-
-
-/**
- * Images
- */
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
 figure > img {
   display: block;
 }
@@ -81,11 +55,6 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
-/**
- * Lists
- */
 ul, ol {
   margin-left: $spacing-unit;
   list-style: none;
@@ -98,20 +67,10 @@ li {
   }
 }
 
-
-
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
-
-
-/**
- * Links
- */
 a {
   color: $link-base-color;
   text-decoration: none;
@@ -134,10 +93,6 @@ a {
   }
 }
 
-
-/**
- * Blockquotes
- */
 blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
@@ -154,11 +109,6 @@ blockquote {
   }
 }
 
-
-
-/**
- * Code formatting
- */
 pre,
 code {
   font-family: $code-font-family;
@@ -193,11 +143,6 @@ pre {
   }
 }
 
-
-
-/**
- * Wrapper
- */
 .wrapper {
   max-width: calc(#{$content-width} - (#{$spacing-unit}));
   margin-right: auto;
@@ -213,29 +158,14 @@ pre {
   }
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-
-
-/**
- * Icons
- */
-
 .orange {
   color: #f66a0a;
-}
-
-.grey {
-  color: #828282;
 }
 
 .svg-icon {
@@ -247,10 +177,6 @@ pre {
   vertical-align: text-bottom;
 }
 
-
-/**
- * Tables
- */
 table {
   margin-bottom: $spacing-unit;
   width: 100%;

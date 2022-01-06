@@ -1,12 +1,3 @@
-a {
-  text-decoration: none;
-  color: rgb(61, 146, 201);
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
-
 footer {
   padding: $spacing-unit 0;
 }
@@ -18,8 +9,8 @@ header {
 }
 
 aside {
-  background: rgb(61, 79, 93);
-  color: #fff;
+  background: $table-zebra-color; 
+  color: $text-color;
 }
 
 aside header {
@@ -28,10 +19,6 @@ aside header {
 
 header h1 {
   text-transform: uppercase;
-}
-header h2 {
-  font-weight: 300;
-  color: rgb(176, 202, 219);
 }
 
 header img {
@@ -43,11 +30,13 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
 nav ul li {
   display: inline-block;
   *display: inline;
   zoom: 1;
 }
+
 nav ul li .pure-button {
   background: transparent;
   border: 2px solid rgb(176, 202, 219);
@@ -57,6 +46,7 @@ nav ul li .pure-button {
   text-transform: uppercase;
   font-size: 85%;
 }
+
 nav ul > li .pure-button:hover,
 nav ul > li .pure-button :focus {
   border: 2px solid rgb(61, 146, 201);
