@@ -11,6 +11,7 @@ social_links:
   twitter: worthington10
   github:  worthington10tw
   instagram: worthington10
+  linkedin: worthington10
 excerpt_separator: <!--more-->
 plugins:
  - jekyll-feed
