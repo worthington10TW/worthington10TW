@@ -2,7 +2,7 @@
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.header_pages | default: default_paths -%}
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-  <img alt="photo of me" src="{{ "/assets/me.jpg" | relative_url }}" />
+  <img alt="{{ site.title | escape }}" src="{{ page.image | default: site.image }}" />
   <h1><a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
   <h2>{{ site.description | escape }}</h2>
   {%- if titles_size > 0 -%}

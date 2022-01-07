@@ -6,17 +6,21 @@ image: /assets/me.jpg
 ---
 
 Hi 👋,
+ 
+I'm Matthew, I've worked in tech for over 17 years, I'm currently a tech lead at [Thoughtworks](https://www.thoughtworks.com/).
+ 
+Over the years I've been a contractor, consultant and full time employee, in a broad range of domains, including; music, fashion & photography, advertising & ecommerce, finance & banking, risk analysis, hospitality, medical, publishing and travel.
+ 
+I've also played a variety of roles, some of these include; technical support, infra engineer, technical business analyst, full stack engineer, tech lead, principal engineer and trainer.
 
-I'm Matthew, I'm a tech lead at [Thoughtworks](https://www.thoughtworks.com/).
-
-At time of writing (Or updating) I've worked in tech for a little over 17 years.
-
-I wanted a place to share my thoughts that wasnt confined a private google drive or set of notes that I rarely revisit. I have set myself a goal to improving my writing skills and to share more of my experiences, and feel that this is a perfect place to do it.
+Currently my focus and passion lies in building safe and autonomous teams, with a focus on team wellbeing and growth.
 
 # Experience
 
 ## Thoughtworks
+__Tech lead__
 
+<!-- Bid team -->
 ### Thoughtworks university trainer
 
 ### Fashion Ecommerce 
@@ -25,8 +29,6 @@ I wanted a place to share my thoughts that wasnt confined a private google drive
 
 ### Trainer (Course creator)
 
-### Bid team
-
 ### Banking
 
 ### Legal publishing
@@ -34,19 +36,25 @@ I wanted a place to share my thoughts that wasnt confined a private google drive
 ### Medical
 
 ## Ormsby Street
+__Principal engineer__
 
 ## Resident Advisor
+__Developer & Architect__
 
 ## Intelligent Reach
+__Developer__
 
 ## Dazed & Confused
+__Developer__
 
 ## AEI Media
+__Technical developer__
 
 ## Drum&BassArena 
+__Lead developer__
 
 ## Financial software ltd
+__Technical analysst & developer__
 
 ## Mayflower Collection
-
-
+__IT support & developer__

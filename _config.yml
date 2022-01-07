@@ -20,3 +20,4 @@ sass:
     sass_dir: _sass
     style: compact 
 permalink: pretty
+image: /assets/me.jpg
