@@ -9,7 +9,7 @@ published: true
 
 How I built this blog, what I used to build it, and why I decided on the tech.
 
-Code found [here](https://github.com/worthington10tw/me){:target="_blank"}
+[Code found here](https://github.com/worthington10tw/me){:target="_blank" rel="noreferrer"}
 
 <!--more-->
 
@@ -38,7 +38,7 @@ Jekyll is a ruby based static site generator. Content is written in markdown and
 
 GitHub Pages made hosting the site free and GitHub actions would deploy my site and articles on checkin.
 
-It was gloriously simple to get started too, both [GitHub's](https://pages.github.com/){:target="_blank"} and [Jekyll's](https://jekyllrb.com/){:target="_blank"} documentation was easy to follow.
+It was gloriously simple to get started too, both [GitHub's](https://pages.github.com/){:target="_blank"  rel="noreferrer"} and [Jekyll's](https://jekyllrb.com/){:target="_blank"  rel="noreferrer"} documentation was easy to follow.
 
 To install the jekyll gem `gem install bundler jekyll`
 
@@ -83,7 +83,7 @@ Finally the artifact is retrieved and using the GitHub Pages API is deployed.
 
 ## Lighthouse 
 
-The initial [lighthouse](https://developers.google.com/web/tools/lighthouse){:target="_blank"} run came back with a perfect score.
+The initial [lighthouse](https://developers.google.com/web/tools/lighthouse){:target="_blank"  rel="noreferrer"} run came back with a perfect score.
 
 ![lighthouse report](/assets/2022-01-08-how-what-why/lighthouse.png)
 
