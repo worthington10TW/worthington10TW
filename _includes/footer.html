@@ -1,13 +1,9 @@
 <footer>
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  <section>
-     <div>
-        <ul class="contact-list">
-           <li >{{ site.author.name | escape }}</li>
-           <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        </ul>
-     </div>
-  </section>
+  <address>
+     {{ site.author.name | escape }} <br/>
+     <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+   </address>
   <section>
      {%- include social.html -%}
   </section>
