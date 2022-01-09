@@ -40,20 +40,20 @@ It was gloriously simple. Getting started was a breeze, both [GitHub's](https://
 
 If you want to get started you will need ruby installed on your machine (I use [rbenv](https://github.com/rbenv/rbenv) to manage my ruby versions, installed via [brew](https://brew.sh/)). Then with just 3 commands you're up and running: 
 
-- To install the jekyll gem `gem install bundler jekyll`
-- To create a site `jekyll new .`
-- To serve run locally `bundle exec jekyll serve`
+1. To install the jekyll gem `gem install bundler jekyll`
+2. To create a site `jekyll new .`
+3. To serve run locally `bundle exec jekyll serve`
 
 ![file structure](/assets/2022-01-08-how-what-why/structure.png)
 
 The file structure is pretty simple, from top to bottom we have:
-- _includes- Contains page consistent html- head, header and  footer. 
-- _layouts- Contains different layout styles- default (like a base page), home, page and post.
-- _posts- Contains articles, written in markdown.
-- _sass- SCSS files for styling.
-- _site- Generated site (not source controlled)
-- .jekyll-cache
-- assets- Images and css entry point
+- `_includes` Contains page consistent html- head, header and  footer. 
+- `_layouts` Contains different layout styles- default (like a base page), home, page and post.
+- `_posts` Contains articles, written in markdown.
+- `_sass` SCSS files for styling.
+- `_site` Generated site (not source controlled)
+- `.jekyll-cache`
+- `assets` Images and css entry point
 
 ![config](/assets/2022-01-08-how-what-why/config.png)
 

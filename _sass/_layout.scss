@@ -5,12 +5,41 @@ footer {
   position: fixed;
   background-color: $table-zebra-color; 
   width: 100%;
+  .social-media-list {
+    display: table;
+    margin: 0 auto;
+    li {
+      float: left;
+      margin: 5px 10px 5px 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        padding: $spacing-unit / 4;
+        border: 1px solid $border-color-01;
+        &:hover {
+          border-color: $border-color-02;
+        }
+      }
+    }
+  }
 }
 
 header {
   text-align: center;
   top: auto;
   margin: 3em auto;
+  h1 {
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  img {
+    border-radius: 50%;
+    max-width: $aside-imgage-size;
+  }
 }
 
 aside {
@@ -18,56 +47,27 @@ aside {
   color: $text-color;
 }
 
-aside header {
-  max-width: 100%
-}
-
-aside header h2 {
-  font-size: 1em;
-}
-
-header h1 {
-  text-transform: uppercase;
-}
-
-header img {
-  border-radius: 50%;
-  max-width: 10em;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-nav ul li .button {
-  padding: 0.5em 1em;
-  border: 2px solid rgb(176, 202, 219);
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 85%;
-}
-
-nav ul > li .button:hover,
-nav ul > li .button :focus {
-  border: 2px solid rgb(61, 146, 201);
-  text-decoration: none;
-}
-
-main ul h2 {
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 0.2em;
-}
-
-.feed-subscribe .svg-icon {
-  padding: 5px 5px 2px 0;
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      .button {
+        padding: 0.5em 1em;
+        border: 2px solid $brand-color;
+        color: $text-color;
+        text-transform: uppercase;
+        font-size: 85%;
+        &:hover, &:focus {
+          border: 2px solid $link-base-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 address{
@@ -75,24 +75,77 @@ address{
   text-align: center;
 }
 
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
+article {
+  margin: 1em;
+  padding-bottom: 10em;
+  header {
+    margin-bottom: $spacing-unit;
+    p {
+      font-size: $small-font-size;
+      color: $brand-color;
+    }
+  } 
+  section {
+    margin-bottom: $spacing-unit;
+  
+    h1,
+    h2,
+    h3 {
+      margin-top: $spacing-unit * 2;
+    }
+    h4,
+    h5,
+    h6 {
+      margin-top: $spacing-unit;
+    }
+  
+    h2 {
+      @include relative-font-size(1.75);
+  
+      @media screen and (min-width: $on-large) {
+        @include relative-font-size(2);
+      }
+    }
+  
+    h3 {
+      @include relative-font-size(1.375);
+  
+      @media screen and (min-width: $on-large) {
+        @include relative-font-size(1.625);
+      }
+    }
+  
+    h4 {
+      @include relative-font-size(1.25);
+    }
+  
+    h5 {
+      @include relative-font-size(1.125);
+    }
+    h6 {
+      @include relative-font-size(1.0625);
+    }
 
-footer section div {
-  width: calc(100% - (#{$spacing-unit} / 2));
-  padding: 0 ($spacing-unit / 2);
-  text-align: center;
-
-  &:first-child {
-    padding-right: $spacing-unit / 2;
-    padding-left: 0;
+    ul, ol{
+      margin: 1em;
+    }
+    ul{
+      list-style: circle;
+    }
+  
+    ol{
+      list-style: decimal
+    }
   }
-
-  &:last-child {
-    padding-right: 0;
-    padding-left: $spacing-unit / 2;
+  
+  header h1, section h1 {
+    @include relative-font-size(2.625);
+    letter-spacing: -1px;
+    line-height: 1.15;
+  
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(2.625);
+    }
   }
 }
 
@@ -102,153 +155,32 @@ footer section div {
   }
 }
 
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
-}
-
-main ul,
-article {
-  margin: 1em;
-}
-
-article header p {
-  font-size: $small-font-size;
-  color: $brand-color;
-}
-
-article header {
-  margin-bottom: $spacing-unit;
-}
-
-article ul,
-article ol {
-  list-style: circle;
-}
-
-article header h1,
-article section h1 {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1.15;
-
-  @media screen and (min-width: $on-large) {
-    @include relative-font-size(2.625);
-  }
-}
-
-article section {
-  margin-bottom: $spacing-unit;
-
-  h1,
-  h2,
-  h3 {
-    margin-top: $spacing-unit * 2;
-  }
-  h4,
-  h5,
-  h6 {
-    margin-top: $spacing-unit;
-  }
-
-  h2 {
-    @include relative-font-size(1.75);
-
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(2);
-    }
-  }
-
-  h3 {
-    @include relative-font-size(1.375);
-
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(1.625);
-    }
-  }
-
-  h4 {
-    @include relative-font-size(1.25);
-  }
-
-  h5 {
-    @include relative-font-size(1.125);
-  }
-  h6 {
-    @include relative-font-size(1.0625);
-  }
-}
-
-.social-media-list {
-  display: table;
-  margin: 0 auto;
-  li {
-    float: left;
-    margin: 5px 10px 5px 0;
-    &:last-of-type {
-      margin-right: 0;
-    }
-    a {
-      display: block;
-      padding: $spacing-unit / 4;
-      border: 1px solid $border-color-01;
-      &:hover {
-        border-color: $border-color-02;
-      }
-    }
-  }
-}
-
-main {
-  padding-bottom: 10em;
-}
-
 @media screen and (min-width: $on-large) {
-  .one-half {
-    width: calc(50% - (#{$spacing-unit} / 2));
-  }
   main {
     padding: 2em 3em 0;
-    margin-left: 35%;
-  }
-
-  aside{
-    width: 35%;
-  }
-
-  aside header {
-    max-width: 14em;
-  }
-
-  aside header {
-    margin: 20% auto;
-    text-align: right;
-  }
-
-  main header {
-    text-align: left;
+    margin-left: $nav-size;
+    header {
+      text-align: left;
+    }
   }
 
   aside {
+    width: $nav-size;
     position: fixed;
     top: 0;
     bottom: 0;
+    header {
+      max-width: $aside-imax-width;
+      margin: 20% auto;
+      text-align: right;
+      h2 {
+        font-size: 1.5em;
+      }
+    }
   }
 
   footer {
     text-align: center;
     position: absolute;
-  }
-
-  header img {
-    max-width: 150px;
-  }
-
-  aside header h2 {
-    font-size: 1.5em;
-  }
+  }   
 }
