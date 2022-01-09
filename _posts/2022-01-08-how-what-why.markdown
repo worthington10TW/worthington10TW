@@ -7,17 +7,15 @@ image: /assets/2022-01-08-how-what-why/octojekyll.png
 published: true
 ---
 
-How I built this blog, what I used to build it, and why I decided on the tech.
-
-[Code found here](https://github.com/worthington10tw/me){:target="_blank" rel="noreferrer"}
+How I built this blog, what I used to build it, and why I picked this tech stack.
 
 <!--more-->
 
-Years ago I used to blog. I used a system that I developed called siliconpanda. Siliconpanda was a multi-tenant content management system, it was created so I could scratch my dev itch whilst creating something useful. The system allowed me to throw together a site for a client pretty quickly and supply a nice user interface for them to create their own content. Some would (rightfully) say that wordpress fills this gap pretty nicely, but for me I wanted an excuse to play around with new tech; the site was built with the then brand new .net core and hosted on Azure, using as many of the new services they provided that I could shoe horn in. 
+Years ago I used to blog. I used a system that I developed called siliconpanda. Siliconpanda was a multi-tenant content management system, it was created so I could scratch my dev itch whilst creating something useful. The system allowed me to throw together a site for a client pretty quickly and supply a nice user interface for them to create their own content. Some would (rightfully) say that wordpress fills this gap pretty nicely, but for me I wanted an excuse to play around with new tech; the site was built with the then brand new `.net core` and hosted on `Azure`, using as many of the new services they provided that I could shoe horn in. 
 
-In my evenings I would tinker; adding new features as fast as I could. After some time life got in the way and I was not able to give siliconpanda the support and time it needed, it soon only hosted one aging blog with stale articles. The cost of keeping the portal and site running with multiple databases and many services soon became a bit silly, and the constant dependabot emails became an annoyance. The aging tech was causing more of a headache and didn’t have much value. I finally said goodbye to siliconpanda by tearing down the infrastructure.
+In my evenings I would tinker; adding new features as fast as I could. After some time life got in the way and I was not able to give siliconpanda the support and time it needed, it soon only hosted one aging blog with stale articles. The cost of keeping the portal and site running with multiple databases and many services soon became a bit silly, and the constant dependabot emails became an annoyance. The aging tech was causing me a headache and didn’t bring much value. I finally said goodbye to siliconpanda by tearing down the infrastructure.
 
-I decided that this year I wanted to improve my writing skills and to share some of my experiences, I looked to siliconpanda again to host my new blog. It felt over engineered for what I wanted, .net had also moved on and the tech was dated; it would take lots of effort to bring the site up to the standard I wanted before I could even write my first post. This would not do.
+I decided that this year I wanted to improve my writing skills and to share some of my experiences, I looked to siliconpanda again to host my new blog. It felt over engineered for what I wanted, `.net` had also moved on and the tech was dated; it would take lots of effort to bring the site up to the standard I wanted before I could even write my first post. This would not do.
 
 I set myself some principles to help me narrow my focus.
 The site should be:
@@ -34,17 +32,17 @@ Once I set myself these constraints I ended up with a site created using Jekyll,
 
 ## Jekyll
 
-Jekyll is a ruby based static site generator. Content is written in markdown and the pages are created using HTML and liquid templating engine. This was perfect, I could use git as my version control and database, and all my content would be written in markdown (a format that I use everyday).
+Jekyll is a ruby based static site generator. Content is written in markdown and the pages are created using HTML and liquid templating. This was perfect, I could use git as my version control and database, and all my content would be written in markdown (a format that I use everyday).
 
 GitHub Pages made hosting the site free and GitHub actions would deploy my site and articles on checkin.
 
-It was gloriously simple to get started too, both [GitHub's](https://pages.github.com/){:target="_blank"  rel="noreferrer"} and [Jekyll's](https://jekyllrb.com/){:target="_blank"  rel="noreferrer"} documentation was easy to follow.
+It was gloriously simple. Getting started was a breeze, both [GitHub's](https://pages.github.com/){:target="_blank"  rel="noreferrer"} and [Jekyll's](https://jekyllrb.com/){:target="_blank"  rel="noreferrer"} documentation is well written and easy to follow.
 
-To install the jekyll gem `gem install bundler jekyll`
+If you want to get started you will need ruby installed on your machine (I use [rbenv](https://github.com/rbenv/rbenv) to manage my ruby versions, installed via [brew](https://brew.sh/)). Then with just 3 commands you're up and running: 
 
-To create a site `jekyll new .`
-
-To serve run locally `bundle exec jekyll serve`
+- To install the jekyll gem `gem install bundler jekyll`
+- To create a site `jekyll new .`
+- To serve run locally `bundle exec jekyll serve`
 
 ![file structure](/assets/2022-01-08-how-what-why/structure.png)
 
@@ -83,13 +81,17 @@ Finally the artifact is retrieved and using the GitHub Pages API is deployed.
 
 ## Lighthouse 
 
-The initial [lighthouse](https://developers.google.com/web/tools/lighthouse){:target="_blank"  rel="noreferrer"} run came back with a perfect score.
+I use [Lighthouse](https://developers.google.com/web/tools/lighthouse){:target="_blank"  rel="noreferrer"} to measure websites performance, accessibility and SEO. Its a handy tool that baked into chromes dev tools (They even have a nice CLI that can be popped into pipelines).
+
+The initial  run came back with a perfect score.
 
 ![lighthouse report](/assets/2022-01-08-how-what-why/lighthouse.png)
 
 ## Ta-da!
 
-Styling wise I wanted something simple, something that is good enough to get me going. I plan to give the styling a bit more love, however for now I want to focus on content. 
+Styling wise I wanted something simple. Just enough to get me going. To give me a platform to share my thoughts and not be terrible on the eye. I feel that I achieved this. 
+
+I plan to give the styling a bit more love in the future, however for now I want to focus on content. 
 
 ### Desktop
 ![desktop](/assets/2022-01-08-how-what-why/desktop.png)
@@ -99,4 +101,4 @@ Styling wise I wanted something simple, something that is good enough to get me 
 
 I'm pleased with how quickly I could get up and running. And the price point is just dreamy.
 
-
+[Code found here](https://github.com/worthington10tw/me){:target="_blank" rel="noreferrer"}
