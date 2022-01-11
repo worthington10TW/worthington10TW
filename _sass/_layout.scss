@@ -77,11 +77,11 @@ header {
 
 aside {
   color: $text-color;
-
   background-image: url("/assets/background.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  // transition: background 1s;
 }
 
 nav {
