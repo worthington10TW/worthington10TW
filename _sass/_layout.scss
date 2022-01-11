@@ -3,7 +3,6 @@ footer {
   padding: 10px 0;
   bottom: 0;
   position: fixed;
-  background-color: $table-zebra-color; 
   width: 100%;
   .social-media-list {
     display: table;
@@ -26,6 +25,39 @@ footer {
   }
 }
 
+
+
+h1, h2 {
+  a {
+  display: inline-block;
+  position: relative;
+  color: $link-base-color;
+  text-decoration: none;
+  }
+
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $link-base-color;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
 header {
   text-align: center;
   top: auto;
@@ -43,8 +75,12 @@ header {
 }
 
 aside {
-  background: $table-zebra-color; 
   color: $text-color;
+
+  background-image: url("/assets/background.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 nav {
