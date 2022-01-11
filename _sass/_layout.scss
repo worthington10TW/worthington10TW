@@ -4,6 +4,7 @@ footer {
   bottom: 0;
   position: fixed;
   width: 100%;
+  background-color: black;
   .social-media-list {
     display: table;
     margin: 0 auto;
@@ -221,5 +222,6 @@ article {
   footer {
     text-align: center;
     position: absolute;
+    background-color: transparent
   }   
 }
