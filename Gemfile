@@ -6,13 +6,7 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 
-gem "github-pages", group: :jekyll_plugins do
-  gem "jekyll-seo-tag"
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-sass-converter"
-  gem "liquid_reading_time"
-  gem "jekyll-spaceship"
-end
+gem "github-pages", group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

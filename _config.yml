@@ -24,20 +24,3 @@ sass:
     style: compact 
 permalink: pretty
 image: /assets/me.jpg
-jekyll-spaceship:
-  processors:
-    - table-processor
-    - plantuml-processor
-    - mermaid-processor
-    - polyfill-processor
-    - media-processor
-    - element-processor
-  element-processor:
-      css:
-        - img:
-            props:
-              loading: lazy
-        - a:
-            props:
-              target: _blank
-              rel: noopener noreferrer
