@@ -7,7 +7,7 @@ layout: default
      <p>
         {%- assign date_format = "%b %-d, %Y" -%}
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
+           🗓 {{ page.date | date: date_format }}
         </time>
         {%- if page.modified_date -%}
         {%- assign mdate = page.modified_date | date_to_xmlschema -%}
@@ -22,6 +22,8 @@ layout: default
         {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
         {%- endif -%}
+        {%- assign content = page.content -%}
+        {%- include read_time.html -%} 
      </p>
   </header>
   <section itemprop="articleBody">
