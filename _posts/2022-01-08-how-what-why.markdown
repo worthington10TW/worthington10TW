@@ -36,7 +36,7 @@ Jekyll is a ruby based static site generator. Content is written in markdown and
 
 GitHub Pages made hosting the site free and GitHub actions would deploy my site and articles on checkin.
 
-It was gloriously simple. Getting started was a breeze, both [GitHub's](https://pages.github.com/){:target="_blank"  rel="noreferrer"} and [Jekyll's](https://jekyllrb.com/){:target="_blank"  rel="noreferrer"} documentation is well written and easy to follow.
+It was gloriously simple. Getting started was a breeze, both [GitHub's](https://pages.github.com/) and [Jekyll's](https://jekyllrb.com/) documentation is well written and easy to follow.
 
 If you want to get started you will need ruby installed on your machine (I use [rbenv](https://github.com/rbenv/rbenv) to manage my ruby versions, installed via [brew](https://brew.sh/)). Then with just 3 commands you're up and running: 
 
@@ -81,7 +81,7 @@ Finally the artifact is retrieved and using the GitHub Pages API is deployed.
 
 ## Lighthouse 
 
-I use [Lighthouse](https://developers.google.com/web/tools/lighthouse){:target="_blank"  rel="noreferrer"} to measure websites performance, accessibility and SEO. Its a handy tool that baked into chromes dev tools (They even have a nice CLI that can be popped into pipelines).
+I use [Lighthouse](https://developers.google.com/web/tools/lighthouse) to measure websites performance, accessibility and SEO. Its a handy tool that baked into chromes dev tools (They even have a nice CLI that can be popped into pipelines).
 
 The initial  run came back with a perfect score.
 
@@ -101,4 +101,4 @@ I plan to give the styling a bit more love in the future, however for now I want
 
 I'm pleased with how quickly I could get up and running. And the price point is just dreamy.
 
-[Code found here](https://github.com/worthington10tw/me){:target="_blank" rel="noreferrer"}
+[Code found here](https://github.com/worthington10tw/me)
