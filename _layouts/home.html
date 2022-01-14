@@ -20,8 +20,9 @@ layout: default
          {{ post.title | escape }}
          </a>
       </h2>
-      {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-      <span>{{ post.date | date: date_format }} - {{ time }} min read</span>
+      <!-- {% capture time %}{{ post.content | reading_time }}{% endcapture %} -->
+      <!-- <span>{{ post.date | date: date_format }} - {{ time }} min read</span> -->
+      <span>{{ post.date | date: date_format }}</span>
       <p>
          {{ post.excerpt }}
       </p>
