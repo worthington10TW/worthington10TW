@@ -1,0 +1,17 @@
+{% if page.mermaid == true %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    var config = {
+        startOnLoad:true,
+        theme: 'dark',
+        flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+    mermaid.init(undefined, '.language-mermaid');
+});
+</script>
+{% endif %}
