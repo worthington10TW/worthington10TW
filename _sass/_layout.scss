@@ -18,8 +18,6 @@ footer {
       }
       a {
         display: block;
-        padding: $spacing-unit / 4;
-        border: 1px solid $border-color-01;
         &:hover {
           border-color: $border-color-02;
         }
@@ -118,6 +116,22 @@ main{
   margin: 1em;
 }
 
+.posts {
+  ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 0;
+  align-items: stretch;
+  justify-content: space-between;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
 article {
   padding-bottom: 10em;
   header {
@@ -198,6 +212,12 @@ article {
 }
 
 @media screen and (min-width: $on-large) {
+  .posts {
+    li {
+      height: 350px;
+      width: 280px;
+    }
+  }
   main {
     padding: 2em 3em 0;
     margin-left: $nav-size;

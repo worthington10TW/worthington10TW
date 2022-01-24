@@ -11,23 +11,24 @@ layout: default
 <h2>{{ page.list_title }}</h2>
 {%- endif -%}
 {{ content }}
-<ul>
-  {%- assign date_format = "%b %-d, %Y" -%}
-   {%- for post in posts -%}
-   <li>
-      <h2>
-         <a href="{{ post.url | relative_url }}">
-         {{ post.title | escape }}
-         </a>
-      </h2>
-      <time datetime="{{ post.date | date_to_xmlschema }}">🗓 {{ post.date | date: date_format }}</time> 
-      {%- assign content = post.content -%}
-      {%- include read_time.html -%}
-      <p>
-         {{ post.excerpt }}
-      </p>
-      <hr/>
-   </li>
-   {%- endfor -%}
-</ul>
+<section class="posts">
+   <ul>
+   {%- assign date_format = "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li>
+         <h2>
+            <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+            </a>
+         </h2>
+         <time datetime="{{ post.date | date_to_xmlschema }}">🗓 {{ post.date | date: date_format }}</time> 
+         {%- assign content = post.content -%}
+         {%- include read_time.html -%}
+         <p>
+            {{ post.excerpt }}
+         </p>
+      </li>
+      {%- endfor -%}
+   </ul>
+</section>
 {%- endif -%}
