@@ -67,6 +67,8 @@ I really like CC tray; I think it's a lovely app that does a great job, however 
 
 I also decided that I wanted to decouple my laptop from my build server, in the same way as the office. I wanted to know the state of my builds regardless if my laptop was open or not. I wanted to be able to look away from my screen and quickly know if a build needed my attention.
 
+<hr/>
+
 ## So I got to work 
 
 | I bought some stuff                    | ![office](/assets/2021-01-28-i-built-a-build-monitor/stuff.png)     |
@@ -78,6 +80,8 @@ I also decided that I wanted to decouple my laptop from my build server, in the 
 | Installed my program                      | ![office](/assets/2021-01-28-i-built-a-build-monitor/install.png)     |
 | Started the monitor on reboot             | ![office](/assets/2021-01-28-i-built-a-build-monitor/reboot.png) |
 | And got visibility back!                  | ![office](/assets/2021-01-28-i-built-a-build-monitor/visible.png)|
+
+<hr/>
 
 ## How does it work?
 
@@ -127,6 +131,8 @@ And my first iteration is done!
 7. Rinse and repeat
 
 ![office](/assets/2021-01-28-i-built-a-build-monitor/overview.png)
+
+<hr/>
 
 ## How can you build your own?
 
