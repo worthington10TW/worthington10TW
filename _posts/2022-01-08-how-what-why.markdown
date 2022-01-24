@@ -4,7 +4,7 @@ title:  "How? what? why?"
 date:   2022-01-08 19:23:00 +0000
 categories: code
 image: /assets/2022-01-08-how-what-why/octojekyll.png
-published: true
+code: https://github.com/worthington10tw/me
 ---
 
 How I built this blog, what I used to build it, and why I picked this tech stack.
@@ -101,4 +101,3 @@ I plan to give the styling a bit more love in the future, however for now I want
 
 I'm pleased with how quickly I could get up and running. And the price point is just dreamy.
 
-[Code found here](https://github.com/worthington10tw/me){:target="_blank" rel="noreferrer"}

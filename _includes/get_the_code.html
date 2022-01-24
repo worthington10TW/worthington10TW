@@ -1,0 +1,8 @@
+{%- if page.code -%}
+<a class='button' rel="noreferrer" href="{{ page.code | escape }}" target="_blank" title="Get the code">
+   <svg class="svg-icon">
+      <use xlink:href="{{ '/assets/social-icons.svg#github' | relative_url }}"></use>
+   </svg>
+   Get the code
+</a>
+{%- endif -%}
