@@ -21,12 +21,10 @@ layout: default
             {{ post.title | escape }}
             </a>
          </h2>
-         <time datetime="{{ post.date | date_to_xmlschema }}">🗓 {{ post.date | date: date_format }}</time> 
+         <p>🗓 {{ post.date | date: date_format }} 
          {%- assign content = post.content -%}
          {%- include read_time.html -%}
-         <p>
-            {{ post.excerpt }}
-         </p>
+         {{ post.excerpt }}</p>
       </li>
       {%- endfor -%}
    </ul>
