@@ -44,7 +44,7 @@ If you want to get started you will need ruby installed on your machine (I use [
 2. To create a site `jekyll new .`
 3. To serve run locally `bundle exec jekyll serve`
 
-![file structure](/assets/2022-01-08-how-what-why/structure.png)
+[![file structure](/assets/2022-01-08-how-what-why/structure.png)](/assets/2022-01-08-how-what-why/structure.png)
 
 The file structure is pretty simple, from top to bottom we have:
 - `_includes` Contains page consistent html- head, header and  footer. 
@@ -55,11 +55,11 @@ The file structure is pretty simple, from top to bottom we have:
 - `.jekyll-cache`
 - `assets` Images and css entry point
 
-![config](/assets/2022-01-08-how-what-why/config.png)
+[![config](/assets/2022-01-08-how-what-why/config.png)](/assets/2022-01-08-how-what-why/config.png)
 
 The config file makes updating site information super easy.
 
-![article](/assets/2022-01-08-how-what-why/article.png)
+[![article](/assets/2022-01-08-how-what-why/article.png)](/assets/2022-01-08-how-what-why/article.png)
 
 Jekyll will process files when they have a `front matter` block, this is the yaml between the two triple dashed lines at the top of the file.
 
@@ -67,15 +67,15 @@ In this example we set the layout to use, the title of the article, the date tha
 
 ## Deployment
 
-![pipeline](/assets/2022-01-08-how-what-why/pipeline.png)
+[![pipeline](/assets/2022-01-08-how-what-why/pipeline.png)](/assets/2022-01-08-how-what-why/pipeline.png)
 
 Github has a bot that is able to identify how to generate and deploy the site and is handled without any additional code.
 
-![build](/assets/2022-01-08-how-what-why/build.png)
+[![build](/assets/2022-01-08-how-what-why/build.png)](/assets/2022-01-08-how-what-why/build.png)
 
 The pipeline first builds the site and saves this as an artifact
 
-![deploy](/assets/2022-01-08-how-what-why/deploy.png)
+[![deploy](/assets/2022-01-08-how-what-why/deploy.png)](/assets/2022-01-08-how-what-why/deploy.png)
 
 Finally the artifact is retrieved and using the GitHub Pages API is deployed.
 
@@ -85,7 +85,7 @@ I use [Lighthouse](https://developers.google.com/web/tools/lighthouse){:target="
 
 The initial  run came back with a perfect score.
 
-![lighthouse report](/assets/2022-01-08-how-what-why/lighthouse.png)
+[![lighthouse report](/assets/2022-01-08-how-what-why/lighthouse.png)](/assets/2022-01-08-how-what-why/lighthouse.png)
 
 ## Ta-da!
 
@@ -94,10 +94,10 @@ Styling wise I wanted something simple. Just enough to get me going. To give me 
 I plan to give the styling a bit more love in the future, however for now I want to focus on content. 
 
 ### Desktop
-![desktop](/assets/2022-01-08-how-what-why/desktop.png)
+[![desktop](/assets/2022-01-08-how-what-why/desktop.png)](/assets/2022-01-08-how-what-why/desktop.png)
 
 ### Mobile
-![mobile](/assets/2022-01-08-how-what-why/mobile.png)
+[![mobile](/assets/2022-01-08-how-what-why/mobile.png)](/assets/2022-01-08-how-what-why/mobile.png)
 
 I'm pleased with how quickly I could get up and running. And the price point is just dreamy.
 
