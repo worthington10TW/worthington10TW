@@ -21,10 +21,11 @@ layout: default
             {{ post.title | escape }}
             </a>
          </h2>
-         <p>🗓 {{ post.date | date: date_format }} 
-         {%- assign content = post.content -%}
-         {%- include read_time.html -%}
-         {{ post.excerpt }}</p>
+         <p>
+            <span>🗓 {{ post.date | date: date_format }} </span>
+            {%- assign content = post.content -%}
+            {%- include read_time.html -%}
+            {{ post.excerpt }}</p>
       </li>
       {%- endfor -%}
    </ul>
