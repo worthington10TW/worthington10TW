@@ -49,7 +49,7 @@ So now I had my constraints I could start to think about what I could build. I t
 
 Something I really missed was a big, bright build monitor.
 
-[![monitor](/assets/2021-01-28-i-built-a-build-monitor/monitor.png){:height="500px"}](/assets/2021-01-28-i-built-a-build-monitor/monitor.png)
+[![monitor](/assets/2021-01-28-i-built-a-build-monitor/monitor.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/monitor.png)
 
 Understanding the state of my pipelines at a glance is incredibly valuable and something I really missed.
 
@@ -57,11 +57,11 @@ Now I know there are solutions to this. I could read the emails I get on each br
 
 I try to put time aside to read and reply to emails, if I don't do this I’m constantly jumping around never finishing anything. I set aside mornings, just after lunch and end of day to go through my emails. If my build is broken this would not work and I would finish a (bad)day with an inbox like this.
 
-[![email](/assets/2021-01-28-i-built-a-build-monitor/email.png){:height="500px"}](/assets/2021-01-28-i-built-a-build-monitor/email.png)
+[![email](/assets/2021-01-28-i-built-a-build-monitor/email.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/email.png)
 
 I’m not sure why I abuse tabs as much as I do, I can never seem to just close them down. I spend a day opening tab after tab, barely spending more than a few minutes on each, and when I want to find something I know I have open I tend to just open another tab. Having a build status page open in my mess of a browser carries zero value, it's just another tab that will never be looked at again.
 
-[![tab](/assets/2021-01-28-i-built-a-build-monitor/tab.png){:height="500px"}](/assets/2021-01-28-i-built-a-build-monitor/tab.png)
+[![tab](/assets/2021-01-28-i-built-a-build-monitor/tab.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/tab.png)
 
 I really like CC tray; I think it's a lovely app that does a great job, however some of the build server technologies that I’m using do not currently work with CC tray without some tweaking. These are usually solved problems that just require some small bit of data manipulation to get working, but they go to the bottom of my priority pile, always something that I’ll get to later.
 
