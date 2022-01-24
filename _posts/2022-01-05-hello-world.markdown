@@ -3,7 +3,7 @@ layout: post
 title:  "Hello world"
 date:   2022-01-05 19:01:47 +0000
 categories: about hello
-image: /assets/2022-01-05-hello-world/wave.png
+image: /assets/2022-01-05-hello-world/wave.webp
 ---
 
 Over the years I've run loads of workshops, brownbags, knowledge transfers, presentations and lightning talks. I'm immensely proud of what I achieved, however failed to really document or share these outside of the initial group. This felt wasteful. 

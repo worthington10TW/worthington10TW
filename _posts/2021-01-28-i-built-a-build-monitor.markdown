@@ -3,7 +3,7 @@ layout: post
 title:  "I built a build monitor"
 date:   2021-01-28 00:00:00 +0000
 categories: code raspberry-pi python ci-cd
-image: /assets/2021-01-28-i-built-a-build-monitor/lonely.png
+image: /assets/2021-01-28-i-built-a-build-monitor/lonely.webp
 code: https://github.com/worthington10TW/gpio-build-monitor
 ---
 
@@ -49,7 +49,7 @@ So now I had my constraints I could start to think about what I could build. I t
 
 Something I really missed was a big, bright build monitor.
 
-[![monitor](/assets/2021-01-28-i-built-a-build-monitor/monitor.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/monitor.png)
+[![monitor](/assets/2021-01-28-i-built-a-build-monitor/monitor.webp){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/monitor.webp)
 
 Understanding the state of my pipelines at a glance is incredibly valuable and something I really missed.
 
@@ -57,11 +57,11 @@ Now I know there are solutions to this. I could read the emails I get on each br
 
 I try to put time aside to read and reply to emails, if I don't do this I’m constantly jumping around never finishing anything. I set aside mornings, just after lunch and end of day to go through my emails. If my build is broken this would not work and I would finish a (bad)day with an inbox like this.
 
-[![email](/assets/2021-01-28-i-built-a-build-monitor/email.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/email.png)
+[![email](/assets/2021-01-28-i-built-a-build-monitor/email.webp){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/email.webp)
 
 I’m not sure why I abuse tabs as much as I do, I can never seem to just close them down. I spend a day opening tab after tab, barely spending more than a few minutes on each, and when I want to find something I know I have open I tend to just open another tab. Having a build status page open in my mess of a browser carries zero value, it's just another tab that will never be looked at again.
 
-[![tab](/assets/2021-01-28-i-built-a-build-monitor/tab.png){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/tab.png)
+[![tab](/assets/2021-01-28-i-built-a-build-monitor/tab.webp){:style="max-height:500px"}](/assets/2021-01-28-i-built-a-build-monitor/tab.webp)
 
 I really like CC tray; I think it's a lovely app that does a great job, however some of the build server technologies that I’m using do not currently work with CC tray without some tweaking. These are usually solved problems that just require some small bit of data manipulation to get working, but they go to the bottom of my priority pile, always something that I’ll get to later.
 
@@ -71,15 +71,15 @@ I also decided that I wanted to decouple my laptop from my build server, in the 
 
 ## So I got to work 
 
-| I bought some stuff                    | [![stuff](/assets/2021-01-28-i-built-a-build-monitor/stuff.png)](/assets/2021-01-28-i-built-a-build-monitor/stuff.png)     |
-| And I got my Pi up and running.           | [![pi](/assets/2021-01-28-i-built-a-build-monitor/start-pi.png)](/assets/2021-01-28-i-built-a-build-monitor/start-pi.png) |
-| I turned on some lights                   | [![lights](/assets/2021-01-28-i-built-a-build-monitor/lights.png)](/assets/2021-01-28-i-built-a-build-monitor/lights.png)  |
-| Started to throw together a bit more code | [![code](/assets/2021-01-28-i-built-a-build-monitor/code.png)](/assets/2021-01-28-i-built-a-build-monitor/code.png)     |
-| I bought a frame                          | [![frame](/assets/2021-01-28-i-built-a-build-monitor/frame.png)](/assets/2021-01-28-i-built-a-build-monitor/frame.png)     |
-| Drilled some holes                        | [![holes](/assets/2021-01-28-i-built-a-build-monitor/holes.png)](/assets/2021-01-28-i-built-a-build-monitor/holes.png)     |
-| Installed my program                      | [![install](/assets/2021-01-28-i-built-a-build-monitor/install.png)](assets/2021-01-28-i-built-a-build-monitor/install.png)     |
-| Started the monitor on reboot             | [![reboot](/assets/2021-01-28-i-built-a-build-monitor/reboot.png)](/assets/2021-01-28-i-built-a-build-monitor/reboot.png) |
-| And got visibility back!                  | [![visible](/assets/2021-01-28-i-built-a-build-monitor/visible.png)](/assets/2021-01-28-i-built-a-build-monitor/visible.png)|
+| I bought some stuff                    | [![stuff](/assets/2021-01-28-i-built-a-build-monitor/stuff.webp)](/assets/2021-01-28-i-built-a-build-monitor/stuff.webp)     |
+| And I got my Pi up and running.           | [![pi](/assets/2021-01-28-i-built-a-build-monitor/start-pi.webp)](/assets/2021-01-28-i-built-a-build-monitor/start-pi.webp) |
+| I turned on some lights                   | [![lights](/assets/2021-01-28-i-built-a-build-monitor/lights.webp)](/assets/2021-01-28-i-built-a-build-monitor/lights.webp)  |
+| Started to throw together a bit more code | [![code](/assets/2021-01-28-i-built-a-build-monitor/code.webp)](/assets/2021-01-28-i-built-a-build-monitor/code.webp)     |
+| I bought a frame                          | [![frame](/assets/2021-01-28-i-built-a-build-monitor/frame.webp)](/assets/2021-01-28-i-built-a-build-monitor/frame.webp)     |
+| Drilled some holes                        | [![holes](/assets/2021-01-28-i-built-a-build-monitor/holes.webp)](/assets/2021-01-28-i-built-a-build-monitor/holes.webp)     |
+| Installed my program                      | [![install](/assets/2021-01-28-i-built-a-build-monitor/install.webp)](assets/2021-01-28-i-built-a-build-monitor/install.webp)     |
+| Started the monitor on reboot             | [![reboot](/assets/2021-01-28-i-built-a-build-monitor/reboot.webp)](/assets/2021-01-28-i-built-a-build-monitor/reboot.webp) |
+| And got visibility back!                  | [![visible](/assets/2021-01-28-i-built-a-build-monitor/visible.webp)](/assets/2021-01-28-i-built-a-build-monitor/visible.webp)|
 
 <hr/>
 
@@ -87,27 +87,27 @@ I also decided that I wanted to decouple my laptop from my build server, in the 
 
 Starts with a configuration file.
 
-[![config](/assets/2021-01-28-i-built-a-build-monitor/config.png)](/assets/2021-01-28-i-built-a-build-monitor/config.png)
+[![config](/assets/2021-01-28-i-built-a-build-monitor/config.webp)](/assets/2021-01-28-i-built-a-build-monitor/config.webp)
 
 I then abstracted the basic functionality of the lights away behind a board service.
 
-[![board](/assets/2021-01-28-i-built-a-build-monitor/board.png)](/assets/2021-01-28-i-built-a-build-monitor/board.png)
+[![board](/assets/2021-01-28-i-built-a-build-monitor/board.webp)](/assets/2021-01-28-i-built-a-build-monitor/board.webp)
 
 And made sure it runs on my machine...
 
-[![fail](/assets/2021-01-28-i-built-a-build-monitor/fail.png)](/assets/2021-01-28-i-built-a-build-monitor/fail.png)
+[![fail](/assets/2021-01-28-i-built-a-build-monitor/fail.webp)](/assets/2021-01-28-i-built-a-build-monitor/fail.webp)
 
 Unsurprisingly my mac is not compatible with a GPIO board. I decided on a quick and easy workaround. When I'm running locally I will use a stub of the library and when I'm running with the optimized flag I will use the GPIO library. This should give me the flexibility I want and allow me to cotinue building the app on my laptop.
 
-[![mock](/assets/2021-01-28-i-built-a-build-monitor/mock.png)](/assets/2021-01-28-i-built-a-build-monitor/mock.png)
+[![mock](/assets/2021-01-28-i-built-a-build-monitor/mock.webp)](/assets/2021-01-28-i-built-a-build-monitor/mock.webp)
 
 I then started on the integrations. I wanted to monitor my CircleCI and GitHub Action pipelines to start with. Both have really easy to use and well documented APIs.
 
-[![integration](/assets/2021-01-28-i-built-a-build-monitor/gha-integration.png)](/assets/2021-01-28-i-built-a-build-monitor/gha-integration.png)
+[![integration](/assets/2021-01-28-i-built-a-build-monitor/gha-integration.webp)](/assets/2021-01-28-i-built-a-build-monitor/gha-integration.webp)
 
 I have many pipelines running over many servers. I want to aggregate these results. I also wanted to get my results as quickly as possible. Using asynctio I would fire off all the requests for the configured pipelines in 1 go. I would also set an is_running flag, allowing me to light up an LED on the monitor. I could then aggregate the results, using this aggregate to display the status of all my builds.  
 
-[![aggregate](/assets/2021-01-28-i-built-a-build-monitor/aggregate.png)](/assets/2021-01-28-i-built-a-build-monitor/aggregate.png)
+[![aggregate](/assets/2021-01-28-i-built-a-build-monitor/aggregate.webp)](/assets/2021-01-28-i-built-a-build-monitor/aggregate.webp)
 
 Now I need to turn on some lights.
 
@@ -118,7 +118,7 @@ Now I need to turn on some lights.
 - If **any** of the builds have an unknown status the red and green light would turn on
 - If there has been a connection issue the purple light would turn on (not pictured)
 
-[![blink](/assets/2021-01-28-i-built-a-build-monitor/blink.png)](/assets/2021-01-28-i-built-a-build-monitor/blink.png)
+[![blink](/assets/2021-01-28-i-built-a-build-monitor/blink.webp)](/assets/2021-01-28-i-built-a-build-monitor/blink.webp)
 
 And my first iteration is done! 
 
@@ -130,7 +130,7 @@ And my first iteration is done!
 6. Wait
 7. Rinse and repeat
 
-[![overview](/assets/2021-01-28-i-built-a-build-monitor/overview.png)](/assets/2021-01-28-i-built-a-build-monitor/overview.png)
+[![overview](/assets/2021-01-28-i-built-a-build-monitor/overview.webp)](/assets/2021-01-28-i-built-a-build-monitor/overview.webp)
 
 <hr/>
 
