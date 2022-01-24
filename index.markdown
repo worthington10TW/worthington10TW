@@ -1,4 +1,4 @@
 ---
 layout: home
-image: /assets/me.jpg
+image: /assets/me.webp
 ---
