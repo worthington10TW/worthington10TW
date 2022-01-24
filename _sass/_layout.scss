@@ -5,6 +5,8 @@ footer {
   position: fixed;
   width: 100%;
   background-color: black;
+  // HACK 2022-01-24 h2-> `position: relative;` causes some crappy styling, this is a quick fix for now 
+  z-index: 100;
   .social-media-list {
     display: table;
     margin: 0 auto;
