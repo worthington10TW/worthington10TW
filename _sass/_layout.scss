@@ -108,13 +108,12 @@ main{
 .posts {
   padding-bottom: $footer-size;
   ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-left: 0;
-  align-items: stretch;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   li {
@@ -216,7 +215,9 @@ article {
   .posts {
     li {
       height: $post-card-height;
+      max-width: calc( 100vw / 3 );
       width: $post-card-width;
+      padding: 1em;
     }
   }
   main {
