@@ -2,12 +2,13 @@
 layout: post
 title:  "How? what? why?"
 date:   2022-01-08 19:23:00 +0000
-categories: code
+categories: about
 image: /assets/2022-01-08-how-what-why/octojekyll.webp
+tech: jekyll ruby github-actions
 code: https://github.com/worthington10tw/me
 ---
 
-How I built this blog, what I used to build it, and why I picked this tech stack.
+So, I've thrown together a new blog. This is how I built it and how I ended on this tech stack. Pop over to [my github page](https://github.com/worthington10tw) to view the code.
 
 <!--more-->
 

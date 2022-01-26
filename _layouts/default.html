@@ -2,12 +2,10 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 {%- include head.html -%}
 <body>
-   <aside>
-      {%- include header.html -%}
-      {%- include footer.html -%}
-   </aside>
+   {%- include header.html -%}
    <main>
       {{ content }}
    </main>
+   {%- include footer.html -%}
 </body>
 </html>

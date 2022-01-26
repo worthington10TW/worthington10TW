@@ -2,6 +2,8 @@ title: Ramblings of a developer
 author:
   name: M Z Worthington
   email: matt@siliconpanda.com
+  twitter: worthington10
+  picture: /assets/me.webp
 description: >- 
   Hi folks 👋👋
   My name is Matthew and I work in tech. 
@@ -22,5 +24,5 @@ plugins:
 sass:
     sass_dir: _sass
     style: compact 
-permalink: pretty
+permalink: /:categories/:title
 image: /assets/me.webp

@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello world"
 date:   2022-01-05 19:01:47 +0000
-categories: about hello
+categories: about
 image: /assets/2022-01-05-hello-world/wave.webp
 ---
 

@@ -2,16 +2,15 @@
 layout: post
 title:  "I built a build monitor"
 date:   2021-01-28 00:00:00 +0000
-categories: code raspberry-pi python ci-cd
-image: /assets/2021-01-28-i-built-a-build-monitor/lonely.webp
+categories: ci-cd
+image: /assets/2021-01-28-i-built-a-build-monitor/lonely.gif
 code: https://github.com/worthington10TW/gpio-build-monitor
+tech: raspberry-pi python
 ---
 
 Christmas is usually a time for me to catch up with friends and family. Every day tends to be filled with drinks and dinners with friends or recovering on the sofa, it's an enjoyable few weeks in which I am not particularly productive. This year is different. The pandemic ruined everyone's plans and I now have lots of time on my hands, this is a perfect opportunity to learn something new.
 
 <!--more-->
-
-<hr/>
 
 I wasn't sure what I wanted to do, so I started by outlining some constraints
 
