@@ -20,7 +20,7 @@
          </li>
       </ul>
    </nav>
-   <img loading="eager" alt="{{ site.title | escape }}" src="{{ page.image | default: site.image }}" />
+   <img loading="eager" alt="{{ site.title | escape }}" src="{{ page.image | default: site.author.image }}" />
    <h1>{{ site.title | escape }}</h1>
    <h2>{{ site.description | escape }}</h2>
    {%- if titles_size > 0 -%}
