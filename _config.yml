@@ -25,4 +25,4 @@ sass:
     sass_dir: _sass
     style: compact 
 permalink: /:categories/:title
-image: /assets/me.webp
+# permalink: pretty
