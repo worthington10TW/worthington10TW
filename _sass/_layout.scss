@@ -24,8 +24,6 @@ footer {
   }
 }
 
-
-
 h1, h2, nav {
   a {
   display: inline-block;
@@ -64,10 +62,6 @@ header {
   h2 {
     font-size: 1em;
   }
-  img {
-    border-radius: 50%;
-    max-width: $header-imgage-size;
-  }
 }
 
 body > header {
@@ -79,9 +73,19 @@ body > header {
 
   text-align: center;
   top: auto;
+  padding-bottom: $header-margin;
 
-  h2 {
+  h1 {
     font-size: 1.5em;
+    margin: $header-margin;
+  }
+  h2 {
+    margin: $header-margin;
+  }
+  img {
+    border-radius: 50%;
+    max-width: $header-image-size;
+    margin: $header-margin;
   }
 }
 
