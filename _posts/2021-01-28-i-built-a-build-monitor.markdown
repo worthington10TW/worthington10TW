@@ -5,7 +5,9 @@ date:   2021-01-28 00:00:00 +0000
 categories: ci-cd
 image: /assets/2021-01-28-i-built-a-build-monitor/lonely.gif
 code: https://github.com/worthington10TW/gpio-build-monitor
-tech: raspberry-pi python
+tech: 
+    - raspberry-pi
+    - python
 ---
 
 Christmas is usually a time for me to catch up with friends and family. Every day tends to be filled with drinks and dinners with friends or recovering on the sofa, it's an enjoyable few weeks in which I am not particularly productive. This year is different. The pandemic ruined everyone's plans and I now have lots of time on my hands, this is a perfect opportunity to learn something new.

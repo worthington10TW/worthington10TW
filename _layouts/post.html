@@ -24,6 +24,8 @@ layout: default
         {%- endif -%}
         {%- assign content = page.content -%}
         {%- include read_time.html -%} 
+        {%- assign tech = page.tech -%}
+        {%- include tech_stack.html -%}
      </p>
   </header>
   <section itemprop="articleBody">

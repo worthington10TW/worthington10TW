@@ -4,7 +4,10 @@ title:  "How? what? why?"
 date:   2022-01-08 19:23:00 +0000
 categories: about
 image: /assets/2022-01-08-how-what-why/octojekyll.webp
-tech: jekyll ruby github-actions
+tech: 
+    - jekyll
+    - ruby
+    - github-actions
 code: https://github.com/worthington10tw/me
 ---
 
