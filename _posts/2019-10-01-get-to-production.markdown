@@ -9,7 +9,7 @@ tech:
     - heroku
 code: https://github.com/worthington10TW/hello-karta/tree/complete
 image: /assets/2019-10-01-get-to-production/circle.webp
-published: false
+published: true
 ---
 
 Over the summer I was lucky enough to speak at Karta conference in Frankfurt. I presented a lightning talk on CI/CD followed by a workshop called ‘Get to production!’. The goal of the talk and workshop was to cover the pipeline basics and for the group to have the opportunity to create and deploy a simple application using pipelines as code.
@@ -75,18 +75,56 @@ In some situations a manual triggered pipeline or stage may be necessary, you ma
 
 ## The workshop
 
-The goal of the workshop was to take an application and build our own pipeline using pipelines as code. All the bitsthat came with the workshop simply enabled the application to run and to be deployed, it wasnt the focus, however I wanted these to be as readable and simple as possible. 
+The goal of the workshop was to take an application and build our own pipeline using pipelines as code. All the other bits that came with the workshop simply enabled the application to run and to be deployed, however I wanted these to be as readable and simple as possible. 
 
-We used:
-- VueJS
+We focused on:
 - Circle CI 
+- VueJS
 - Heroku
+
+However we also used:
+- Babel
+- Cypress
+- Mocha
+- NPM
+- Docker
+- GitHub
+
+We first validated that everyone had all the tools for the workshop
+
+```sh
+vue --version
+heroku --version
+git --version
+docker --version
+node --version
+npm --version
+curl --version
+```
+
+Then we forked and cloned the repo
+
+[![Fork](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Fork.png)](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Fork.png)
+
+[![Clone](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Clone.png)](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Clone.png)
+
+We then followed the project on CircleCI
+
+[![Clone](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Follow.png)](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/Follow.png)
+
+And generated a token 
+
+[![CreateToken](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/CreateToken.png)](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/CreateToken.png)
+
+At this point everyone should have all the dependencies required, the accounts setup and our basic pipeline running.
+
+[![FirstPipeline](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/FirstPipelineCombined.png)](https://raw.githubusercontent.com/worthington10TW/hello-karta/master/pitch/plan/FirstPipelineCombined.png)
 
 The [code provided](https://github.com/worthington10TW/hello-karta/tree/master) contained [a script](https://github.com/worthington10TW/hello-karta/blob/master/.scripts/app-builder.sh) to get us up and running, this script created a heroku application and added the relevant environment variables to circleCI.
 
-The repository also contained a [.vue folder](https://github.com/worthington10TW/hello-karta/blob/master/.vue/preset.json) that allowed the vue CLI to create the same application for everyone in the workshop.
+The repository also contained a [.vue folder](https://github.com/worthington10TW/hello-karta/blob/master/.vue/preset.json) that allowed the vue CLI to create the same application for everyone in the workshop by running `vue create --preset ./hello-karta/.vue hello-karta`.
 
-We also had a Dockerfile that runs the application, a basic pipeline that spits out today's date (but does nothing with the code), and a couple of scripts (One to deploy the application and another to ping the application)
+We also had a Dockerfile that runs the application, a basic pipeline that spits out today's date (but does nothing with the code), and a couple of scripts (One to deploy the application and another to ping the application).
 
 We could then start building our 
 
@@ -199,7 +237,7 @@ workflows:
             - deploy-to-production
 ```
 
-And thats our path to production 
+And thats our path to production. To recap we created a VueJS application with Mocha unit tests and Cypress E2E tests, using CircleCI and pipelines as code to install, lint, test and deploy our application. Our application is deployed to Heroku and served using docker over multiple environments.
 
 [The deck from the talk can be found here](https://hackmd.io/@worthington10tw/SJ3B5o0CK#/){:target="_blank"  rel="noreferrer"} (Recently migrated from [gitpitch](https://gitpitch.github.io/gitpitch/#/free-trial){:target="_blank"  rel="noreferrer"} to [hackmd](https://hackmd.io/){:target="_blank"  rel="noreferrer"})
 
