@@ -9,7 +9,7 @@ tech:
     - C#
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
 image: /assets/2020-11-25-getting-started-with-elasticsearch/elastic-elasticsearch-logo.webp
-published: true
+published: false
 ---
 
 I recently engaged with a client that wanted to improve their search relevance and speed. We decided to run some experiments to see if elasticsearch would be a good fit. 
