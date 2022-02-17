@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I built a build monitor"
+title:  I built a build monitor
 date:   2021-01-28 00:00:00 +0000
 categories: ci-cd
 image: /assets/2021-01-28-i-built-a-build-monitor/lonely.gif

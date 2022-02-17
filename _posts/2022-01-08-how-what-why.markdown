@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How? what? why?"
+title:  How? what? why?
 date:   2022-01-08 19:23:00 +0000
 categories: about
 image: /assets/2022-01-08-how-what-why/octojekyll.webp

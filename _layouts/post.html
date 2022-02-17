@@ -22,8 +22,13 @@ layout: default
         {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
         {%- endif -%}
+        
         {%- assign content = page.content -%}
         {%- include read_time.html -%} 
+
+        {%- assign categories = page.categories -%}
+        {%- include workshop.html -%}
+
         {%- assign tech = page.tech -%}
         {%- include tech_stack.html -%}
      </p>

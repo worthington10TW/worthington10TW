@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Workshop- Get to production"
+title:  Get to production
 date:   2019-10-01 00:00:00 +0000
 categories: workshop ci-cd
 tech:
