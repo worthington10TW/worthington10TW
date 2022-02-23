@@ -4,7 +4,7 @@ title:  Getting started with elastic search
 date:   2020-11-25 00:00:00 +0000
 categories: getting-started workshop search
 tech: 
-    - elasticsearch
+    - Elasticsearch
     - dotnet
     - C#
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
@@ -12,41 +12,151 @@ image: /assets/2020-11-25-getting-started-with-elasticsearch/elastic-elasticsear
 published: false
 ---
 
-I recently engaged with a client that wanted to improve their search relevance and speed. We decided to run some experiments to see if elasticsearch would be a good fit. 
+I recently engaged with a client that wanted to improve their search relevance and speed. We decided to run some experiments to see if Elasticsearch would be a good fit. 
 
 <!--more-->
 
-We wanted to be as visible as possible, and open for anyone interested to look at what we are doing. Many of the engineering team had not worked with Lucence based search engines before. I remember when I first used lucene, I felt pretty lost. So I threw together some lunch and learns and opened them up to everyone that wanted to pop by and learn the basics of elasticsearch. 
+We wanted to be as visible as possible, and open for anyone interested to look at what we are doing. Many of the engineering team had not worked with Lucene based search engines before. I remember when I first used lucene, I felt pretty lost. So I threw together some lunch and learns and opened them up to everyone that wanted to pop by and learn the basics of Elasticsearch. 
 
 [The deck that went with the workshop can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"} and there is a GitHub repo that will help spin up a single node instance and populate the search engine with some test data. 
 
-This post covers the basics of elasticsearch, just enough to get up and running.
+This post covers the basics of Elasticsearch, just enough to get up and running.
 
-The running example of the workshop is a fictious university consisting of trainers and students.
+The running example of the workshop is a fictitious university consisting of trainers and students. For the purpose of this example we have split the index in this way, however depending on your usage you may decide to have a single index of people. It's worth mapping out how you want your search engine to behave and change your data structure to match.
+
+[If you want to code along with this post you pop over to the code repo that was used during the workshop](https://github.com/worthington10TW/ElasticsearchBrownBag){:target="_blank"  rel="noreferrer"}
 
 ## Elasticsearch
 
-First off, its worth mentioning that [elasticsearch documentation is amazing](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html){:target="_blank"  rel="noreferrer"}. I hope to provide a brief overview, just enough to get going with elasticsearch; go check out the docs once you've decided to make the jump.
+First off, its worth mentioning that [Elasticsearch documentation is amazing](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html){:target="_blank"  rel="noreferrer"}. I hope to provide a brief overview, just enough to get going with Elasticsearch; go check out the docs once you've decided to make the jump.
 
-So, what is elasticsearch?
+So, what is Elasticsearch?
 
 > [Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.](https://www.elastic.co/elasticsearch/){:target="_blank"  rel="noreferrer"}
 
-Simple put, elasticsearch stores data, organises data and retrieves data.
+Simple put, Elasticsearch stores data, organises data and retrieves data.
 
-To get started we can look a few of the key components that make up elasticsearch
+To get started we can look a few of the key components that make up Elasticsearch
 
-- Documents
-- Indexes
+- Cluster
 - (Types of) Nodes
+- Indexes
 - Shards
-- Clusters
+- Documents
+- How to search
+
+## Cluster
+
+So, let's start at the top. The highest point in our architecture is the cluster.
+
+A cluster is one of more nodes with the same cluster name.
+
+[![cluster](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)
+
+In this example we can see that our University cluster has a master node and 3 other nodes, all with some documents inside.
+
+## Nodes
+
+But what's a node? 
+
+Well, we have a few that I think everyone starting up should be aware of, and some that you can get back to later. 
+
+### Nodes you should know about
+
+- Data nodes 
+  - Stores data and executes data-related operations such as search and aggregation
+- Ingest nodes 
+  - Apply an ingest pipeline to a document in order to transform and enrich the document before indexing
+  - With a heavy ingest load, it makes sense to use dedicated ingest nodes and to not include the ingest role from nodes that have the master or data roles.
+- Master nodes 
+  - Are in charge of cluster-wide management and configuration actions such as adding and removing nodes 
+- Client nodes
+  - Forwards cluster requests to the master node and data-related requests to data nodes
+
+### Other nodes
+
+- Tribe nodes 
+  - Act as a client node, performing read and write operations against all of the nodes in the cluster
+- Machine learning nodes
+  - Available under Elastic’s Basic License that enables machine learning tasks. 
+
+## Indexes
+
+Within your nodes we have indexes, this is where you'll find your documents. The index is the logical name which maps to one or more shards (more on this later).
+
+We can explicitly create an index
+
+```curl
+PUT /trainer
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,  
+      "number_of_replicas": 2 
+    }
+  },
+  "mappings": {
+    "properties": {
+      "bio":    { "type": "text" },  
+      "subjects":  { "type": "keyword"  }, 
+      "name":   { "type": "text"  }     
+    }
+  }
+}
+```
+
+Or have Elasticsearch create an index when adding a document when it does not exist.
+
+I find that if I create my indexes explicitly I have an easier time source controlling my configuration and replicating my configuration across many environments. 
+
+## Index alias
+
+At our fictitious university we have trainers and students, however we want to search across people. An index alias is a simple way to make these queries easy to write and maintain.
+
+[![index alias](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)
+
+```curl
+POST /_aliases
+{
+  "actions": [
+    {
+      "add": {
+        "index": "trainer",
+        "alias": "people"
+      }
+    },
+    {
+      "add": {
+        "index": "student",
+        "alias": "people"
+      }
+    }
+  ]
+}
+```
+
+We can now use the `people` index in the same way as our `trainer` and `student` indexes.
+
+## Shards
+
+Each shard is a single Lucene (Open source Core search library Written in Java) index. These are automatically managed by Elasticsearch. 
+We can configure primary and replica count, documents are then placed in random nodes across the cluster.
+Our indexes are split into 5 shards by default The rest should just work itself out
+
+
+### Replica shards
+
+Used when primary fails, they should never be on the same node as the primary shard Increased search performance
+
+[![shard](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)
+
+
 
 ## Documents 
 
-Lets start and the most relatable component- the data. A document is a record of data, they are stored as JSON (Key value pairs).
+A document is a record of data, they are stored as JSON (Key value pairs).
 
-We can the add this into our search engine by using the REST API.
+We can add this into our search engine by using the REST API.
 
 ```curl
 PUT trainer/_doc/1
@@ -121,9 +231,13 @@ We have a few different ways to store data including
 
 Sometimes our data is much more complex than what the basic fields can accomodate for. We have a few different methods for storing more complex data structures. 
 
-These methods all have a use, however they also all have drawbacks. Its important to think about what type would be best for your usecase for each field. The cleaners your data is going in, the easier it will be to search later.
+These methods all have a use, however they also all have drawbacks. It's important to think about what type would be best for your use case for each field. The cleaner your data is going in, the easier it will be to search later. When populating our search engine it helps to think about the value the engine will produce and how searches will be performed.
 
 ##### Object
+
+The simplest form of our complex data structures is simply a single object.
+
+In this example we have split our name into its own object of parts.
 
 ```json
 {
@@ -143,50 +257,25 @@ These will then be flattened when stored like this
 }
 ```
 
-##### Flat
-
-This is when all the data is flattened into a single field, this method is particularly useful when dealing with large amounts of data with unknown fields as this can prevent defining too many fields which can cause memory errors.
-
-However we also want to be careful when using this method as it treats the entire value as keywords which does not provide full search functionality.
-
-We first update our mappings to set the property we would like flattened.
+We can then setup a mapping for this object
 
 ```curl
 PUT trainer
 {
   "mappings": {
-    "properties": {
-      "name": {
-        "type": "text"
-      },
-      "information": {
-        "type": "flattened"
-      }
+    "properties": { 
+      "first": { "type": "text" },
+      "last":  { "type": "text" }
     }
   }
 }
 ```
 
-In this example we have a unstructured object called `information`, the payload varies document to document, we want the ability to search over this field, so we decide to store them by flattening the object.
-
-```curl
-POST trainer/_doc/1
-{
-    // TODO
-  "name": "Matthew",
-  "information": {
-    "availability": "urgent",
-    "timestamp": {
-      "created": 1541458026,
-      "closed": 1541457010
-    }
-  }
-}
-```
+Note that we do not need to set the `type` as this is defaulted to `object`
 
 ##### Nested 
 
-We may want to store an array of objects, like this
+We may want to store an array of objects. Our trainers have an array of lessons, each lesson is an object holding basic information.
 
 ```json
 {
@@ -204,7 +293,7 @@ We may want to store an array of objects, like this
 }
 ```
 
-These will then be flattened when stored like this
+By default these will then be flattened when stored like this
 
 ```json
 {
@@ -231,46 +320,105 @@ PUT /trainer
 
 These will now be stored as independent objects and maintain their relationship.
 
-##### Join 
-Parent child
+##### Flat
 
-#### What about locations?
+This is when all the data is flattened into a single field, this method is particularly useful when dealing with large amounts of data with unknown fields as this can prevent defining too many fields which can cause memory errors.
 
-- Geo
-- long / lat
-- polygons
-- coordinate system (Cartesian)
-- points
-- geometries (shapes)
+However we also want to be careful when using this method as it treats the entire value as keywords which does not provide full search functionality.
 
-## Indexes
-
-Indexes are the place elasticsearch keeps your documents The logical name which maps to one or more shards
-
-We can explicitly create an index
+We first update our mappings to set the property we would like flattened.
 
 ```curl
-PUT /trainer
+PUT trainer
 {
-  "settings": {
-    "index": {
-      "number_of_shards": 3,  
-      "number_of_replicas": 2 
-    }
-  },
   "mappings": {
     "properties": {
-      "bio":    { "type": "text" },  
-      "subjects":  { "type": "keyword"  }, 
-      "name":   { "type": "text"  }     
+      "name": {
+        "type": "text"
+      },
+      "information": {
+        "type": "flattened"
+      }
     }
   }
 }
 ```
 
-Or have elasticsearch create an index when adding a document when not exists.
+In this example we have an unstructured object called `information`, the payload varies document to document, we want the ability to search over this field, so we decide to store them by flattening the object.
 
-I find that if I create my indexes explicitly I have an easier time source controlling my configuration and replicating my configuration across many environments.
+```curl
+POST trainer/_doc/1
+{
+  "name": "Matthew",
+  "information": {
+    "birthday": "2020-02-06",
+    "firstPetsName": "Fluffy",
+    "favouriteColour": "Purple"
+  }
+}
+```
+
+When returning our data from source the structure is returned in the same way.
+
+##### Join 
+
+In some situations we may need a parent/ child relationship. These should be used with caution, we are not creating a copy of your database and structure, we are creating a search engine and we want to aim to denormalize as much as possible.
+
+Before using this method take a step back and question how the search will be performed. In most cases I would pick duplicating data over introducing joins.
+
+We have introduced a lead trainer that is responsible for a set of trainers.
+
+```curl
+PUT trainer
+{
+  "mappings": {
+    "properties": {
+      "trainer_relations": {
+        "type": "join",
+        "relations": {
+          "trainer": "leadTrainer"
+        }
+      }
+    }
+  }
+}
+```
+
+Bob is the lead trainer (with the ID of 1) to Matthew.
+
+```json
+{
+  "name": "Bob",
+  "trainer_relations":{"name":"leadTrainer"}
+}
+{
+  "name": "Matthew",
+  "trainer_relations":{"name":"trainer","parent":1}}
+}
+```
+
+Now searching for all the trainers under a particular lead trainer is easy-
+
+```curl
+GET trainer/_search
+{
+  "query": {
+    "has_parent": {
+      "parent_type": "leadTrainer",
+      "query": { "match": { "name": "Bob" } }
+    }
+  }
+}
+```
+
+#### What about spatial data?
+
+- Shapes
+- Points
+- Geoshape
+- Geopoint
+
+More on these in future posts.
 
 ### Adding many documents to an index
 
@@ -290,55 +438,13 @@ POST _bulk
 
 On first impression this might look like an array of updates, however it does not have square brackets surrounding it.
 
-When sending a bulk request we first send an object of intent- this will let elasticsearch know what the operation will be (In this example the first instruction is to index a document in the trainer index with the ID of 1), the second object will then be the data for this request (Similar to the payload when putting a single document). 
+When sending a bulk request we first send an object of intent- this will let Elasticsearch know what the operation will be (In this example the first instruction is to index a document in the trainer index with the ID of 1), the second object will then be the data for this request (Similar to the payload when putting a single document).
 
-## Index alias
+## How to Search
 
-Rename your index Group many indexes
-
-At our fictious university we have trainers and students, we want to search across people. An index alias of people containing teachers and pupils to the rescue!
-
-[![index alias](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)
-
-## Nodes you should know about
-
-Data nodes Ingest nodes Master nodes Client nodes
-
-Note: Data nodes stores data and executes data-related operations such as search and aggregation Ingest nodes (Default role).Apply an ingest pipeline to a document in order to transform and enrich the document before indexing. With a heavy ingest load, it makes sense to use dedicated ingest nodes and to not include the ingest role from nodes that have the master or data roles. ETL
-
-Master nodes in charge of cluster-wide management and configuration actions such as adding and removing nodes Client nodes forwards cluster requests to the master node and data-related requests to data nodes
-
-## Other nodes
-
-Tribe nodes Machine learning nodes
-
-Note: Tribe nodes act as a client node, performing read and write operations against all of the nodes in the cluster Machine Learning nodes These are nodes available under Elastic’s Basic License that enable machine learning tasks. Machine learning nodes have xpack.ml.enabled and node.ml set to true.
-
-## Data nodes
-
-Contains indexes Data nodes host the shards
-[![node](/assets/2020-11-25-getting-started-with-elasticsearch/node.png)](/assets/2020-11-25-getting-started-with-elasticsearch/node.png)
-
-## Shards
-
-Single lucene index Automatically managed by Elasticsearch We can configure primary and replica count Placed in random nodes across the cluster Indexes are split into 5 shards by default The rest should just work itself out
-
-### Lucene
-
-Open source Core search library Written in Java
-
-### Replica shards
-
-Used when primary fails Never on the same node as the primary shard Increased search performance
-
-[![shard](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)
-
-## Cluster
-
-One of more nodes Master node controllers cluster management Nodes all share the same cluster name
-
-[![cluster](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)
+Finally we can get to the fun bit.
 
 ---
 
 [The deck from the talk can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"}
+
