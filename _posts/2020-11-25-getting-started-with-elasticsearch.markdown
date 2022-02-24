@@ -5,11 +5,9 @@ date:   2020-11-25 00:00:00 +0000
 categories: getting-started workshop search
 tech: 
     - Elasticsearch
-    - dotnet
-    - C#
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
 image: /assets/2020-11-25-getting-started-with-elasticsearch/elastic-elasticsearch-logo.webp
-published: false
+published: true
 ---
 
 I recently engaged with a client that wanted to improve their search relevance and speed. We decided to run some experiments to see if Elasticsearch would be a good fit. 
@@ -18,11 +16,13 @@ I recently engaged with a client that wanted to improve their search relevance a
 
 We wanted to be as visible as possible, and open for anyone interested to look at what we are doing. Many of the engineering team had not worked with Lucene based search engines before. I remember when I first used lucene, I felt pretty lost. So I threw together some lunch and learns and opened them up to everyone that wanted to pop by and learn the basics of Elasticsearch. 
 
-[The deck that went with the workshop can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"} and there is a GitHub repo that will help spin up a single node instance and populate the search engine with some test data. 
+[The deck that went with the workshop can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"} and there is a GitHub repo that will help spin up a single node instance and populate the search engine with some test data, written in C# & dotnet core.
 
-This post covers the basics of Elasticsearch, just enough to get up and running.
+The goal of this post is to cover the basic architecture of Elastisearch, in future posts I'll dive into individual features (Like the search query DSL).
 
 The running example of the workshop is a fictitious university consisting of trainers and students. For the purpose of this example we have split the index in this way, however depending on your usage you may decide to have a single index of people. It's worth mapping out how you want your search engine to behave and change your data structure to match.
+
+Also, modelling your data on how your users will use the systems is vital, in most cases the best search model will not be a mirror copy of your database models. 
 
 [If you want to code along with this post you pop over to the code repo that was used during the workshop](https://github.com/worthington10TW/ElasticsearchBrownBag){:target="_blank"  rel="noreferrer"}
 
@@ -78,7 +78,7 @@ Well, we have a few that I think everyone starting up should be aware of, and so
 - Tribe nodes 
   - Act as a client node, performing read and write operations against all of the nodes in the cluster
 - Machine learning nodes
-  - Available under Elastic’s Basic License that enables machine learning tasks. 
+  - Available under Elastic’s Basic Licence that enables machine learning tasks. 
 
 ## Indexes
 
@@ -108,6 +108,78 @@ PUT /trainer
 Or have Elasticsearch create an index when adding a document when it does not exist.
 
 I find that if I create my indexes explicitly I have an easier time source controlling my configuration and replicating my configuration across many environments. 
+
+
+### Querying index
+
+We can query against a single index, alias or complete dataset by using the query DSL.
+
+In this example we are searching our trainer index for a name that matches the query `Matthew`
+
+```curl
+POST /trainer/_search
+{
+  "query": {
+    "match": {
+      "name": {
+        "query": "Matthew"
+      }
+    }
+  }
+}
+```
+and expect the following return.
+
+```json
+{
+    "took": 616,
+    "timed_out": false,
+    "_shards": {
+        "total": 1,
+        "successful": 1,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 1,
+            "relation": "eq"
+        },
+        "max_score": 5.9282455,
+        "hits": [
+            {
+                "_index": "trainer",
+                "_id": "1",
+                "_score": 5.9282455,
+                "_source": {
+                    "name": "Matthew",
+                    "startDate": "2020-11-1",
+                    "interests": [
+                        "Search",
+                        "Baking"
+                    ],
+                    "subjects": [
+                        "Java",
+                        "JS",
+                        "C#",
+                        "Elasticsearch"
+                    ]
+                }
+            }
+        ]
+    }
+}
+```
+
+Our response comes with some useful data, particularly
+
+- took- How long our query took to run in ms.
+- timed_out- whether Elasticsearch reached its configured timeout limit.
+- hits- 
+  - total- Information on the total number of results
+  - max_score- the maximum relevance score of the results
+  - nested hits- These are the results for the current page of results (defaulted to 10 results), they continue the index of the document, ID, relevance score and the _source (Or document)
+
 
 ## Index alias
 
@@ -146,10 +218,16 @@ Our indexes are split into 5 shards by default The rest should just work itself 
 
 ### Replica shards
 
-Used when primary fails, they should never be on the same node as the primary shard Increased search performance
+Used when primary fails, they should never be on the same node as the primary shard. Shards give us an increase in search performance and resilence.
 
 [![shard](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)
 
+- In this example our primary shards are labelled S1 (on Node 1), S2 (on Node 2), S3 (on Node 3). 
+- Collectively they contain all the documents, with the ID 1, 2, 3, 4, 5.
+- These are spread over multiple nodes.
+- In this example we have 2 replicas, labelled R1 (on Node 2 and 3), R2 (on Node 2 and 3 ), R3 (on Node 1 and 2).
+- The replica contains a copy of each document.
+- And each replica is never on the same node as the primary shard.
 
 
 ## Documents 
@@ -440,11 +518,16 @@ On first impression this might look like an array of updates, however it does no
 
 When sending a bulk request we first send an object of intent- this will let Elasticsearch know what the operation will be (In this example the first instruction is to index a document in the trainer index with the ID of 1), the second object will then be the data for this request (Similar to the payload when putting a single document).
 
-## How to Search
-
-Finally we can get to the fun bit.
-
 ---
 
-[The deck from the talk can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"}
+Hopefully that gives an overview of elasticsearch. Pop over to the repo if you want to play around with any of these concepts, which contains:
 
+- Elasticsearch single node instance setup via docker
+- Data generator for students and trainers written in dotnet core
+- Configuration
+
+Spin up everything by using the command `docker-compose up`.
+
+Have fun 🎉🎉
+
+[The deck from the talk can be found here](https://hackmd.io/@worthington10tw/S16Ds3ycv#/){:target="_blank"  rel="noreferrer"}
