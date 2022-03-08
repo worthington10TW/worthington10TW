@@ -1,16 +1,18 @@
 @charset "utf-8";
 
-$brand-color:           #999999 !default;
+$brand-color:           #bcbfc6 !default;
 $brand-color-light:     lighten($brand-color, 5%) !default;
 $brand-color-dark:      darken($brand-color, 35%) !default;
 
 $site-title-color:      $brand-color-light !default;
 
-$text-color:            #d5d5d5 !default;
-$background-color:      #181818 !default;
-$code-background-color: #212121 !default;
+$text-color:            #bcbfc6 !default;
+$background-color:      #485063 !default;
+$background-color-light:     lighten($background-color, 5%) !default;
+$background-color-dark:      darken($background-color, 15%) !default;
+$code-background-color: #343d52 !default;
 
-$link-base-color:       #79b8ff !default;
+$link-base-color:       #00cdcd !default;
 $link-visited-color:    $link-base-color !default;
 $link-hover-color:      $text-color !default;
 
