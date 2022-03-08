@@ -51,7 +51,7 @@ So, let's start at the top. The highest point in our architecture is the cluster
 
 A cluster is one of more nodes with the same cluster name.
 
-[![cluster](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.png)
+[![cluster](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.webp)](/assets/2020-11-25-getting-started-with-elasticsearch/cluster.webp)
 
 In this example we can see that our University cluster has a master node and 3 other nodes, all with some documents inside.
 
@@ -185,7 +185,7 @@ Our response comes with some useful data, particularly
 
 At our fictitious university we have trainers and students, however we want to search across people. An index alias is a simple way to make these queries easy to write and maintain.
 
-[![index alias](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)](/assets/2020-11-25-getting-started-with-elasticsearch/alias.png)
+[![index alias](/assets/2020-11-25-getting-started-with-elasticsearch/alias.webp)](/assets/2020-11-25-getting-started-with-elasticsearch/alias.webp)
 
 ```curl
 POST /_aliases
@@ -220,7 +220,7 @@ Our indexes are split into 5 shards by default The rest should just work itself 
 
 Used when primary fails, they should never be on the same node as the primary shard. Shards give us an increase in search performance and resilence.
 
-[![shard](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)](/assets/2020-11-25-getting-started-with-elasticsearch/shard.png)
+[![shard](/assets/2020-11-25-getting-started-with-elasticsearch/shard.webp)](/assets/2020-11-25-getting-started-with-elasticsearch/shard.webp)
 
 - In this example our primary shards are labelled S1 (on Node 1), S2 (on Node 2), S3 (on Node 3). 
 - Collectively they contain all the documents, with the ID 1, 2, 3, 4, 5.
