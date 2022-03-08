@@ -4,7 +4,6 @@ footer {
   bottom: 0;
   height: $footer-size;
   width: 100%;
-  background-color: black;
   .social-media-list {
     display: table;
     margin: 0 auto;
@@ -72,7 +71,7 @@ nav {
       zoom: 1;
     }
     a {
-      color: $text-color!important;
+      color: $text-color;
     }
   }
 }
