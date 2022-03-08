@@ -111,10 +111,8 @@ Improve onboarding of junior or graduates to the industry.
 
 We will achieve this by having
 
-- A tech stack similar to our clients will reduce onboarding friction.
-- A workflow similar to our clients will manage expectations when joining a team.
-- Our clients having input in projects will increase trust between TW and clients.
-- Our clients being invited to showcases will increase our client confidence in our abilities.
+- A widely adopted tech stack will reduce onboarding friction.
+- A workflow similar to business critical teams will manage expectations when joining a team.
 
 ##### We believe that fostering good habits 
 
@@ -139,7 +137,7 @@ We will achieve this by having
 - Wellbeing questionnaire to give us visibility of team health, measuring Independence/ support/ learning/ pace
 
 
-The key to success is a clear vision, achievable bets and goals. This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, new measures and possible stories that may arise; use your impact map to gauge whether to drop these activities or pursue them. Constantly reevaluate current state, do all activities contribute to the vision?
+The key to success is a clear vision, achievable bets and goals. This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, tech tasks and possible stories that may arise; use the above to gauge whether to drop these activities or pursue them. Constantly reevaluate current state, do all activities contribute to the vision?
 
 ---
 
@@ -160,6 +158,8 @@ The key to success is a clear vision, achievable bets and goals. This should be 
 - 1 experienced (part time) PO with the goal to keep the program and the project on track, offering support to the team.
 
 Having an even number of participants will really help. Everyone within the team will be pairing, it is important for the trainers to pair as much as possible, if you do have an odd number of folks in the team you will have a difficult decision to make. As a trainer do you step back and float, or do you allow a new developer or BA to go unsupported? 
+
+The number of each role isnt a hard requirement, they serve as a rough guide, try to stick to the [two pizza rule](https://whatis.techtarget.com/definition/two-pizza-rule){:target="_blank"  rel="noreferrer"}.
 
 For the purposes of this section we will split the team into 2 camps- The trainers and the trainees, however when on the ground remind yourself that you are one complete and equal team, all on the same journey.
 
@@ -183,18 +183,17 @@ Planning is key, when the project starts it will be intense. Identifying the tec
 
 #### The tech stack
 
->
 During the pilot of this program we decided to use the follow:
->
+
 - Java 11
 - Postgres
 - Flyway
 - Lombock
 - Gradle
 - REST API Design
->
+
 - React
->
+
 - Docker
 - Auth (Okta)
 - Infrastructure as code (Terraform)
@@ -202,13 +201,12 @@ During the pilot of this program we decided to use the follow:
 - Host using a cloud provider (GCP) 
 - CI/CD and pipelines as code (CircleCI)
 - Governance (Code styling, vulnerability detection)
->
+
 - Trunk based (When pairing)
->
+
 - TDD, code maintainability and code quality
 
-
-This will change. Different tech will become a higher priority for the business, and different methods of delivery will surface, the above list should not be considered static. 
+This will change. Different tech will come in and out of fasion and we may see a need to upskill folks in a particular. We found ourselves with the above by interviewing graduates, tenured folks in the business, leadership teams, etc. The list will change from company to company and over time. 
 
 #### The project
 
@@ -227,24 +225,24 @@ Aim for you project to be
 
 #### The code
 
-We interviewed many folk that have contributed to beach projects, and a common theme came up; it takes too long to get up and running, people get left behind and code quickly becomes messy with many hands touching a small codebase. 
+I interviewed many folks that have contributed to open source or company side projects. A common theme came up; it takes too long to get up and running, people get left behind and code quickly becomes messy with many hands touching a small codebase. 
 
 Gift the team some code to get going. You should have a good idea what the team will be building, with what tools. It will also take a long time to get approval, repos setup, and build servers running. Kick this off as early as possible. 
 
-You should have enough information to throw together some sample code for the team to use. It is important to keep the sample codebase as slim as possible, it is not there to show everything that a framework can do, it's just enough to get something running, think tracer bullet.
+You should have enough information to throw together some sample code for the team to use. It is important to keep the sample codebase as slim as possible, it is not there to show everything that a framework can do, it's just enough to get something running, think [tracer bullet](https://growsmethod.com/practices/TracerBullets.html){:target="_blank"  rel="noreferrer"} .
 
-It is also important to document this step, READMEs are important, the team will benefit by having a well documented, easy to understand codebase, onboarding will be easy, and those lessons can be taken forward to the team, not only improving the projects onboarding, but future clients.
+It is also important to document this step, READMEs are important, the team will benefit by having a well documented, easy to understand codebase, onboarding will be easy, and those lessons can be taken forward to the team, not only improving the projects onboarding, but future teams.
 
->
-We decided to create 2 projects, with okta authentication and deployed to GCP. The code was produced using TDD, was small and simple, however functional.
->
+
+During the pilot we decided to create 2 projects, with okta authentication and deployed to GCP. The code was produced using TDD, was small and simple, however functional.
+
 - Both front and back used Okta for authentication. 
 - One endpoint returning a simple message
 - A front end that could integrate with the endpoint
 - A build pipeline that tests and deploys
 - Terraform that builds the infrastructure
 - Readmes, don’t forget the readmes!
->
+
 We also attached a git tag to the base code, reach out if you would find this useful.
 
 ---
@@ -285,7 +283,7 @@ Paulo Caroli crafted the lean inception, it's an incredibly useful set of worksh
 
 Running the inception remote seems like a daunting task. Remember to take frequent breaks, remind the team that any team member can request a break at any point in time, and allow for extra time. Using tools like Mural really helped keep collaboration high, if these are not available then google slides can also work (Although a little clunky).
 
-Most of the team will be new to inceptions, it is important to stay nimble. End of day wrap ups with the product owner, tech lead and business analyst will really help get the most out of the week, if this is impossible try to regroup in the morning or at any free point during the day
+Most of the team will be new to inceptions, it is important to stay nimble. End of day wrap ups with the product owner, tech lead and business analyst will really help get the most out of the week, if this is impossible try to regroup in the morning or at any free point during the day.
 
 
 ### Remote first
@@ -325,6 +323,10 @@ Each week aim to do the following:
 - Pair switch (Depending on your ways of working session)
 - Knowledge share/ guest speaker
 
+### Retrospective
+
+//TODO
+
 ### Wellbeing
 
 Visibility of your new team's wellbeing should be a constant thought throughout the process. Many of the team members will not have worked in a team like this, on the particular tech stack, or even in tech at all. I believe that when people feel safe and are not fearful of experimentation they will learn quickly and produce value at pace.
@@ -339,18 +341,21 @@ The results of the report will also be used to give us an idea of what to change
 
 Nominate someone within the team to own the initiative. This involved making a copy of the form and sending it to the team, allowing the team enough time to fill it out, and reporting findings back to the team.
 
->
 During the pilot the questions did not change, we saw a dip in reponses, and occasionally results that triggered change. Without this tool the difficulties may have gone unnoticed and the health of our team would have suffered. 
->
+
 We decided on the following questions, all with a comments section and Red, Amber, Green (RAG) status.
 Am I independent?
 Am I supported?
 Am I learning?
 Am I happy with the pace?
->
+
 These questions correlate with our goals for the program, this serves as a metric against our bets.
->
+
 We found that on occasion health/ morale of the team dropped, by exploring these concerns as soon as possible using a variety of tools alleviated the concerns. These include Hopes & fears, happiness revisited and the Spotify health check. 
+
+#### Showcase
+
+//TODO
 
 ---
 
@@ -378,15 +383,16 @@ Although we are aiming to give the team a real life experience of an account, we
 
 The trainers should keep the goals in mind when pairing, at the start of the program pairing may feel similar to a knowledge share or onboarding exercise; transferring pairing skills are as important as delivering value. 
 
-This should change over time. The ping pong technique is excellent to gauge how much support your pair needs, gradually stepping back, giving your pair much more freedom and responsibility, allowing them to drive the majority of the sessions. 
+This should change over time. The [ping pong](https://martinfowler.com/articles/on-pair-programming.html#PingPong){:target="_blank"  rel="noreferrer"} technique is excellent to gauge how much support your pair needs, gradually stepping back, giving your pair much more freedom and responsibility, allowing them to drive the majority of the sessions. 
 
 ### Mobbing
 
 Mobbing is an excellent tool to get the tem aligned, share knowledge, or roll out a global change to the codebase. 
 
->Picking a piece of work to mob on takes some thought, we first thought that mobbing on a terraform piece would be beneficial, the majority team did not have any experience with [GCP](https://cloud.google.com/){:target="_blank"  rel="noreferrer"} or [Terraform](https://www.terraform.io/){:target="_blank"  rel="noreferrer"}. We thought that mobbing would be beneficial to the entire team as they will all get exposure to both GCP and Terraform, this was not correct. We ended up in a session with many folks feeling left behind and not able to contribute. In hindsight this sort of task would have been better suited to a timeboxed trainer led session.  
+Picking a piece of work to mob on takes some thought, we first thought that mobbing on a terraform piece would be beneficial, the majority team did not have any experience with [GCP](https://cloud.google.com/){:target="_blank"  rel="noreferrer"} or [Terraform](https://www.terraform.io/){:target="_blank"  rel="noreferrer"}. We thought that mobbing would be beneficial to the entire team as they will all get exposure to both GCP and Terraform, this was not correct. We ended up in a session with many folks feeling left behind and not able to contribute. In hindsight this sort of task would have been better suited to a timeboxed trainer led session.  
 
 #### How to identify a mobbing session
+
 - Discuss the challenge during a tech huddle
 - Organised a 1 hour mobbing session session
 - Ask the team to review documentation before kick starting
@@ -427,11 +433,11 @@ Weekly showcases will bring many benefits.
 
 Having weekly guest speakers is a great way to break up the week whilst seeding new ideas to the team.
 
->
+
 We experimented with speakers more and less than once a week, we received feedback that more than once a week did not leave enough time to code, and ad hoc meetings distubed the workflow of the team. We decided to have core coding hours (Meeting free time) and a KT session on Wednesdays.
->
+
 During the pilot we managed to find speakers on a variety of topics:
->
+
 - Cross functional requirements (CFR circus)
 - Introduction to React
 - User testing
