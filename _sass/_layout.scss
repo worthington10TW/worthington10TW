@@ -24,13 +24,14 @@ footer {
   }
 }
 
-body > header {
-  color: $text-color;
-  background-image: url("/assets/background.webp");
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
 
+body > header {
+  // Snazzy background effect
+  background: linear-gradient(-45deg, $brand-color-dark, $background-color, $code-background-color, $brand-color);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+
+  color: $text-color;
   text-align: center;
   top: auto;
   padding-bottom: $header-margin;
@@ -46,6 +47,18 @@ body > header {
     border-radius: 50%;
     max-width: $header-image-size;
     margin: $header-margin;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
