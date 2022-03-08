@@ -27,7 +27,7 @@ footer {
 
 body > header {
   // Snazzy background effect
-  background: linear-gradient(-45deg, $brand-color-dark,  $code-background-color, $brand-color-light, $brand-color);
+  background: linear-gradient(-45deg, $brand-color-light, $brand-color-dark, $brand-color, $background-color, $brand-color-dark);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 
