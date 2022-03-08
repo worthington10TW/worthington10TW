@@ -27,9 +27,9 @@ footer {
 
 body > header {
   // Snazzy background effect
-  background: linear-gradient(-45deg, $brand-color-dark, $background-color, $code-background-color, $brand-color);
+  background: linear-gradient(-45deg, $brand-color-dark,  $code-background-color, $brand-color-light, $brand-color);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 15s ease infinite;
 
   color: $text-color;
   text-align: center;
@@ -71,6 +71,9 @@ nav {
       display: inline-block;
       *display: inline;
       zoom: 1;
+    }
+    a {
+      color: $text-color!important;
     }
   }
 }
