@@ -26,7 +26,7 @@ The site should be:
 - Cheap to run
     - The cost of running siliconpanda for a single blog didn't make much sense to me, I didn't want to be in a position where I had to choose between content or cost. I wanted the site to be a record of my achievements, even if I took a break from writing. This meant no SQL.
 - Easy to maintain
-    - I want the site to be easy to throw together, fast to load, easily transferable, and tech that doesn't need me to update dependencies weekly. For me this meant no Javascript, and ideally time tested tooling- markdown, HTML and CSS is good enough, no node_modules for me, thanks.
+    - I want the site to be easy to throw together, fast to load, easily transferable, and tech that doesn't need me to update dependencies weekly. For me this meant no Node and limited JS. I want time tested tooling- markdown, HTML and CSS is good enough; no node_modules for me, thanks.
 - No tracking
     - Having visitors to the site would be lovely (Thanks for coming), but it’s not my current goal. I see no benefit in tracking users, it adds overhead and brings me no value. You won't be seeing a cookie banner here.
 - Less div tags and more semantic HTML
