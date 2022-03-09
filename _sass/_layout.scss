@@ -126,7 +126,8 @@ main{
   position: fixed;
   bottom: 0;
   right: 0;
-  font-size: xx-small;
+  font-size: $large-font-size;
+  margin: 1em;
 }
 
 article {
