@@ -36,6 +36,7 @@ layout: default
   <section itemprop="articleBody">
      {{ content }}
      {%- include get_the_code.html -%}
+     {%- include go_to_top.html -%}
   </section>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

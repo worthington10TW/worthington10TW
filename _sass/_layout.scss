@@ -122,6 +122,13 @@ main{
   }
 }
 
+.go-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: xx-small;
+}
+
 article {
   max-width: $on-laptop;
   padding-bottom: $footer-size;
