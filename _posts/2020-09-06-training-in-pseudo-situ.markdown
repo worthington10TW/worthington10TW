@@ -79,27 +79,17 @@ I'm a mentor, coach and cultiavtor. I mentor a few graduate and junior developer
 
 Over the course of a couple of weeks I interviewed around ~20 people and synthesized my findings.
 
-
 //TODO list of themes.
 
 I didnt set out to create a training course, but I did want to address these pain points. After lots of spit balling I ended on this course.
 
+The purpose of this article is to give an outline of what I believe is an effective way to introduce folks to the industry in a safe and enjoyable way. Many of the implementation details will change depending on the need at the time, however it should provide just enough to seed your own implementation. 
+
+//TODO Overview of what the course is- 1 liner.
+
 ### What is it?
 
-#### The goal
-
-//TODO
-Improve onboarding of junior or graduates to the industry by operating as closely to a
-//To operate as closely to a client engagement as possible
-
-
-//TODO research outcome setting 
-
-//TODO introduce the impact map/ below, mention how yours may be different
-
-I wanted to maintain direction. I'm easily distracted and sometimes lose sight of the bigger picture. I decided to create an impact map to serve as a reminder why I'm doing this, and what should be the driver to my decisions.
-
-I create an impact map, printed it out and stuck it right above my monitor, so everyday I would see it as a reminder. It really helped me maintain focus.
+I wanted to maintain direction. I'm easily distracted and sometimes lose sight of the bigger picture. I decided to create an impact map to serve as a reminder why I'm doing this, and what should be the driver to my decisions. I printed it out and stuck it above my monitor; everyday I would see it as a reminder. It really helped me maintain focus.
 
 Its a bit tricky to display the entire map on a website and keep it looking pretty, so I've split it out into the goal and 3 parts. 
 
@@ -147,7 +137,7 @@ graph LR;
  env-->wellbeing;
 ```
 
-The key to success is a clear vision, achievable bets and goals. This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, tech tasks and possible stories that may arise; use the above to gauge whether to drop these activities or pursue them. Constantly reevaluate current state, do all activities contribute to the vision?
+This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, tech tasks, and possible stories that may arise. It can be difficult to know the best course of action; use the above to gauge whether to drop these activities or pursue them. Constantly reevaluate current state- *do all activities contribute to the vision?*
 
 ### What it is not?
 
@@ -305,7 +295,7 @@ During the pilot we missed key sessions and overrand on occasion, this was ok. A
 
 Before we can move into execution we need to define a strategy. An Inception allows us to diverge before we converge. A week of workshops that allow us to understand and define the problem, with the goal of creating just enough of a backlog to get us going.
 
-Paulo Caroli crafted the lean inception, it's an incredibly useful set of workshops. The entire week is planned out and well documented. He has documented these in a [book](https://www.amazon.co.uk/Lean-Inception-Align-People-Product-ebook/dp/B079CMQQB5/ref=sr_1_1?dchild=1&keywords=lean+inception&qid=1601575358&sr=8-1){:target="_blank"  rel="noreferrer"} and [blog posts](https://martinfowler.com/articles/lean-inception/){:target="_blank"  rel="noreferrer"}.
+Paulo Caroli crafted the lean inception; an incredibly useful set of workshops. The entire week is planned out and well documented. He has documented these in a [book](https://www.amazon.co.uk/Lean-Inception-Align-People-Product-ebook/dp/B079CMQQB5/ref=sr_1_1?dchild=1&keywords=lean+inception&qid=1601575358&sr=8-1){:target="_blank"  rel="noreferrer"} and [blog posts](https://martinfowler.com/articles/lean-inception/){:target="_blank"  rel="noreferrer"}.
 
 If you follow Paulo's plan you will cover
 
@@ -396,10 +386,6 @@ We decided on the following questions, all with a comments section and RAG statu
 These questions correlate with our goals for the program, this serves as a metric against our bets.
 
 We found that on occasion health/ morale of the team dropped, by exploring these concerns as soon as possible using a variety of tools alleviated the concerns. These include Hopes & fears, happiness revisited and the [Spotify health check](https://engineering.atspotify.com/2014/09/squad-health-check-model/){:target="_blank"  rel="noreferrer"}. 
-
-#### Showcase
-
-//TODO
 
 ---
 
@@ -499,8 +485,3 @@ User testing sessions are a useful technique, they give the team the opportunity
 ### Stepping back
 
 At some point during the 9 weeks you will notice the team is running. Stories are flying through the board, QA is a quick and easy process, code quality is consistently high, TDD is apparent, and getting a story ready is seamless. This is the time to start stepping back.
-
-
-
-
-
