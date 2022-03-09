@@ -8,11 +8,41 @@ tech:
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
 image: /assets/2020-11-25-getting-started-with-elasticsearch/elastic-elasticsearch-logo.webp
 published: true
+toc: true
 ---
 
 I recently engaged with a client that wanted to improve their search relevance and speed. We decided to run some experiments to see if Elasticsearch would be a good fit. 
 
 <!--more-->
+
+# Contents
+<nav>
+  <ul>
+    <li>
+      <a href="#introduction">Introduction</a>
+    </li>
+    <li>
+      <a href="#cluster">Cluster</a>
+    </li>
+    <li>
+      <a href="#nodes">Nodes</a>
+    </li>
+    <li>
+      <a href="#indexes">Indexes</a>
+    </li>
+    <li>
+      <a href="#index-alias">Index alias</a>
+    </li>
+    <li>
+      <a href="#shards">Shards</a>
+    </li>
+    <li>
+      <a href="#documents">Documents</a>
+    </li>
+  </ul>
+</nav>
+
+## Introduction
 
 We wanted to be as visible as possible, and open for anyone interested to look at what we are doing. Many of the engineering team had not worked with Lucene based search engines before. I remember when I first used lucene, I felt pretty lost. So I threw together some lunch and learns and opened them up to everyone that wanted to pop by and learn the basics of Elasticsearch. 
 
@@ -26,7 +56,7 @@ Also, modelling your data on how your users will use the systems is vital, in mo
 
 [If you want to code along with this post you pop over to the code repo that was used during the workshop](https://github.com/worthington10TW/ElasticsearchBrownBag){:target="_blank"  rel="noreferrer"}
 
-## Elasticsearch
+### Elasticsearch
 
 First off, its worth mentioning that [Elasticsearch documentation is amazing](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html){:target="_blank"  rel="noreferrer"}. I hope to provide a brief overview, just enough to get going with Elasticsearch; go check out the docs once you've decided to make the jump.
 
