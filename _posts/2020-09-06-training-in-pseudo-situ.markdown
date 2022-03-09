@@ -3,14 +3,17 @@ layout: post
 title:  Training in pseudo situ
 date:   2020-09-06 00:00:00 +0000
 categories: training course
-published: false
 image: /assets/2020-09-06-training-in-pseudo-situ/student.webp
+published: false
+toc: true
+mermaid: true
 ---
 
-A developer's role is not just code, and a BA’s role is not just story writing, anyone in the industry will attest to this. However many training programs offer little in the way of understanding the role and expectations for a member of an autonomous, highly performant team; these lessons are commonly deferred. Learning these on the job. 
+A developer's role is not just code, and a BA’s role is not just story writing, anyone in the industry will attest to this. However many training programs offer little in the way of understanding the role and expectations for a member of an autonomous team; these lessons are commonly deferred. Learning these on the job. 
 
 <!--more-->
 
+# Contents
 <nav>
 <ul>
   <li>
@@ -72,10 +75,79 @@ A developer's role is not just code, and a BA’s role is not just story writing
 
 ## Why?
 
-//TODO interviews with grads, etc
+I'm a mentor, coach and cultiavtor. I mentor a few graduate and junior developers. They had just started their career in tech and I was keen to understand how it felt to enter the industry and the pain points. It became apparent very early on that many of the difficulties were not unique and the same issues kept popping up. I decided to investigate this further and interview a sample group. 
+
+Over the course of a couple of weeks I interviewed around ~20 people and synthesized my findings.
 
 
-We can do a better job of shortening that feedback loop, lowering onboarding anxiety and managing expectations. 
+//TODO list of themes.
+
+I didnt set out to create a training course, but I did want to address these pain points. After lots of spit balling I ended on this course.
+
+### What is it?
+
+#### The goal
+
+//TODO
+Improve onboarding of junior or graduates to the industry by operating as closely to a
+//To operate as closely to a client engagement as possible
+
+
+//TODO research outcome setting 
+
+//TODO introduce the impact map/ below, mention how yours may be different
+
+I wanted to maintain direction. I'm easily distracted and sometimes lose sight of the bigger picture. I decided to create an impact map to serve as a reminder why I'm doing this, and what should be the driver to my decisions.
+
+I create an impact map, printed it out and stuck it right above my monitor, so everyday I would see it as a reminder. It really helped me maintain focus.
+
+Its a bit tricky to display the entire map on a website and keep it looking pretty, so I've split it out into the goal and 3 parts. 
+
+```mermaid
+graph TD;
+ goal(Goal: Improve onboarding of junior or graduates to the industry by operating as closely to a business critical, highly performant teams)
+```
+
+```mermaid
+graph LR;
+  expectation(We believe that running a project with similar expectations of existing teams</br><strong>Will result in shorter lead time when joining a new team</strong>);
+    tech(A widely adopted tech stack will reduce onboarding friction.)
+    workflow(A workflow similar to business critical teams will manage expectations when joining a team.)
+
+ expectation-->tech;
+ expectation-->workflow;
+
+```
+
+```mermaid
+graph LR;
+  habits(We believe that fostering good habits</br><strong>Will result in an increase in productivity, code quality, and velocity</strong>)
+    pairing(Having a pairing culture will decrease onboarding time)
+    tdd(Following TDD will increase code maintainability)
+    ddd(Following DDD will increase code readability)
+    draw(Drawing often will increase understanding of a domain and enable DDD practices)
+    windows(Fix broken windows first mindset will reduce code rot.)
+
+ habits-->pairing;
+ habits-->tdd;
+ habits-->ddd;
+ habits-->draw;
+ habits-->windows;
+```
+
+```mermaid
+graph LR;
+  env(We believe that creating a safe working environment</br><strong>Will increase confidence and reducing onboarding friction when joining a business critical team</strong>)
+    feedback(A Feedback matrix to increase constructive conversation)
+    1to1(Frequent 1-1s to give increased visibility of team health)
+    wellbeing(Wellbeing questionnaire to give us visibility of team health: </br>measuring Independence/ support/ learning/ pace)
+
+ env-->feedback;
+ env-->1to1;
+ env-->wellbeing;
+```
+
+The key to success is a clear vision, achievable bets and goals. This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, tech tasks and possible stories that may arise; use the above to gauge whether to drop these activities or pursue them. Constantly reevaluate current state, do all activities contribute to the vision?
 
 ### What it is not?
 
@@ -90,54 +162,6 @@ This may seem counterintuitive. We want our developers to be the best they can p
 - Because languages come in and out of fashion, frameworks change rapidly and tools often reach EOL.
 - By taking a tech stack that is common today, and building high quality real applications, with a real use and value in mind we can craft a culture where the team learns the skills required to deliver at pace, giving a real understanding of why we push particular practices.
 - The goal is to create a motivated, experienced, self learning, highly performant team. The tech stack is the tool to help us reach the goal.
-
-### What is it?
-
-#### The goal
-
-//TODO
-Improve onboarding of junior or graduates to the industry.
-//To operate as closely to a client engagement as possible
-
-
-//TODO research outcome setting 
-
-//TODO introduce the impact map/ below, mention how yours may be different
-
-
-##### We believe that running a project with similar expectations as a real world client 
-
-**Will result in increased confidence from our clients when onboarding developers**
-
-We will achieve this by having
-
-- A widely adopted tech stack will reduce onboarding friction.
-- A workflow similar to business critical teams will manage expectations when joining a team.
-
-##### We believe that fostering good habits 
-
-**Will result in an increase in productivity, code quality, and velocity**
-
-We will achieve this by
-
-- Having a pairing culture will decrease onboarding time
-- Following TDD will increase code maintainability
-- Following DDD will increase code readability
-- Drawing often will increase understanding of a domain and enable DDD practices
-- Fix broken windows first mindset will reduce code rot.
-
-##### We believe that creating a safe working environment
-
-**Will increase confidence and reducing onboarding friction when landing on a billable client**
-
-We will achieve this by having 
-
-- A Feedback matrix to increase constructive conversation
-- Frequent 1-1s to give increased visibility of team health
-- Wellbeing questionnaire to give us visibility of team health, measuring Independence/ support/ learning/ pace
-
-
-The key to success is a clear vision, achievable bets and goals. This should be visible to all and serves as a reminder why the team makes certain decisions. During the course lifetime there will be many sessions, blockers, tech tasks and possible stories that may arise; use the above to gauge whether to drop these activities or pursue them. Constantly reevaluate current state, do all activities contribute to the vision?
 
 ---
 
@@ -279,7 +303,24 @@ During the pilot we missed key sessions and overrand on occasion, this was ok. A
 
 ### Lean inception
 
+Before we can move into execution we need to define a strategy. An Inception allows us to diverge before we converge. A week of workshops that allow us to understand and define the problem, with the goal of creating just enough of a backlog to get us going.
+
 Paulo Caroli crafted the lean inception, it's an incredibly useful set of workshops. The entire week is planned out and well documented. He has documented these in a [book](https://www.amazon.co.uk/Lean-Inception-Align-People-Product-ebook/dp/B079CMQQB5/ref=sr_1_1?dchild=1&keywords=lean+inception&qid=1601575358&sr=8-1){:target="_blank"  rel="noreferrer"} and [blog posts](https://martinfowler.com/articles/lean-inception/){:target="_blank"  rel="noreferrer"}.
+
+If you follow Paulo's plan you will cover
+
+- The product Is/ is not/ does/ does not
+- Write the Product Vision
+- Describe the users
+- Discover the Features
+- Current codebase demo
+- Codebase walkthrough & integrations
+- Display Features in Journeys
+- Show the User Journeys
+- How do we know we did good (RAID)/ measures
+- Technical and business review / prioritisation
+- Sequence the Features
+
 
 Running the inception remote seems like a daunting task. Remember to take frequent breaks, remind the team that any team member can request a break at any point in time, and allow for extra time. Using tools like Mural really helped keep collaboration high, if these are not available then google slides can also work (Although a little clunky).
 
@@ -335,6 +376,8 @@ Visibility of your new team's wellbeing should be a constant thought throughout 
 
 A weekly report is a useful tool to use to gauge the health of the report, every question should be optional and the results are anonymous, however completely open and visible to the team.
 
+For us we implemented this by creating a google form with some key questions, participants could enter comments and submit a Red, Amber, Green (RAG) status. The results each weeks were then displayed in our retro on a slide deck for everyone to see and to help seed conversation during the retro (Any particularly alarming comments should be actioned well before the retro).
+
 The tool is owned by the entire team, the questions, format and cadence are up for discussion, team members should be allowed to suggest changes to the form, it needs to work for your team, and capture what your team finds valuable.
 
 The results of the report will also be used to give us an idea of what to change in the next iteration of the program, and therefore participation is key, it should not be forced, but the team should know the impact of the report.
@@ -343,15 +386,16 @@ Nominate someone within the team to own the initiative. This involved making a c
 
 During the pilot the questions did not change, we saw a dip in reponses, and occasionally results that triggered change. Without this tool the difficulties may have gone unnoticed and the health of our team would have suffered. 
 
-We decided on the following questions, all with a comments section and Red, Amber, Green (RAG) status.
-Am I independent?
-Am I supported?
-Am I learning?
-Am I happy with the pace?
+We decided on the following questions, all with a comments section and RAG status.
+
+- Am I independent?
+- Am I supported?
+- Am I learning?
+- Am I happy with the pace?
 
 These questions correlate with our goals for the program, this serves as a metric against our bets.
 
-We found that on occasion health/ morale of the team dropped, by exploring these concerns as soon as possible using a variety of tools alleviated the concerns. These include Hopes & fears, happiness revisited and the Spotify health check. 
+We found that on occasion health/ morale of the team dropped, by exploring these concerns as soon as possible using a variety of tools alleviated the concerns. These include Hopes & fears, happiness revisited and the [Spotify health check](https://engineering.atspotify.com/2014/09/squad-health-check-model/){:target="_blank"  rel="noreferrer"}. 
 
 #### Showcase
 
@@ -375,7 +419,7 @@ All team members will wear different hats, with many roles and responsibilities,
 
 We get closer collaboration by having developers pair with BA’s, even BA’s sitting in on QA tasks, we also increase empathy towards other roles within the teams. 
 
->During the pilot we found on occasion that the goals of the devs and business analyst were not completely aligned, which led to conflict. By cross core capability pairing we managed to quickly align the team, giving an increased respect and understanding for the roles and responsibilities within the group.  
+During the pilot we found on occasion that the goals of the devs and business analyst were not completely aligned, which led to conflict. By cross core capability pairing we managed to quickly align the team, giving an increased respect and understanding for the roles and responsibilities within the group.  
 
 #### Developer pairing
 
