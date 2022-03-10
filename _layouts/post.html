@@ -23,21 +23,19 @@ layout: default
         {% endfor %}
         {%- endif -%}
         
-        {%- assign content = page.content -%}
-        {%- include read_time.html -%} 
-
-        {%- assign categories = page.categories -%}
-        {%- include workshop.html -%}
-
-        {%- assign tech = page.tech -%}
-        {%- include tech_stack.html -%}
+        {%- include read_time.html content=page.content-%} 
+        {%- include workshop.html  categories=page.categories-%}
+        {%- include tech_stack.html tech=page.tech-%}
      </p>
   </header>
   <section itemprop="articleBody">
      <!-- {% include toc.html html=content %} -->
      {{ content }}
      {%- include get_the_code.html -%}
-     {%- include go_to_top.html -%}
   </section>
+
+   {%- if page.content "#contents" -%}
+      <a class="go-to-top" href="#contents">🔝</a>
+   {%- endif -%}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

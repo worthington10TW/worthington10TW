@@ -25,8 +25,7 @@ layout: default
          <p>
             <span>🗓 {{ post.date | date: date_format }} </span>
             
-            {%- assign content = post.content -%}
-            {%- include read_time.html -%}
+            {%- include read_time.html content=post.content -%}
 
             {{ post.excerpt }}</p>
       </li>

@@ -5,7 +5,6 @@ date:   2020-09-06 00:00:00 +0000
 categories: training course
 image: /assets/2020-09-06-training-in-pseudo-situ/student.webp
 published: true
-toc: true
 mermaid: true
 ---
 
@@ -68,6 +67,7 @@ A developer's role is not just code, and a BA’s role is not just story writing
     </li>
   </ul>
 </nav>
+{%- include go_to_top.html -%}
 
 ## Why?
 
