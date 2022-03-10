@@ -15,7 +15,6 @@ I recently engaged with a client that wanted to improve their search relevance a
 
 <!--more-->
 
-# Contents
 <nav>
   <ul>
     <li>
