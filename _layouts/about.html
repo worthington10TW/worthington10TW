@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<article>
+   <header>
+     <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+   </header>
+   <section itemprop="articleBody">
+     {{ content }}
+   </section>
+   <section>
+     <h2>Experience</h2>
+     <ul style="list-style:none;">
+      {% for job in site.data.experience %}
+        <li>
+           <h3>
+            {% if job.link %} 
+            <a href={{job.link}} target="_blank"> {{job.name}}</a> 
+            {% else %} 
+            {{job.name}}
+            {% endif %}              
+            </h3>
+            <h4>{{job.role}}</h4>
+            {% if job.projects and job.projects.size != 0 %}
+               <ul style="list-style:none;">
+               {% for project in job.projects %}
+               <li>
+                  <h5>
+                     {% if project.link %} 
+                     <a href={{project.link}} target="_blank"> {{project.name}}</a> 
+                     {% else %} 
+                     {{project.name}}
+                     {% endif %}              
+                  </h5>
+               </li>
+               {% endfor %}
+               </ul>
+            {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+   </section>
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
