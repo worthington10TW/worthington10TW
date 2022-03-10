@@ -13,61 +13,60 @@ A developer's role is not just code, and a BA’s role is not just story writing
 
 <!--more-->
 
-# Contents
-<nav>
-<ul>
-  <li>
-    <a href="#why">Why I created the course</a>
-  </li>
-  <li>
-    <a href="#structure">Structure</a>
-  </li>
-  <li>
-    <a href="#shape-the-team">Shape the team</a>
-  </li>
-  <li>
-    <a href="#getting-going">Getting going</a>
-    <ul>
-      <li>
-        <a href="#lean-inception">Lean inception</a>
-      </li>
-      <li>
-        <a href="#remote-first">Remote first</a>
-      </li>
-      <li>
-        <a href="#cadence-and-ceremonies">Cadence and ceremonies</a>
-      </li>
-      <li>
-        <a href="#wellbeing">Wellbeing</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#delivery">Delivery</a>
-    <ul>
-      <li>
-        <a href="#focus-on-value">Focus on value</a>
-      </li>
-      <li>
-        <a href="#pairing-on-everything-by-everyone">
-          Pairing on everything, by everyone
-        </a>
-      </li>
-      <li>
-        <a href="#mobbing">Mobbing</a>
-      </li>
-      <li>
-        <a href="#showcase--little-and-often">Showcase- little and often</a>
-      </li>
-      <li>
-        <a href="#guest-speakers">Guest speakers</a>
-      </li>
-      <li>
-        <a href="#stepping-back">Stepping back</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+<nav id="contents">
+  <ul>
+    <li>
+      <a href="#why">Why I created the course</a>
+    </li>
+    <li>
+      <a href="#structure">Structure</a>
+    </li>
+    <li>
+      <a href="#shape-the-team">Shape the team</a>
+    </li>
+    <li>
+      <a href="#getting-going">Getting going</a>
+      <ul>
+        <li>
+          <a href="#lean-inception">Lean inception</a>
+        </li>
+        <li>
+          <a href="#remote-first">Remote first</a>
+        </li>
+        <li>
+          <a href="#cadence-and-ceremonies">Cadence and ceremonies</a>
+        </li>
+        <li>
+          <a href="#wellbeing">Wellbeing</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#delivery">Delivery</a>
+      <ul>
+        <li>
+          <a href="#focus-on-value">Focus on value</a>
+        </li>
+        <li>
+          <a href="#pairing-on-everything-by-everyone">
+            Pairing on everything, by everyone
+          </a>
+        </li>
+        <li>
+          <a href="#mobbing">Mobbing</a>
+        </li>
+        <li>
+          <a href="#showcase--little-and-often">Showcase- little and often</a>
+        </li>
+        <li>
+          <a href="#guest-speakers">Guest speakers</a>
+        </li>
+        <li>
+          <a href="#stepping-back">Stepping back</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
 ## Why?

@@ -15,8 +15,7 @@ I recently engaged with a client that wanted to improve their search relevance a
 
 <!--more-->
 
-# Contents
-<nav>
+<nav id="contents">
   <ul>
     <li>
       <a href="#introduction">Introduction</a>

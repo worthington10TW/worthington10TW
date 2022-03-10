@@ -60,7 +60,7 @@ body > header {
   }
 }
 
-nav:first-child {
+nav:not(#contents) {
   text-align: left;
   ul {
     margin: 0;
@@ -76,7 +76,7 @@ nav:first-child {
   }
 }
 
-nav:not(:first-child) {
+#contents {
   ul {
     list-style:none;
     margin: 0 0 0 1em;
