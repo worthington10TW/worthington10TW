@@ -34,7 +34,7 @@ layout: default
      {%- include get_the_code.html -%}
   </section>
 
-   {%- if page.content "#contents" -%}
+   {%- if page.content contains 'id="contents"' -%}
       <a class="go-to-top" href="#contents">🔝</a>
    {%- endif -%}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

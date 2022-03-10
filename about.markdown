@@ -27,7 +27,7 @@ __Tech lead__
 
 ### Travel (OTA)
 
-### Trainer (Course creator)
+### [Trainer (Course creator)](/training/course/training-in-pseudo-situ)
 
 ### Banking
 
