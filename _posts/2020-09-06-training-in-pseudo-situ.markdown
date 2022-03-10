@@ -67,7 +67,6 @@ A developer's role is not just code, and a BA’s role is not just story writing
     </li>
   </ul>
 </nav>
-{%- include go_to_top.html -%}
 
 ## Why?
 
