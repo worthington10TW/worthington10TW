@@ -63,7 +63,7 @@
 - name: SiliconPanda
   role: Founder
   description: | 
-    Web design agency.
+    Web design agency with a multi tenant CMS at its heart.
   tech:
     - C#
     - dotnet core
