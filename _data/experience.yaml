@@ -19,27 +19,78 @@
 - name: Ormsby Street
   link: https://www.ormsbystreet.com/
   role: Principal engineer
+  description: | 
+    Building high throughput systems and heavy data processing. Ensured smooth transfer during acquisition.
+  tech:
+    - C#
+    - .Net
+    - Java
+    - Azure
+    - DataFactory
+    - Azure Search
+    - Knockout
+    - Microservice Architecture    
 
 - name: Resident Advisor
   link: https://ra.co/
   role: Developer & Architect
+  description: |
+    Green & Brown field development, including: API (B2B and C2B), 
+    Custom Authorization, Custom Authentication, High traffic enviroments.
+  tech:
+    - C#
+    - .Net
 
 - name: Intelligent Reach
   link: https://www.intelligentreach.com/
   role: Developer
+  description: eCommerce tracking and analytics
+  tech:
+    - Big data with SQL SSAS.
+    - C#
+    - .Net
 
-- name: Drum&BassArena
-  link: https://breakbeat.co.uk/
-  role: Lead developer
+- name: Dazed Digital 
+  link: https://www.dazeddigital.com/
+  role: Developer
+  tech:
+    - Azure
+    - Kaltura
+    - C#
+    - .Net
 
 - name: AEI Media
   link: https://aei.co.uk/
   role: Developer
+  description: |
+    Principal developer for AEI Media- holding company for a variety of bass music companies. Ranging from streaming, events, news, label, publishings, distribution, etc.
+    Lead developer at drum&bassArena, multichannel bass music brand. 
+
+- name: Drum&BassArena
+  link: https://breakbeat.co.uk/
+  role: Lead developer
+  description: | 
+    Services including; news, events, blogs, live video streaming, 
+    high quality music downloadstore, 
+    portals and reporting services for distributors and labels.
+  tech:
+    - C#
+    - .Net
+    - MS SQL
+    - JavaScript
 
 - name: Financial software ltd
   link: https://www.financialsoftware.co.uk/
   role: Technical analysst & developer
+  tech:
+    - C#
+    - .Net
+    - Silverlight
+    - MS SQL
+    - JavaScript
 
 - name: Mayflower Collection
   link: https://www.mayflowerhotel.co.uk/
   role: IT support & developer
+  description: |
+    In house reservation system development (with WISH technologies integrations)
