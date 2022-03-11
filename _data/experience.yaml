@@ -91,7 +91,8 @@
   role: Developer
   description: eCommerce tracking and analytics
   tech:
-    - Big data with SQL SSAS.
+    - Big data 
+    - SQL SSAS
     - C#
     - Angular
     - Lucene
