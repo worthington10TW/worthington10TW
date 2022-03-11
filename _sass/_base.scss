@@ -192,6 +192,18 @@ pre {
   vertical-align: text-bottom;
 }
 
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  margin: 5px 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: $background-color-light;
+  font-size: $small-font-size;
+}
+
 table {
   margin-bottom: $spacing-unit;
   width: 100%;

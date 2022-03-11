@@ -22,20 +22,24 @@ layout: default
             </h3>
             <h4>{{job.role}}</h4>
             {% if job.projects and job.projects.size != 0 %}
-               <ul style="list-style:none;">
+            <h4>Projects</h4>
                {% for project in job.projects %}
-               <li>
-                  <h5>
                      {% if project.link %} 
-                     <a href={{project.link}} target="_blank"> {{project.name}}</a> 
+                     <a class="chip" rel="noreferrer" href={{project.link}} target="_blank"> {{project.name}}</a> 
                      {% else %} 
-                     {{project.name}}
-                     {% endif %}              
-                  </h5>
-               </li>
+                     <span class="chip"> {{project.name}}</span> 
+                     {% endif %}       
                {% endfor %}
-               </ul>
             {% endif %}
+
+
+            {% if job.tech and job.tech.size != 0 %}
+            <h4>Tech</h4>
+               {% for tech in job.tech %}
+                <span class="chip"> {{tech}}</span>      
+               {% endfor %}
+            {% endif %}
+            <hr/>
         </li>
       {% endfor %}
       </ul>

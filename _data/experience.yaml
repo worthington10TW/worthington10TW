@@ -11,40 +11,35 @@
   - name: Tieto EVRY- Banking
     link: https://www.thoughtworks.com/en-gb/clients/tietoevry
   - name: Legal publishing
+  - name: One Million Mentors
+    link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
   - name: Medical
   # - name: Bid teams 
 
 - name: Ormsby Street
   link: https://www.ormsbystreet.com/
   role: Principal engineer
-  projects: []
 
 - name: Resident Advisor
   link: https://ra.co/
   role: Developer & Architect
-  projects: []
 
 - name: Intelligent Reach
   link: https://www.intelligentreach.com/
   role: Developer
-  projects: []
 
 - name: Drum&BassArena
   link: https://breakbeat.co.uk/
   role: Lead developer
-  projects: []
 
 - name: AEI Media
   link: https://aei.co.uk/
-  role:
-  projects: []
+  role: Developer
 
 - name: Financial software ltd
   link: https://www.financialsoftware.co.uk/
   role: Technical analysst & developer
-  projects: []
 
 - name: Mayflower Collection
   link: https://www.mayflowerhotel.co.uk/
   role: IT support & developer
-  projects: []
