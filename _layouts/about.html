@@ -21,6 +21,11 @@ layout: default
             {% endif %}              
             </h3>
             <h4>{{job.role}}</h4>
+            
+            {% if job.description and job.description != blank %}
+            <p>{{job.description}}</p>
+            {% endif %}
+
             {% if job.projects and job.projects.size != 0 %}
             <h4>Projects</h4>
                {% for project in job.projects %}
@@ -32,13 +37,13 @@ layout: default
                {% endfor %}
             {% endif %}
 
-
             {% if job.tech and job.tech.size != 0 %}
             <h4>Tech</h4>
                {% for tech in job.tech %}
                 <span class="chip"> {{tech}}</span>      
                {% endfor %}
             {% endif %}
+
             <hr/>
         </li>
       {% endfor %}
