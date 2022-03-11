@@ -14,6 +14,34 @@
   - name: One Million Mentors
     link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
   - name: Medical
+
+  tech:
+    - Java
+    - C#
+    - Clojure
+    - Kotlin
+    - NodeJs
+
+    - VueJS
+    - React
+    - Mongo
+    - PostgreSQL
+    - MySQL
+
+    - Elasticsearch
+    - Solr
+
+    - Kafka
+
+    - Terraform
+    - Ansible
+    - Kubernetes
+    - Azure
+    - AWS
+    - GCP
+
+    - ...And many more
+
   # - name: Bid teams 
 
 - name: Ormsby Street
@@ -29,7 +57,24 @@
     - DataFactory
     - Azure Search
     - Knockout
+    - RabbitMQ
     - Microservice Architecture    
+
+- name: SiliconPanda
+  role: Founder
+  description: | 
+    Web design agency.
+  tech:
+    - C#
+    - dotnet core
+    - VueJS  
+    - Azure
+    - Azure Media Service
+    - Azure Search Service
+    - SQL Azure 
+    - Azure Table Storage
+    - Azure Message Service
+    - Azure Blob Storage
 
 - name: Resident Advisor
   link: https://ra.co/
@@ -48,6 +93,8 @@
   tech:
     - Big data with SQL SSAS.
     - C#
+    - Angular
+    - Lucene
     - .Net
 
 - name: Dazed Digital 
@@ -77,6 +124,7 @@
     - C#
     - .Net
     - MS SQL
+    - Lucene
     - JavaScript
 
 - name: Financial software ltd
