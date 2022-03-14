@@ -19,13 +19,13 @@ layout: default
             {% else %} 
             {{job.name}}
             {% endif %}              
+
+            - {{job.role}}
             </h3>
 
             {% if job.domain %} 
             <i>{{job.domain}}</i>
-            {% endif %}              
-
-            <h4>{{job.role}}</h4>
+            {% endif %}            
             
             {% if job.description and job.description != blank %}
             <p>{{job.description}}</p>
