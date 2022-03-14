@@ -20,6 +20,11 @@ layout: default
             {{job.name}}
             {% endif %}              
             </h3>
+
+            {% if job.domain %} 
+            <i>{{job.domain}}</i>
+            {% endif %}              
+
             <h4>{{job.role}}</h4>
             
             {% if job.description and job.description != blank %}

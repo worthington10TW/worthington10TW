@@ -1,6 +1,7 @@
 - name: Thoughtworks
   link: https://www.thoughtworks.com
   role: Tech Lead
+  domain: Leading global technology consultancy 
   projects: 
   - name: Thoughtworks university trainer
     link: https://www.thoughtworks.com/en-gb/careers/graduates
@@ -49,6 +50,7 @@
   role: Principal engineer
   description: | 
     Building high throughput systems and heavy data processing. Ensured smooth transfer during acquisition.
+  domain: Finance & business insight
   tech:
     - C#
     - .Net
@@ -62,8 +64,9 @@
 
 - name: SiliconPanda
   role: Founder
+  domain: Web design agency
   description: | 
-    Web design agency with a multi tenant CMS at its heart.
+    Web design agency with a multi tenant CMS at its core.
   tech:
     - C#
     - dotnet core
@@ -82,6 +85,7 @@
   description: |
     Green & Brown field development, including: API (B2B and C2B), 
     Custom Authorization, Custom Authentication, High traffic enviroments.
+  domain: Music, publishing & events
   tech:
     - C#
     - .Net
@@ -90,6 +94,7 @@
   link: https://www.intelligentreach.com/
   role: Developer
   description: eCommerce tracking and analytics
+  domain: E-commerce
   tech:
     - Big data 
     - SQL SSAS
@@ -101,6 +106,7 @@
 - name: Dazed Digital 
   link: https://www.dazeddigital.com/
   role: Developer
+  domain: Fashion & photography
   tech:
     - Azure
     - Kaltura
@@ -110,6 +116,7 @@
 - name: AEI Media
   link: https://aei.co.uk/
   role: Developer
+  domain: Music, streaming, events & e-commerce
   description: |
     Principal developer for AEI Media- holding company for a variety of bass music companies. Ranging from streaming, events, news, label, publishings, distribution, etc.
     Lead developer at drum&bassArena, multichannel bass music brand. 
@@ -117,6 +124,7 @@
 - name: Drum&BassArena
   link: https://breakbeat.co.uk/
   role: Lead developer
+  domain: Music & e-commerce
   description: | 
     Services including; news, events, blogs, live video streaming, 
     high quality music downloadstore, 
@@ -130,6 +138,7 @@
 
 - name: Financial software ltd
   link: https://www.financialsoftware.co.uk/
+  domain: Finance
   role: Technical analysst & developer
   tech:
     - C#
@@ -140,6 +149,7 @@
 
 - name: Mayflower Collection
   link: https://www.mayflowerhotel.co.uk/
+  domain: Travel & hospitality
   role: IT support & developer
   description: |
     In house reservation system development (with WISH technologies integrations)

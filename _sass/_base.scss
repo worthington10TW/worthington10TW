@@ -254,8 +254,8 @@ header , nav, main {
     bottom: 0;
     left: 0;
     background-color: $link-base-color;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transform-origin: bottom center;
+    transition: transform 0.3s ease-out;
   }
 
   a:hover{
@@ -263,8 +263,8 @@ header , nav, main {
   }
 
   a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+    transform: scaleX(0.9);
+    transform-origin: bottom center;
   }
 }
 
