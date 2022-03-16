@@ -64,7 +64,6 @@
 
 - name: SiliconPanda
   role: Founder
-  domain: Web design agency
   description: | 
     Web design agency with a multi tenant CMS at its core.
   tech:
