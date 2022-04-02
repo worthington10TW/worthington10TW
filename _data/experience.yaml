@@ -2,7 +2,8 @@
   link: https://www.thoughtworks.com
   role: Tech Lead
   domain: Leading global technology consultancy 
-  projects: 
+  projects:
+  - name: Public sector
   - name: Thoughtworks university trainer
     link: https://www.thoughtworks.com/en-gb/careers/graduates
   - name: Fashion Ecommerce 
@@ -14,7 +15,7 @@
   - name: Legal publishing
   - name: One Million Mentors
     link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
-  - name: Medical
+  - name: Medical/ Healthcare
 
   tech:
     - Java
