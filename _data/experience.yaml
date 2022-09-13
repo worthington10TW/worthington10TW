@@ -20,6 +20,8 @@
        Search engine design and implementation
   - name: Trainer
     role: Course creator
+    description: |
+      9 week immersive course including; lean inception, user research and delivery. Structured around best practice concluding in a real production application.
     link: /training/course/training-in-pseudo-situ
   - name: Tieto EVRY- Banking
     role: Engagement & Tech lead
@@ -28,7 +30,7 @@
     role: Tech lead
     description: Search engine design and implementation
   - name: One Million Mentors
-    role: Hacknight organiser and contirbutor
+    role: Hacknight organiser and contributor
     link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
   - name: Medical/ Healthcare
     role: C# & .Net SME & Engineer
