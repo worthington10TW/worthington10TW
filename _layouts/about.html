@@ -42,6 +42,16 @@ layout: default
                {% endfor %}
             {% endif %}
 
+            {% if job.projects and job.projects.size != 0 %}
+               {% for project in job.projects %}
+                     {% if project.description %} 
+                     <h5>{{project.name}}</h5>
+                     {{project.description | newline_to_br | mardownify}}
+                     <hr/> 
+                     {% endif %}       
+               {% endfor %}    
+            {% endif %}
+
             {% if job.tech and job.tech.size != 0 %}
             <h4>Tech</h4>
                {% for tech in job.tech %}
