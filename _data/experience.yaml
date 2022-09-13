@@ -1,21 +1,38 @@
 - name: Thoughtworks
   link: https://www.thoughtworks.com
-  role: Tech Lead
+  role: Multiple roles
   domain: Leading global technology consultancy 
   projects:
   - name: Public sector
-  - name: Thoughtworks university trainer
+    role: Technical Principal
+    description: |
+       Responsible for crafting and implementing multi-team, multi-year technical vision.
+  - name: Thoughtworks university
+    role: Trainer
     link: https://www.thoughtworks.com/en-gb/careers/graduates
   - name: Fashion Ecommerce 
+    role: Lead engineer
+    description: |
+      Improved software delivery performance and DevEx.
   - name: Travel (OTA)
-  - name: Trainer (Course creator)
+    role: Lead engineer and SME
+    description: |
+       Search engine design and implementation
+  - name: Trainer
+    role: Course creator
     link: /training/course/training-in-pseudo-situ
   - name: Tieto EVRY- Banking
+    role: Engagement & Tech lead
     link: https://www.thoughtworks.com/en-gb/clients/tietoevry
-  - name: Legal publishing
+  - name: Legal publishing 
+    role: Tech lead
+    description: Search engine design and implementation
   - name: One Million Mentors
+    role: Hacknight organiser and contirbutor
     link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
   - name: Medical/ Healthcare
+    role: C# & .Net SME & Engineer
+    description: Event driven architecture design and implementation
 
   tech:
     - Java
@@ -27,6 +44,7 @@
     - VueJS
     - React
     - Mongo
+    - Redis
     - PostgreSQL
     - MySQL
 

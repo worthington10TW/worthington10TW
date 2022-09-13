@@ -32,24 +32,21 @@ layout: default
             {% endif %}
 
             {% if job.projects and job.projects.size != 0 %}
-            <h4>Projects</h4>
-               {% for project in job.projects %}
-                     {% if project.link %} 
-                     <a class="chip" rel="noreferrer" href={{project.link}} target="_blank"> {{project.name}}</a> 
-                     {% else %} 
-                     <span class="chip"> {{project.name}}</span> 
-                     {% endif %}       
-               {% endfor %}
-            {% endif %}
-
-            {% if job.projects and job.projects.size != 0 %}
-               {% for project in job.projects %}
-                     {% if project.description %} 
-                     <h5>{{project.name}}</h5>
-                     {{project.description | newline_to_br | mardownify}}
-                     <hr/> 
-                     {% endif %}       
-               {% endfor %}    
+            <ul style="list-style:none;">
+            {% for project in job.projects %}
+               <li>
+                  {% if project.link %} 
+                  <h4><a rel="noreferrer" href={{project.link}} target="_blank"> {{project.name}}</a> - {{project.role}}</h4>
+                  {% else %} 
+                  <h4>{{project.name}} - {{project.role}}</h4>
+                  {% endif %}
+                  
+                  {% if project.description %} 
+                  <i>{{project.description | newline_to_br | mardownify}}</i>
+                  {% endif %} 
+               </li>
+            {% endfor %} 
+            </ul>
             {% endif %}
 
             {% if job.tech and job.tech.size != 0 %}
