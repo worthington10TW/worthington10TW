@@ -43,6 +43,7 @@ layout: default
                   
                   {% if project.description %} 
                   <i>{{project.description | newline_to_br | mardownify}}</i>
+                  <hr/>
                   {% endif %} 
                </li>
             {% endfor %} 
