@@ -3,6 +3,10 @@
   role: Multiple roles
   domain: Leading global technology consultancy 
   projects:
+  - name: Public Sector Demand
+    role: Technical Pre-Sales Partner
+    description: |
+      Security & Cross Government
   - name: Public sector
     role: Technical Principal & Architect
     description: |
