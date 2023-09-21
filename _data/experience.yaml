@@ -4,9 +4,15 @@
   domain: Leading global technology consultancy 
   projects:
   - name: Public sector
-    role: Technical Principal
+    role: Technical Principal & Architect
     description: |
-       Responsible for crafting and implementing multi-team, multi-year technical vision.
+       Responsible for crafting and implementing multi-team, multi-year technical vision. 
+
+       Leading a team of over 100, split into cross functional, multi disciplined teams. Organised around products.
+
+       Strong focus on security, data privacy, and stability. Guided by <a target="_blank" href="https://www.ncsc.gov.uk/collection/caf/cni-introduction">NCSC</a> and aligned to The Cyber Assessment Framework (CAF), assured with automated governance. Provisioning CNI with modern software delivery practices.
+
+       Operating an accessible service assessed by The Central Digital and Data Office (CDDO) against a <a target="_blank" href="https://www.gov.uk/service-manual/service-assessments">GDS Service Assessment</a>, following the <a target="_blank" href="https://www.gov.uk/guidance/the-technology-code-of-practice">The Technology Code Of Practice</a> 
   - name: Thoughtworks university
     role: Trainer
     link: https://www.thoughtworks.com/en-gb/careers/graduates
