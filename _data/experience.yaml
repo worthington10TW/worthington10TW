@@ -4,10 +4,12 @@
   domain: Leading global technology consultancy 
   projects:
   - name: Public Sector Demand
+    location: UK
     role: Technical Pre-Sales Partner
     description: |
       Security & Cross Government
   - name: Public sector
+    location: UK
     role: Technical Principal & Architect
     description: |
        Responsible for crafting and implementing multi-team, multi-year technical vision. 
@@ -18,6 +20,7 @@
 
        Operating an accessible service assessed by The Central Digital and Data Office (CDDO) against a <a target="_blank" href="https://www.gov.uk/service-manual/service-assessments">GDS Service Assessment</a>, following the <a target="_blank" href="https://www.gov.uk/guidance/the-technology-code-of-practice">The Technology Code Of Practice</a> 
   - name: Thoughtworks university
+    location: Remote (Global)
     role: Trainer
     description: |
       Thoughtworks University (TWU) is a global training program that introduces our newly hired graduates and career changers to the principles, practices and skills required to build working and valuable software.
@@ -25,29 +28,40 @@
       Established in 2005, TWU has always continuously evolved, and since 2022 has grown into a remote learning program that supports the entire first-year graduate experience.
     link: https://www.thoughtworks.com/en-gb/careers/graduates
   - name: BestSecret- Fashion Ecommerce 
+    location: Munich (Germany) & Remote
     link: https://www.thoughtworks.com/en-gb/clients/bestsecret
     role: Lead engineer
     description: |
       Improved software delivery performance and DevEx.
   - name: Travel (OTA)
+    location: Remote (UK)
     role: Lead engineer and SME
     description: |
        Search engine design and implementation
   - name: Trainer
+    location: Remote (UK)
     role: Course creator
     description: |
       9 week immersive course including; lean inception, user research and delivery. Structured around best practice concluding in a real production application.
     link: /training/course/training-in-pseudo-situ
   - name: Tieto EVRY- Banking
+    location: Bergen (Norway), Oslo (Norway), Kiev (Ukraine) & Bengaluru (India)
     role: Engagement & Tech lead
     link: https://www.thoughtworks.com/en-gb/clients/tietoevry
+    description: |
+      Legacy displacement of Core Banking system.
+
+      Focus on <a target="_blank" href="https://teamtopologies.com/">team topologies</a>, domain driven design, developer experience and software delivery performance, assessed against the <a target="_blank" href="https://www.amazon.co.uk/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339">4 key metrics</a>
   - name: Legal publishing 
+    location: London (UK) & Raleigh (USA)
     role: Tech lead
     description: Search engine design and implementation
   - name: One Million Mentors
+    location: London (UK)
     role: Hacknight organiser and contributor
     link: https://www.thoughtworks.com/en-gb/clients/one-million-mentors
   - name: Medical/ Healthcare
+    location: Manchester (UK) & London (UK)
     role: C# & .Net SME & Engineer
     description: Event driven architecture design and implementation
 
@@ -85,6 +99,7 @@
 - name: Ormsby Street
   link: https://www.ormsbystreet.com/
   role: Principal engineer
+  location: London (UK)
   description: | 
     Building high throughput systems and heavy data processing. Ensured smooth transfer during acquisition.
   domain: Finance & business insight
@@ -100,6 +115,7 @@
     - Microservice Architecture    
 
 - name: SiliconPanda
+  location: London (UK)
   role: Founder
   description: | 
     Web design agency with a multi tenant CMS at its core.
@@ -116,6 +132,7 @@
     - Azure Blob Storage
 
 - name: Resident Advisor
+  location: London (UK) & Berlin (Germany)
   link: https://ra.co/
   role: Developer & Architect
   description: |
@@ -127,6 +144,7 @@
     - .Net
 
 - name: Intelligent Reach
+  location: London (UK)
   link: https://www.intelligentreach.com/
   role: Developer
   description: eCommerce tracking and analytics
@@ -140,6 +158,7 @@
     - .Net
 
 - name: Dazed Digital 
+  location: London (UK)
   link: https://www.dazeddigital.com/
   role: Developer
   domain: Fashion & photography
@@ -150,6 +169,7 @@
     - .Net
 
 - name: AEI Media
+  location: London (UK)
   link: https://aei.co.uk/
   role: Developer
   domain: Music, streaming, events & e-commerce
@@ -158,6 +178,7 @@
     Lead developer at drum&bassArena, multichannel bass music brand. 
 
 - name: Drum&BassArena
+  location: London (UK)
   link: https://breakbeat.co.uk/
   role: Lead developer
   domain: Music & e-commerce
@@ -173,6 +194,7 @@
     - JavaScript
 
 - name: Financial software ltd
+  location: London (UK)
   link: https://www.financialsoftware.co.uk/
   domain: Finance
   role: Technical analysst & developer
@@ -184,6 +206,7 @@
     - JavaScript
 
 - name: Mayflower Collection
+  location: London (UK)
   link: https://www.mayflowerhotel.co.uk/
   domain: Travel & hospitality
   role: IT support & developer

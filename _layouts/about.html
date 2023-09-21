@@ -25,7 +25,7 @@ layout: default
 
             {% if job.domain %} 
             <i>{{job.domain}}</i>
-            {% endif %}            
+            {% endif %}
             
             {% if job.description and job.description != blank %}
             <p>{{job.description}}</p>
@@ -40,11 +40,22 @@ layout: default
                   {% else %} 
                   <h4>{{project.name}} - {{project.role}}</h4>
                   {% endif %}
+
+                  {% if project.domain %} 
+                  <i>{{project.domain}}</i>
+                  {% endif %}              
                   
                   {% if project.description %} 
-                  <i>{{project.description | newline_to_br | mardownify}}</i>
-                  <hr/>
+                  <span>{{project.description | newline_to_br | mardownify}}</span>
                   {% endif %} 
+
+                  {% if project.location %} 
+                  <br/>
+                  <span>🌍 {{project.location}}</span>
+                  <br/>
+                  {% endif %}  
+
+                  <hr/>
                </li>
             {% endfor %} 
             </ul>
@@ -55,7 +66,12 @@ layout: default
                {% for tech in job.tech %}
                 <span class="chip"> {{tech}}</span>      
                {% endfor %}
-            {% endif %}
+            {% endif %} 
+
+            {% if job.location %} 
+            <br/>
+            <span>🌍 {{job.location}}</span>
+            {% endif %} 
 
             <hr/>
         </li>
