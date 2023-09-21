@@ -7,7 +7,7 @@ image: /assets/me.webp
 
 Hi 👋,
  
-I'm Matthew, I'm a Technical Principal @[Thoughtworks](https://www.thoughtworks.com/){:target="_blank"}.
+I'm Matthew, currently a Technical Principal @[Thoughtworks](https://www.thoughtworks.com/){:target="_blank"}.
  
 Over the last 17 years I've been a contractor, consultant and full time employee. I've worked in a broad range of domains, including; music, fashion & photography, advertising & ecommerce, finance & banking, risk analysis, hospitality, medical, publishing and travel.
  
