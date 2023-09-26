@@ -6,8 +6,8 @@ const precacheResources = [
   '/404.html',
   '/offline.html',
 
-  '/assets/303,',
-
+  '/assets/404/where-are-you-guys.gif',
+  '/assets/offline/offline.webp',
 
   '/assets/android-chrome-192x192.png',
   '/assets/android-chrome-512x512.png',
@@ -22,8 +22,7 @@ const precacheResources = [
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(cacheName)
-  .then((cache) => cache.addAll(precacheResources)));
+  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(precacheResources)));
 });
 
 self.addEventListener('fetch', (event) => {
@@ -32,12 +31,7 @@ self.addEventListener('fetch', (event) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      
-      try{
-        return fetch(event.request)
-      }catch{
-        return caches.match('offline.html').waitUntil();
-      }
+      return fetch(event.request);
     }),
   );
 });
