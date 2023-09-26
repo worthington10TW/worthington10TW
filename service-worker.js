@@ -1,12 +1,10 @@
 // TODO Break on build
-const cacheName = 'mzworthington-v5';
+const cacheName = 'mzworthington-v6';
 const precacheResources = [
   '/',
   '/about/',
-  '/404/',
 
   '/assets/site.webmanifest',
-  '/assets/404/where-are-you-guys.gif',
   '/assets/offline/offline.webp',
 
   '/assets/android-chrome-192x192.png',
