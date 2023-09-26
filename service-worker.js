@@ -1,4 +1,3 @@
-// TODO Break on build
 const cacheName = 'mzworthington';
 const precacheResources = [
   '/',

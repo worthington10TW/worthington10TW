@@ -122,7 +122,7 @@
   link: https://ra.co/
   role: Developer & Architect
   description: |
-    Green & Brown field development, including: API (B2B and C2B), 
+    Resident Advisor is your global guide to clubs, DJs, tickets, news and rave culture.
     Custom Authorization, Custom Authentication, High traffic enviroments.
   domain: Music, publishing & events
   tech:
@@ -131,6 +131,7 @@
     
 - name: SiliconPanda
   location: London (UK)
+  domain: Web Agency
   date: July 2014 - Apr 2018
   role: Founder
   description: | 
@@ -152,7 +153,7 @@
   date: Feb 2014 - Jan 2015
   link: https://www.intelligentreach.com/
   role: Developer
-  description: eCommerce tracking and analytics
+  description: A complete Product & Data Feed Management platform, to boost your product visibility, expand commerce connectivity and enhance performance
   domain: E-commerce
   tech:
     - Big data 
@@ -167,7 +168,8 @@
   date: June 2013 - Feb 2014
   link: https://www.dazeddigital.com/
   role: Developer
-  domain: Fashion & photography
+  domain: Fashion & photography publishing
+  description: Custom CMS. Rich media. Azure migration
   tech:
     - Azure
     - Kaltura
@@ -207,7 +209,7 @@
   link: https://www.financialsoftware.co.uk/
   domain: Finance
   description: |
-   Capital gains and investment management
+    Award-winning capital gains calculation and investment tax management backed by unrivalled expertise.
   role: Technical analysst & developer
   tech:
     - C#
