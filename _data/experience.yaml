@@ -1,4 +1,5 @@
 - name: Thoughtworks
+  date: Apr 2018
   link: https://www.thoughtworks.com
   role: Multiple roles
   domain: Leading global technology consultancy 
@@ -98,6 +99,7 @@
 
 - name: Ormsby Street
   link: https://www.ormsbystreet.com/
+  date: Mar 2016 - Apr 2018
   role: Principal engineer
   location: London (UK)
   description: | 
@@ -114,8 +116,22 @@
     - RabbitMQ
     - Microservice Architecture    
 
+- name: Resident Advisor
+  location: London (UK) & Berlin (Germany)
+  date: Jan 2015 - Feb 2016
+  link: https://ra.co/
+  role: Developer & Architect
+  description: |
+    Green & Brown field development, including: API (B2B and C2B), 
+    Custom Authorization, Custom Authentication, High traffic enviroments.
+  domain: Music, publishing & events
+  tech:
+    - C#
+    - .Net
+    
 - name: SiliconPanda
   location: London (UK)
+  date: July 2014 - Apr 2018
   role: Founder
   description: | 
     Web design agency with a multi tenant CMS at its core.
@@ -131,20 +147,9 @@
     - Azure Message Service
     - Azure Blob Storage
 
-- name: Resident Advisor
-  location: London (UK) & Berlin (Germany)
-  link: https://ra.co/
-  role: Developer & Architect
-  description: |
-    Green & Brown field development, including: API (B2B and C2B), 
-    Custom Authorization, Custom Authentication, High traffic enviroments.
-  domain: Music, publishing & events
-  tech:
-    - C#
-    - .Net
-
 - name: Intelligent Reach
   location: London (UK)
+  date: Feb 2014 - Jan 2015
   link: https://www.intelligentreach.com/
   role: Developer
   description: eCommerce tracking and analytics
@@ -159,6 +164,7 @@
 
 - name: Dazed Digital 
   location: London (UK)
+  date: June 2013 - Feb 2014
   link: https://www.dazeddigital.com/
   role: Developer
   domain: Fashion & photography
@@ -170,6 +176,7 @@
 
 - name: AEI Media
   location: London (UK)
+  date: Jan 2012 - June 2013
   link: https://aei.co.uk/
   role: Developer
   domain: Music, streaming, events & e-commerce
@@ -179,6 +186,7 @@
 
 - name: Drum&BassArena
   location: London (UK)
+  date: Jan 2012 - June 2013
   link: https://breakbeat.co.uk/
   role: Lead developer
   domain: Music & e-commerce
@@ -195,8 +203,11 @@
 
 - name: Financial software ltd
   location: London (UK)
+  date: Oct 2010 - Dec 2011
   link: https://www.financialsoftware.co.uk/
   domain: Finance
+  description: |
+   Capital gains and investment management
   role: Technical analysst & developer
   tech:
     - C#
@@ -207,6 +218,7 @@
 
 - name: Mayflower Collection
   location: London (UK)
+  date: Jul 2006 - Oct 2010
   link: https://www.mayflowerhotel.co.uk/
   domain: Travel & hospitality
   role: IT support & developer

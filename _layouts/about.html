@@ -24,8 +24,16 @@ layout: default
             </h3>
 
             {% if job.domain %} 
-            <i>{{job.domain}}</i>
+            <i>{{job.domain}} </i>
             {% endif %}
+
+            {% if job.date %} 
+            <i> | {{job.date}} </i>
+            {% endif %}  
+
+            {% if job.location %} 
+            <i> | {{job.location}}</i>
+            {% endif %} 
             
             {% if job.description and job.description != blank %}
             <p>{{job.description}}</p>
@@ -51,7 +59,7 @@ layout: default
 
                   {% if project.location %} 
                   <br/>
-                  <span>🌍 {{project.location}}</span>
+                  <i>{{project.location}}</i>
                   <br/>
                   {% endif %}  
 
@@ -66,11 +74,6 @@ layout: default
                {% for tech in job.tech %}
                 <span class="chip"> {{tech}}</span>      
                {% endfor %}
-            {% endif %} 
-
-            {% if job.location %} 
-            <br/>
-            <span>🌍 {{job.location}}</span>
             {% endif %} 
 
             <hr/>
