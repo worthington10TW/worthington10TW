@@ -1,11 +1,11 @@
 // TODO Break on build
 const cacheName = 'mzworthington-v5';
 const precacheResources = [
-  '/index.html',
-  '/about/index.html',
-  '/404.html',
-  '/offline.html',
+  '/',
+  '/about/',
+  '/404/',
 
+  '/assets/site.webmanifest',
   '/assets/404/where-are-you-guys.gif',
   '/assets/offline/offline.webp',
 
@@ -21,17 +21,43 @@ const precacheResources = [
   '/assets/css/style.css'
 ];
 
+self.addEventListener("install", (event) => {
+    event.waitUntil(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        await cache.addAll(precacheResources);
+        await cache.add(new Request("/offline", { cache: "reload" }));
+      })()
+    );
+    // Force the waiting service worker to become the active service worker.
+    self.skipWaiting();
+  });
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(precacheResources)));
+  event.waitUntil(
+    (async () => {
+        const cache = await caches.open(cacheName);
+        return await cache.addAll(precacheResources);
+    }));
 });
 
 self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
+
+        (async () => {
+            const cache = await caches.open(cacheName);
+            const cachedResponse = await cache.match(event.request);
             if (cachedResponse) {
                 return cachedResponse;
             }
-            
-            return fetch(event.request).catch(caches.match("offline.html"))
-    }));
+
+            try {
+                const networkResponse = await fetch(event.request);
+                return networkResponse;
+            } catch (error) {
+                console.log("Fetch failed; returning offline page instead.", error); 
+                const cachedResponse = await caches.match("offline");
+                return cachedResponse;
+            }
+          })());
 });
