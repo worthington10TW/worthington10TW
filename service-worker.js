@@ -1,5 +1,5 @@
 // TODO Break on build
-const cacheName = 'mzworthington-v4';
+const cacheName = 'mzworthington-v5';
 const precacheResources = [
   '/index.html',
   '/about/index.html',
@@ -26,12 +26,12 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request);
-    }),
-  );
+    event.respondWith(
+        caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            
+            return fetch(event.request).catch(caches.match("offline.html"))
+    }));
 });
