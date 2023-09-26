@@ -1,5 +1,5 @@
 // TODO Break on build
-const cacheName = 'mzworthington-v6';
+const cacheName = 'mzworthington-v7';
 const precacheResources = [
   '/',
   '/about/',
@@ -41,7 +41,6 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('fetch', (event) => {
     event.respondWith(
-
         (async () => {
             const cache = await caches.open(cacheName);
             const cachedResponse = await cache.match(event.request);
@@ -53,9 +52,10 @@ self.addEventListener('fetch', (event) => {
                 const networkResponse = await fetch(event.request);
                 return networkResponse;
             } catch (error) {
-                console.log("Fetch failed; returning offline page instead.", error); 
-                const cachedResponse = await caches.match("offline");
-                return cachedResponse;
+                if (event.request.mode == "navigate"){
+                    const cachedResponse = await caches.match("offline");
+                    return cachedResponse;
+                }
             }
           })());
 });
