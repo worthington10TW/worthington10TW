@@ -1,10 +1,13 @@
-const cacheName = 'mzworthington-v2';
+// TODO Break on build
+const cacheName = 'mzworthington-v4';
 const precacheResources = [
   '/index.html',
   '/about/index.html',
   '/404.html',
+  '/offline.html',
 
-  '/assets/404/where-are-you-guys.gif',
+  '/assets/303,',
+
 
   '/assets/android-chrome-192x192.png',
   '/assets/android-chrome-512x512.png',
@@ -19,22 +22,22 @@ const precacheResources = [
 ];
 
 self.addEventListener('install', (event) => {
-  console.info('Service worker install event!');
-  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(precacheResources)));
-});
-
-self.addEventListener('activate', (event) => {
-  console.info('Service worker activate event!');
+  event.waitUntil(caches.open(cacheName)
+  .then((cache) => cache.addAll(precacheResources)));
 });
 
 self.addEventListener('fetch', (event) => {
-  console.info('Fetch intercepted for:', event.request.url);
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request);
+      
+      try{
+        return fetch(event.request)
+      }catch{
+        return caches.match('offline.html').waitUntil();
+      }
     }),
   );
 });
