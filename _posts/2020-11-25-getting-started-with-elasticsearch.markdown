@@ -3,7 +3,7 @@ layout: post
 title:  Getting started with elastic search
 date:   2020-11-25 00:00:00 +0000
 categories:
-  - Workshops
+  - Guides
 tags:
   - Getting started
   - Search
