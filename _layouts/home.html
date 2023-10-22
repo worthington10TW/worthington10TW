@@ -17,7 +17,7 @@ layout: default
    {% capture category_name %}{{ category | first }}{% endcapture %}
       <h2>{{ category_name | replace: "-", " " | capitalize  }}</h2>
       <ul>
-      {% if category_name == "bootstrap-your-software-delivery" %}
+      {% if category_name == "bootstrapping-software-delivery" %}
          {% assign posts = site.categories[category_name] | sort: "date" %}
       {% else %}
          {% assign posts = site.categories[category_name] | sort: "date" | reverse %}
