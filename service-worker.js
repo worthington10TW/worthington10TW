@@ -15,7 +15,7 @@ const precacheResources = [
   '/assets/me.webp',
   '/assets/social-icons.svg',
 
-  '/assets/css/style.css'
+  '/assets/css/style.css?v=2023-10-22'
 ];
 
 self.addEventListener("install", (event) => {
