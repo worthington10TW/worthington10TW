@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% assign posts = site.categories.bootstrap-your-software-delivery %}
+{% for post in posts %}
+<article>
+   <header>
+      <h1>{{ post.title | escape }}</h1>
+   </header>
+   <div>
+      {{ post.content }}
+   </div>
+ </article>
+{% endfor %}

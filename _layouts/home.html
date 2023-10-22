@@ -12,9 +12,18 @@ layout: default
 {%- endif -%}
 {{ content }}
 <section class="posts">
-   <ul>
    {%- assign date_format = "%b %-d, %Y" -%}
-      {%- for post in posts -%}
+   {%- for category in site.categories reversed -%}
+   {% capture category_name %}{{ category | first }}{% endcapture %}
+      <h2>{{ category_name | replace: "-", " " | capitalize  }}</h2>
+      <ul>
+      {% if category_name == "bootstrap-your-software-delivery" %}
+         {% assign posts = site.categories[category_name] | sort: "date" %}
+      {% else %}
+         {% assign posts = site.categories[category_name] | sort: "date" | reverse %}
+      {% endif %}
+      
+      {% for post in posts %}
       <li>
          <h2>
             <a href="{{ post.url | relative_url }}">
@@ -22,13 +31,13 @@ layout: default
             </a>
          </h2>
          <p>
-            <span>🗓 {{ post.date | date: date_format }} </span>
-            
+            <span>🗓 {{ post.date | date: date_format }} </span> 
             {%- include read_time.html content=post.content -%}
-
             {{ post.excerpt }}</p>
       </li>
-      {%- endfor -%}
-   </ul>
+      {% endfor %}
+      </ul>
+      <hr/>
+   {%- endfor -%}
 </section>
 {%- endif -%}

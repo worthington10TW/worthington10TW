@@ -2,8 +2,7 @@
 layout: post
 title:  Get to production
 date:   2019-10-01 00:00:00 +0000
-categories: 
-  - Workshops
+category: workshops
 tags: 
   - CI/CD
   - Path to Production

@@ -2,8 +2,7 @@
 layout: post
 title:  Training in pseudo situ
 date:   2020-09-06 00:00:00 +0000
-categories:
-  - Guides
+category: guides
 tags: 
   - Training 
   - Course
