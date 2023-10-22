@@ -2,12 +2,14 @@
 layout: post
 title:  How? what? why?
 date:   2022-01-08 19:23:00 +0000
-categories: about
+categories: About
 image: /assets/2022-01-08-how-what-why/octojekyll.webp
+tags:
+  - Guides
 tech: 
-    - jekyll
-    - ruby
-    - github-actions
+    - Jekyll
+    - Ruby
+    - Github Actions
 code: https://github.com/worthington10tw/worthington10tw
 ---
 

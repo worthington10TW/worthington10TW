@@ -2,11 +2,15 @@
 layout: post
 title:  Get to production
 date:   2019-10-01 00:00:00 +0000
-categories: workshop ci-cd
+categories: 
+  - Workshops
+tags: 
+  - CI/CD
+  - Path to Production
 tech:
-    - circleci
-    - vuejs
-    - heroku
+  - CircleCi
+  - VueJS
+  - Heroku
 code: https://github.com/worthington10TW/hello-karta/tree/complete
 image: /assets/2019-10-01-get-to-production/circle.webp
 published: true

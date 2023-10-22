@@ -2,7 +2,12 @@
 layout: post
 title:  Training in pseudo situ
 date:   2020-09-06 00:00:00 +0000
-categories: training course
+categories:
+  - Guides
+tags: 
+  - Training 
+  - Course
+  - Leadership
 image: /assets/2020-09-06-training-in-pseudo-situ/student.webp
 published: true
 mermaid: true

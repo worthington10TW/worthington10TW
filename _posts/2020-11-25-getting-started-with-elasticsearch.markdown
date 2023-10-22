@@ -2,7 +2,11 @@
 layout: post
 title:  Getting started with elastic search
 date:   2020-11-25 00:00:00 +0000
-categories: getting-started workshop search
+categories:
+  - Workshops
+tags:
+  - Getting started
+  - Search
 tech: 
     - Elasticsearch
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
