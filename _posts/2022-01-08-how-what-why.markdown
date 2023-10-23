@@ -2,7 +2,7 @@
 layout: post
 title:  How? what? why?
 date:   2022-01-08 19:23:00 +0000
-category: about
+category: guides
 image: /assets/2022-01-08-how-what-why/octojekyll.webp
 tags:
   - Guides

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign posts = site.posts %}
+{{content}}
+{%- if posts.size > 0 -%}
+    {% assign category_name = page.category  %}
+    {% include list_posts.html %}
+{%- endif -%}

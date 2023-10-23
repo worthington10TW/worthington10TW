@@ -2,42 +2,13 @@
 layout: default
 ---
 
-{% assign posts = site.posts %}
 {%- if page.title -%}
 <h1 >{{ page.title }}</h1>
 {%- endif -%}
-{%- if posts.size > 0 -%}
-{%- if page.list_title -%}
-<h2>{{ page.list_title }}</h2>
-{%- endif -%}
-{{ content }}
-<section class="posts">
-   {%- assign date_format = "%b %-d, %Y" -%}
+{%- if site.posts.size > 0 -%}
+   {{ content }}
    {%- for category in site.categories reversed -%}
-   {% capture category_name %}{{ category | first }}{% endcapture %}
-      <h2>{{ category_name | replace: "-", " " | capitalize  }}</h2>
-      <ul>
-      {% if category_name == "bootstrapping-software-delivery" %}
-         {% assign posts = site.categories[category_name] | sort: "date" %}
-      {% else %}
-         {% assign posts = site.categories[category_name] | sort: "date" | reverse %}
-      {% endif %}
-      
-      {% for post in posts %}
-      <li>
-         <h2>
-            <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-            </a>
-         </h2>
-         <p>
-            <span>🗓 {{ post.date | date: date_format }} </span> 
-            {%- include read_time.html content=post.content -%}
-            {{ post.excerpt }}</p>
-      </li>
-      {% endfor %}
-      </ul>
-      <hr/>
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      {% include list_posts.html %}
    {%- endfor -%}
-</section>
 {%- endif -%}

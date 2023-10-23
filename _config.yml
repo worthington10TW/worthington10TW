@@ -27,3 +27,6 @@ sass:
     style: compact 
 permalink: /:categories/:title
 # permalink: pretty
+collections:
+  category:
+    output: true
