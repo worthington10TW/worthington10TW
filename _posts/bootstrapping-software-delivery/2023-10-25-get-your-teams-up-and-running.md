@@ -2,7 +2,7 @@
 layout: post
 title:  Get your teams up and running
 date:   2023-10-24 03:00:00 +0000
-published: false
+published: true
 category: bootstrapping-software-delivery
 image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
@@ -29,7 +29,7 @@ Having a clear and concise wiki with a group understanding that it is within eve
 
 ### [Organisation or product elevator pitch](https://www.mindtools.com/aofwxxv/crafting-an-elevator-pitch)
 
-What are we trying to achieve? Why are we here?
+What are we trying to achieve? Why are we here? We should all be equipped to answer this. If we cant we should remove this smell as a priority. We get the most out of people when everyone understands our purpose.
 
 ### [Up to date Lean Value Tree](https://www.thoughtworks.com/insights/blog/digital-transformation/how-to-brew-a-perfect-strategy-responsibly-part-one)
 
@@ -54,6 +54,8 @@ It is easy to say our teams are autonomous, but what does that actually mean? Fo
 ## Within the Team
 
 It is important that the organisation knows what each team does, what they are responsible for and how they interact with other teams. The authors of Team Topologies produced a wonderful template for a [team API](https://github.com/TeamTopologies/Team-API-template). I use this template as the entry page for a teams dedicated documentation repository. It gives just the right level of information to new joiners and other teams about the team. 
+
+### Team Topologies API
 
 ``` markdown
 ## Team API
@@ -105,3 +107,9 @@ Date:
 
 
 ```
+
+### Onboarding scripts
+
+### Moving team
+
+### Leaving
