@@ -27,7 +27,7 @@
           </a>
       </h2>
       <p>
-        {%- assign date_format = "%b %-d, %Y" -%}
+          {%- assign date_format = "%b %-d, %Y" -%}
           <span>🗓 {{ post.date | date: date_format }} </span> 
           {%- include read_time.html content=post.content -%}
           {{ post.excerpt }}

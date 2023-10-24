@@ -17,32 +17,6 @@ I recently engaged with a client that wanted to improve their search relevance a
 
 <!--more-->
 
-<nav id="contents">
-  <ul>
-    <li>
-      <a href="#introduction">Introduction</a>
-    </li>
-    <li>
-      <a href="#cluster">Cluster</a>
-    </li>
-    <li>
-      <a href="#nodes">Nodes</a>
-    </li>
-    <li>
-      <a href="#indexes">Indexes</a>
-    </li>
-    <li>
-      <a href="#index-alias">Index alias</a>
-    </li>
-    <li>
-      <a href="#shards">Shards</a>
-    </li>
-    <li>
-      <a href="#documents">Documents</a>
-    </li>
-  </ul>
-</nav>
-
 ## Introduction
 
 We wanted to be as visible as possible, and open for anyone interested to look at what we are doing. Many of the engineering team had not worked with Lucene based search engines before. I remember when I first used lucene, I felt pretty lost. So I threw together some lunch and learns and opened them up to everyone that wanted to pop by and learn the basics of Elasticsearch. 

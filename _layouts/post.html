@@ -29,6 +29,7 @@ layout: default
      </p>
   </header>
   <section itemprop="articleBody">
+      {% include toc.html html=content sanitize=true  h_min=1 h_max=3 %}
      {{ content }}
      {%- include get_the_code.html -%}
   </section>

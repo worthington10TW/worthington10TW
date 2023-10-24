@@ -132,6 +132,7 @@
 
         {% if currLevel > lastLevel %}
             {% capture jekyll_toc %}{{ jekyll_toc }}<{{ listModifier }}{{ subMenuClass }}>{% endcapture %}
+            
         {% elsif currLevel < lastLevel %}
             {% assign repeatCount = lastLevel | minus: currLevel %}
 
@@ -171,4 +172,4 @@
             {% capture jekyll_toc %}<{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}>{% endcapture %}
         {% endif %}
     {% endif %}
-{% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
+{% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}<nav id="contents">{{ jekyll_toc -}}</nav><hr/>

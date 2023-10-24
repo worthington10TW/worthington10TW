@@ -16,62 +16,6 @@ A developer's role is not just code, and a BA’s role is not just story writing
 
 <!--more-->
 
-<nav id="contents">
-  <ul>
-    <li>
-      <a href="#why">Why I created the course</a>
-    </li>
-    <li>
-      <a href="#structure">Structure</a>
-    </li>
-    <li>
-      <a href="#shape-the-team">Shape the team</a>
-    </li>
-    <li>
-      <a href="#getting-going">Getting going</a>
-      <ul>
-        <li>
-          <a href="#lean-inception">Lean inception</a>
-        </li>
-        <li>
-          <a href="#remote-first">Remote first</a>
-        </li>
-        <li>
-          <a href="#cadence-and-ceremonies">Cadence and ceremonies</a>
-        </li>
-        <li>
-          <a href="#wellbeing">Wellbeing</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#delivery">Delivery</a>
-      <ul>
-        <li>
-          <a href="#focus-on-value">Focus on value</a>
-        </li>
-        <li>
-          <a href="#pairing-on-everything-by-everyone">
-            Pairing on everything, by everyone
-          </a>
-        </li>
-        <li>
-          <a href="#mobbing">Mobbing</a>
-        </li>
-        <li>
-          <a href="#showcase--little-and-often">Showcase- little and often</a>
-        </li>
-        <li>
-          <a href="#guest-speakers">Guest speakers</a>
-        </li>
-        <li>
-          <a href="#stepping-back">Stepping back</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
 ## Why?
 
 I'm a mentor, coach and cultivator. I mentor a few graduate and junior developers. They had just started their career in tech and I was keen to understand how it felt to enter the industry and the pain points. It became apparent very early on that many of the difficulties were not unique and the same issues kept popping up. I decided to investigate this further and interview a sample group. 
