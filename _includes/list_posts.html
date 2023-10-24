@@ -1,34 +1,40 @@
-{% if category_name == "bootstrapping-software-delivery" %}
-{% assign posts = site.categories[category_name] | sort: "date" %}
-{% else %}
-{% assign posts = site.categories[category_name] | sort: "date" | reverse %}
-{% endif %}
-<section class="posts">
-  {% if page.category == category_name %}
-    <h2>
-      {{ category_name | replace: "-", " " | capitalize  }}
-    </h2>
+{% assign category_name = include.category_name | default: "" %}
+{% assign category_posts = site.categories[category_name] %}
+
+{%- if category_posts.size > 0 -%}
+  {% if category_name == "bootstrapping-software-delivery" %}
+    {% assign sorted_posts = category_posts | sort: "date" %}
   {% else %}
-    <h2>
-      <a href="{{ category_name | relative_url }}">{{ category_name | replace: "-", " " | capitalize  }}</a>
-    </h2>
+    {% assign sorted_posts = category_posts | sort: "date" | reverse %}
   {% endif %}
-     <ul>
-     {% for post in posts %}
-     <li>
+
+  <section class="posts">
+    {% if page.category == category_name %}
       <h2>
-        <a href="{{ post.url | relative_url }}">
-        {{ post.title | escape }}
-        </a>
-     </h2>
-     <p>
-       {%- assign date_format = "%b %-d, %Y" -%}
-        <span>🗓 {{ post.date | date: date_format }} </span> 
-        {%- include read_time.html content=post.content -%}
-        {{ post.excerpt }}
-    </p>
-     </li>
-     {% endfor %}
-     </ul>
-     <hr/>
-</section>
+        {{ category_name | replace: "-", " " | capitalize  }}
+      </h2>
+    {% else %}
+      <h2>
+        <a href="{{ category_name | relative_url }}">{{ category_name | replace: "-", " " | capitalize  }}</a>
+      </h2>
+    {% endif %}
+      <ul>
+      {% for post in sorted_posts %}
+      <li>
+        <h2>
+          <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+          </a>
+      </h2>
+      <p>
+        {%- assign date_format = "%b %-d, %Y" -%}
+          <span>🗓 {{ post.date | date: date_format }} </span> 
+          {%- include read_time.html content=post.content -%}
+          {{ post.excerpt }}
+      </p>
+      </li>
+      {% endfor %}
+      </ul>
+      <hr/>
+  </section>
+{%- endif -%}

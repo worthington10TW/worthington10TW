@@ -9,6 +9,6 @@ layout: default
    {{ content }}
    {%- for category in site.categories reversed -%}
       {% capture category_name %}{{ category | first }}{% endcapture %}
-      {% include list_posts.html %}
+      {% include list_posts.html category_name=category_name %}
    {%- endfor -%}
 {%- endif -%}
