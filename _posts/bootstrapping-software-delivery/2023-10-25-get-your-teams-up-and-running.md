@@ -2,7 +2,7 @@
 layout: post
 title:  Get your teams up and running
 date:   2023-10-24 03:00:00 +0000
-published: true
+published: false
 category: bootstrapping-software-delivery
 image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
