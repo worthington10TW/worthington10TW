@@ -2,11 +2,11 @@
 layout: post
 title:  Get your teams up and running
 date:   2023-10-27 12:00:00 +0000
-published: true
 category: bootstrapping-software-delivery
 image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
   - Guides
+  - Leadership
   - Getting started
 code: https://github.com/worthington10TW/setup/tree/master/scripts
 ---

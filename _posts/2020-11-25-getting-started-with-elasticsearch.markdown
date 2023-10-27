@@ -6,6 +6,7 @@ category: workshops
 tags:
   - Getting started
   - Search
+  - Tech
 tech: 
     - Elasticsearch
 code: https://github.com/worthington10TW/ElasticsearchBrownBag
