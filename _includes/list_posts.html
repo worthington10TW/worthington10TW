@@ -11,7 +11,7 @@
   <section class="posts">
     {% if page.category == category_name %}
       <h2>
-        <a href="{{ "/" | relative_url }}">Home</a>/{{ category_name | replace: "-", " " | capitalize  }}
+        <a href="{{ "/" | relative_url }}">../</a>{{ category_name | replace: "-", " " | capitalize  }}
       </h2>
       <p>
         {{content}}
