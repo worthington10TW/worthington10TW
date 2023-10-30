@@ -13,6 +13,9 @@
       <h2>
         <a href="{{ "/" | relative_url }}">Home</a>/{{ category_name | replace: "-", " " | capitalize  }}
       </h2>
+      <p>
+        {{content}}
+      </p>
     {% else %}
       <h2>
         <a href="{{ category_name | relative_url }}">{{ category_name | replace: "-", " " | capitalize  }}</a>
