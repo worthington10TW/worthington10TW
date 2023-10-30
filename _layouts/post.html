@@ -4,6 +4,7 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
      <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+     <p><a href="{{ page.category | relative_url }}">{{ page.category | replace: "-", " " | capitalize  }}</a></p>
      <p>
         {%- assign date_format = "%b %-d, %Y" -%}
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -24,9 +25,9 @@ layout: default
      </p>
   </header>
   <section itemprop="articleBody">
-      {% include toc.html html=content sanitize=true  h_min=1 h_max=3 %}
-     {{ content }}
-     {%- include get_the_code.html -%}
+   {% include toc.html html=content sanitize=true  h_min=1 h_max=3 %}
+   {{ content }}
+   {%- include get_the_code.html -%}
   </section>
 
    {%- if page.content contains 'id="contents"' -%}
