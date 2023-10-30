@@ -9,12 +9,6 @@ layout: default
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
            🗓 {{ page.date | date: date_format }}
         </time>
-        {%- if page.modified_date -%}
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date: date_format }}
-        </time>
-        {%- endif -%}
         {%- if page.author -%}
         {% for author in page.author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
