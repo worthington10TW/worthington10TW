@@ -1,4 +1,5 @@
 {% assign category_name = include.category_name | default: "" %}
+{% assign pretty_category_name = category_name | replace: "-", " " | capitalize %}
 {% assign category_posts = site.categories[category_name] %}
 
 {%- if category_posts.size > 0 -%}
@@ -18,7 +19,7 @@
       </p>
     {% else %}
       <h2>
-        <a href="{{ category_name | relative_url }}">{{ category_name | replace: "-", " " | capitalize  }}</a>
+        <a arial-label="Go to '{{ pretty_category_name }}' landing page" href="{{ category_name | relative_url }}">{{ pretty_category_name }}</a>
       </h2>
     {% endif %}
       <ul>
@@ -33,7 +34,6 @@
         {%- assign date_format = "%b %-d, %Y" -%}
         <span>🗓 {{ post.date | date: date_format }} </span> 
         {%- include read_time.html content=post.content -%}
-        
     </p>
     <p>
       {{ post.excerpt }}
