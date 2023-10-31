@@ -1,8 +1,6 @@
 ---
-layout: about
 title: About
 permalink: /about/
-image: /assets/me.webp
 ---
 
 Hi 👋,

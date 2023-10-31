@@ -26,7 +26,27 @@ sass:
     sass_dir: _sass
     style: compact 
 permalink: /:categories/:title
-# permalink: pretty
 collections:
   category:
     output: true
+defaults:
+  -
+    scope:
+      path: "about"
+    values:
+      layout: "about"
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/
+  - .gitignore/
+  - .ruby-version/
+  - Brewfile/
