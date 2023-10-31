@@ -35,18 +35,18 @@ $table-border-color:    $border-color-01 !default;
 // ----------------------------------------------------------------------------
 
 .highlight {
-  .c     { color: #545454; font-style: italic } // Comment
-  .err   { color: #f07178; background-color: #e3d2d2 } // Error
+  .c     { color: #D4D4D4; font-style: italic } // Comment
+  .err   { color: #F9C3C6; background-color: #e3d2d2 } // Error
   .k     { color: #89DDFF; font-weight: bold } // Keyword
   .o     { font-weight: bold } // Operator
-  .cm    { color: #545454; font-style: italic } // Comment.Multiline
-  .cp    { color: #545454; font-weight: bold } // Comment.Preproc
-  .c1    { color: #545454; font-style: italic } // Comment.Single
-  .cs    { color: #545454; font-weight: bold; font-style: italic } // Comment.Special
+  .cm    { color: #D4D4D4; font-style: italic } // Comment.Multiline
+  .cp    { color: #D4D4D4; font-weight: bold } // Comment.Preproc
+  .c1    { color: #D4D4D4; font-style: italic } // Comment.Single
+  .cs    { color: #D4D4D4; font-weight: bold; font-style: italic } // Comment.Special
   .gd    { color: #000; background-color: #fdd } // Generic.Deleted
   .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
   .ge    { font-style: italic } // Generic.Emph
-  .gr    { color: #f07178 } // Generic.Error
+  .gr    { color: #F9C3C6 } // Generic.Error
   .gh    { color: #999 } // Generic.Heading
   .gi    { color: #000; background-color: #dfd } // Generic.Inserted
   .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
@@ -54,7 +54,7 @@ $table-border-color:    $border-color-01 !default;
   .gp    { color: #555 } // Generic.Prompt
   .gs    { font-weight: bold } // Generic.Strong
   .gu    { color: #aaa } // Generic.Subheading
-  .gt    { color: #f07178 } // Generic.Traceback
+  .gt    { color: #F9C3C6 } // Generic.Traceback
   .kc    { font-weight: bold } // Keyword.Constant
   .kd    { font-weight: bold } // Keyword.Declaration
   .kp    { font-weight: bold } // Keyword.Pseudo
