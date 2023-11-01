@@ -181,7 +181,7 @@ main "$@"
 
 #### [Software Script](https://github.com/worthington10TW/setup/blob/master/bootstrap/bootstrap.sh)
 
-I use a Mac with [Homebrew](https://brew.sh/) as my package manager. If you find yourself in a team of Mac users this script could be useful. I tend to create a Brewfile for each product, it gives the teams visibility of all the tools used within the product and feeds into the wider technology register for the organisation. Keeping this in source code allows everyone to easily keep their software up-to-date and consistent across the team.
+I use a Mac with [Homebrew](https://brew.sh/) as my package manager. If you find yourself in a team of Mac users this script could be useful. I tend to create a repo for common tools and scripts, however different teams have their own toolset. When the teams toolsets start to evole I encourage the teams to have their own Brewfile within their repos. This gives the teams visibility of all the tools used within the products and feeds into the wider technology register for the organisation. Keeping this in source code allows everyone to easily keep their software up-to-date and consistent across the team.
 
 ```bash
 #!/bin/sh
