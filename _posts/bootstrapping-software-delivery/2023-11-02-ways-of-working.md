@@ -2,7 +2,7 @@
 layout: post
 title: Ways of working
 date:   2023-11-02 08:00:00 +0000
-published: false
+published: true
 category: bootstrapping-software-delivery
 image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
@@ -37,7 +37,7 @@ discussion. A huddle straight after stand-up is a good time for this.
 
 Larger group analysis sessions, commonly referred to as refinement, have the goal to move stories from 'in analysis' to 'ready for dev', meeting our definition-of-ready requirements. These sessions tend to involve the entire team, going through the backlog of stories that do not currently meet our definition-of-ready with the goal to reach a shared understanding. Developer time is precious, I find I get the most out of these larger group sessions if a well written story is presented to give everyone the opportunity to raise concerns and for us to estimate. To get to this point requires work, running smaller analysis sessions will help to get a story in a good state before presenting to the wider group.
 
-#### 3 Amigos
+3 Amigos are small, frequent, focused sessions that have representation from the business, tech and QA at a minimum. Although the session is called 3 Amigos the number of people is not fixed, depending on the story we may see a UX designer, data engineer, infrastructure dev. It is important to capture the concerns from the right people to ensure we perform the right level of analysis. I find the best way to encourage involvement from the team is to rotate team members that join the sessions, requesting attendees during standup works well. The sessions can end in a variety of ways, we may break the story into thinner slices, we might request spikes to be created to give us deeper insights, we may analyse the story in its entirety and ready to take to the larger estimation session.
 
 ### Kickoff
 
