@@ -23,15 +23,34 @@ Starting a new project can be a daunting task. The goal of this article is to pr
 
 ### Standup
 
-### Refinement
+Stand-ups should be short, time-boxed meetings allowing team members to give an update on their work in progress. Stand-ups help team members keep each other accountable and support each other in the work the team has signed up to deliver. I default to a daily morning standup and expect all team members to join, I also find opening these up to other stakeholders as observers beneficial.
 
-### 3 amigos
+There are many ways to run a standup, I have a strong preference that I find keeps focus on what we find valuable (What is on the board) and allows everyone's voice to be heard. A rotating facilitator gives everyone the opportunity to practise facilitation in a safe environment for a short period of time, it breaks down barriers and builds rapport. I also find walking-the-board keeps focus on the stories and not a dull rendition of someone's day.
 
-### Sprint planning
+walking-the-board: Go through each work item on the team board. Whoever is working on
+That item provides the latest progress update. Start with the work items on the right since they are closer to done.
+
+If there are more detailed discussions required, they should be noted for an offline
+discussion. A huddle straight after stand-up is a good time for this.
+
+### Analysis
+
+Larger group analysis sessions, commonly referred to as refinement have the goal to move stories from 'in analysis' to 'ready for dev', meeting our definition-of-ready requirements. These sessions tend to involve the entire team, going through the backlog of stories that do not currently meet our definition-of-ready with the goal to reach a shared understanding. Developer time is precious, I find I get the most out of these larger group sessions if a well written story is presented to give everyone the oppertunity to raise concerns and for us to estimate. To get to this point requires work, running smaller analysis sessions will help to get a story in a good state before presenting to the wider group.
+
+#### 3 Amigos
+
 
 ### Kickoff
 
 ### Desk check
+
+### Showcase
+
+Showcases are designed to gather feedback from those who are directly or indirectly  affected by the team’s work and those accountable for the work of the team. The team also receives validation for the work delivered and direction on how to move forward with the work.
+
+Showcases provide the team exposure to stakeholders and give an opportunity for the team to practise presentation skills in a safe environment. I believe the showcase should be a celebration, the team has worked hard on creating value and delivering stories. My preference is a light user focused session, rich in demos, keeping code to an absolute minimum, no longer than an hour.
+
+Picking your cadence is important, too frequent and you'll struggle to keep the audience engaged, too long and you'll have invested lots of time without receiving feedback, reducing the ability to course correct. I find every 2 weeks works well.
 
 ## Definitions
 
@@ -59,6 +78,21 @@ Without a clear definition of done, how do we know the feature or story is compl
 * Appropriate documentation
 
 ## Templates
+
+### The board
+
+Columns and swim lanes often trigger rich debate within teams. It is common for team members to have strong opinions on the balance between a useful board that provides visibility and metrics and a terrible board that doesn't show enough or requires lots of maintenance. 
+
+If I had to lean in one direction it would be towards the more simple boards. I aim to work in cross functional, small teams- [Amazon's two pizza rule works well](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/two-pizza-teams.html), this means I get little benefit out of swimlanes. I also want to encourage ownership of a story. I am for a single dev to anchor a story and see it from kickoff all the way to done. This reduces the value in having many granular columns, it becomes an overhead or even worse becomes something we measure that has a high chance of being inaccurate as the columns are not gates or handover points.
+
+| Column     | Gate condition |
+| ----------- | ----------- |
+| `In analysis` | Does the organisation want this feature? |
+| `Ready for dev` | Does it meet our definition of ready? |
+| `In dev` | Does it meet our definition of done? |
+| `Done` | |
+
+If you start to see a slow down in velocity you might want to consider adding in columns to reflect handover points, for example `In QA`. This can help to narrow down issues and validate our thoughts before making more radical changes to our ways of working.
 
 ### Story
 
@@ -138,3 +172,22 @@ graph LR;
 ### Task/ Tech Task
 
 I try to stay away from `Tasks`, especially `Tech Tasks`. I believe this takes the focus away from users, without having a user to focus on we cannot determine the value the change will bring. Having a persona can sometimes take more thought, but this is time well spent, it helps us analyse why this is valuable, aids prioritisation, helps with communication with non technical stakeholders and, opens discussion to different approaches before jumping into implementation details. Not all personas will be typical users of the product, we might see anti-personas or bad actors to drive out security requirements or team members when we are looking to make improvements with developer experience.
+
+## Story lifecycle
+
+Having a shared understanding of handover points and gates will ensure that stories are not left behind and we all know how to keep them moving across the boards.
+
+```mermaid
+%%{init: { 'gitGraph': {'showBranches': false}} }%%
+gitGraph
+  commit id: "User research"
+  commit id: "Creating hypothesis"
+  commit id: "Analysis and design"
+  commit id: "3 Amigos"
+  commit id: "Prioritise backlog"
+  commit id: "Ready for dev"
+  commit id: "Story kick-off"
+  commit id: "In-dev"
+  commit id: "Desk check/ QA"
+  commit id: "Done"
+```
