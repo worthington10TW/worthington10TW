@@ -35,14 +35,17 @@ discussion. A huddle straight after stand-up is a good time for this.
 
 ### Analysis
 
-Larger group analysis sessions, commonly referred to as refinement have the goal to move stories from 'in analysis' to 'ready for dev', meeting our definition-of-ready requirements. These sessions tend to involve the entire team, going through the backlog of stories that do not currently meet our definition-of-ready with the goal to reach a shared understanding. Developer time is precious, I find I get the most out of these larger group sessions if a well written story is presented to give everyone the oppertunity to raise concerns and for us to estimate. To get to this point requires work, running smaller analysis sessions will help to get a story in a good state before presenting to the wider group.
+Larger group analysis sessions, commonly referred to as refinement, have the goal to move stories from 'in analysis' to 'ready for dev', meeting our definition-of-ready requirements. These sessions tend to involve the entire team, going through the backlog of stories that do not currently meet our definition-of-ready with the goal to reach a shared understanding. Developer time is precious, I find I get the most out of these larger group sessions if a well written story is presented to give everyone the opportunity to raise concerns and for us to estimate. To get to this point requires work, running smaller analysis sessions will help to get a story in a good state before presenting to the wider group.
 
 #### 3 Amigos
 
-
 ### Kickoff
 
+I try to keep kickoffs short. By this point everyone should have some understanding of the ask. A run through of the story, acceptance criteria and approach. A quick check to see if we are still all aligned and an opportunity to ask more clarifying questions. If we are not aligned it is less risky to move the story back to analysis and pick up something different. If kickoffs regularly go over 10 minutes it is worth taking a step back and asking yourself "How can I make my analysis sessions more effective?"
+
 ### Desk check
+
+A desk check gives a developer the opportunity to demo the story to stakeholders, including QA's, analysts, product owners. This keeps the feedback loop short and gives stakeholders the opportunity to ask questions or request changes. These also serve as a powerful marker to check the quality of our stories, if we are regularly seeing stories fail desk checks we may want to review our analysis and story writing approach.
 
 ### Showcase
 
@@ -167,7 +170,7 @@ graph LR;
 | ----------- | ----------- |
 | `Steps to Reproduce` | Enough information to find the bug |
 | `Current behaviour` | Screenshots and console logs will help |
-| `Expected behaviour` | Links to previous storys will add clarity |
+| `Expected behaviour` | Links to previous stories will add clarity |
 
 ### Task/ Tech Task
 
