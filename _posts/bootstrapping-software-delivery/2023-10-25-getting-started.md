@@ -23,6 +23,7 @@ I will be adding to this series over the coming weeks, covering
 
 * Get your teams up and running
 * Delivery team's ways of working
+* Architecture & Path to production
 * Getting started with cross-functional requirements
 * Running a live service
 
