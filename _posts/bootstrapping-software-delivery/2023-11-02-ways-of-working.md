@@ -7,6 +7,8 @@ image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
   - Guides
   - Getting started
+  - Ways of working
+  - Story lifecycle
 mermaid: true
 ---
 
