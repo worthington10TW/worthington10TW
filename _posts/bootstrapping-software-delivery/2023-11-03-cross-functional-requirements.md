@@ -130,7 +130,30 @@ In some circumstances there may be a need to keep a close architectural style in
 
 ### Accessibility
 
-[I’ve previously written about my love for semantic HTML](https://mzworthington.co.uk/guides/how-what-why). We can build anything with HTML but without understanding what features are on offer we run the risk of creating something beautiful for us and our machine only, leaving out those that require screen readers and other aids. [WCAG 2](https://www.w3.org/TR/WCAG20/) is a set of guidelines outlining best practice for web content. If I’m producing something for the web I feel a minimum is to align to these standards. 
+[I’ve previously written about my love for semantic HTML](https://mzworthington.co.uk/guides/how-what-why). We can build anything with HTML but without understanding what features are on offer we run the risk of creating something beautiful for us and our machine only, leaving out those that require screen readers and other aids. [WCAG 2.1](https://www.w3.org/TR/WCAG21/) is a set of guidelines outlining best practices for web content. The [A11y Project](https://www.a11yproject.com/checklist/) produce a brilliant checklist and resources focused around accessibility. If I’m producing something for the web I feel a minimum is to align to these standards. [BrowserStack has a brilliant article on some of the common pitfalls](https://www.browserstack.com/guide/common-web-accessibility-issues).
+
+We have a variety of tools to test compliance to these guidelines available to us. Chrome users have [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) baked into dev tools. This gives a user friendly view of a website's accessibility, performance, SEO and PWA alignment. 
+
+To increase software delivery performance we want to automate testing and pull as far left as possible. Accessibility is no exception to this, adding accessibility tests to check alignment to WCAG 2.1 guidelines into our pipeline will ensure our site remains accessible.
+
+My go-to browser testing tool is [Cypress](https://www.cypress.io/), they offer A11y support via the [Axe](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/blogs__a11y) plugin, which makes testing for accessibility a breeze, we simply inject the Axe plugin and check the page against the A11y guidelines.
+
+```js
+/// <reference types="cypress" />
+describe('A11y passes', () => {
+  beforeEach(() => {
+    cy.visit('index.html')
+  })
+
+  it('accessibility check', () => {
+    cy.contains('This page should pass A11y checks')
+    cy.injectAxe()
+    cy.checkA11y()
+  })
+})
+```
+
+> [https://github.com/cypress-io/cypress-example-recipes](https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/blogs__a11y/cypress/e2e/passing-spec.cy.js)
 
 ### Resilience
 
