@@ -8,6 +8,7 @@ image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
   - Guides
   - Getting started
+  - Cross functional requirements
 ---
 
 Cross functional requirements (CFR's) should be owned by the business. When setting up your software delivery capability this can be a hard ask. We have the best intentions to craft a set of well defined, testable cross functional requirements, however to do this we need to ask the organisation to become experts in maintainability, accessibility, resilience, security, privacy, reliability, compliance, disaster recovery to name just a few.
@@ -30,11 +31,11 @@ Many stakeholders have an interest in CFR’s, including product owner’s, the 
 
 Shifting left refers to our path to production. On the left is our code on our machine and all the way to the right we have our release to production. Our environments in which we test gets progressively more prod-like and with that becomes more expensive. We want to reduce feedback loop time as much as possible. When following TDD we reduce this right down to minutes between validating a new line of code, however when it comes to CFR’s this can be sometime before we test against these requirements. Days, weeks or even months could go by before our code makes it to an environment in which we test against performance, load, maintainability or accessibility. At this point we have invested long periods of time into a solution that might not work. By pulling these left we reduce the feedback loop and can test if our solution is the right one. 
 
-Many standards, guidelines and frameworks already exist including [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), [NIST Cybersecurity Framework](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters (CAF)), [NCSC Cyber Assessment Framework (CAF)](https://www.ncsc.gov.uk/collection/caf), [Center for Internet Security (CIS)Critical Security Controls](https://www.cisecurity.org/controls). These standards are mature and adopted by many, because of this a wide array of tools have been created to automate alignment to these standards, allowing us to shift our testing against these CFR's left.
+Understanding what to test and what good looks like is our first task, luckilyl many standards, guidelines and frameworks already exist including [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), [NIST Cybersecurity Framework](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters (CAF)), [NCSC Cyber Assessment Framework (CAF)](https://www.ncsc.gov.uk/collection/caf), [Center for Internet Security (CIS)Critical Security Controls](https://www.cisecurity.org/controls). These standards are mature and adopted by many, because of this a wide array of tools have been created to automate alignment to these standards, allowing us to shift our testing against these CFR's left.
 
 ### Getting started
 
-There is a **huge** amount of cross functional requirements to discuss, including:
+There is a **huge** number of cross functional requirements to discuss, including:
 
 Availability
 , Accessibility
@@ -91,9 +92,45 @@ I’ve selected a few that I believe will give our users a great experience on a
 
 ### Maintainability
 
-I believe within a team code consistency is important. I’ve discussed the difficulty of onboarding 
+Team autonomy helps us go faster by reducing lengthy approvals to reach consistency where consistency is not most valuable. If our teams are positioned around a bounded context and own their code there is little value in cross team code consistency if teams rarely contribute to other teams repositories. The time spent to align many teams will not be made back by increased development productivity. For the same reason code inconsistency within the team can slow us down. Having to familiarise ourselves with everyone's individual code style each time we contribute to the codebase can be slow and may need discussion. 
+
+Our rulesets should work for us, they should help to keep consistency and reduce cognitive load, they should also be open to challenge. We may find that a particular rule does not allow us to write the best quality code for the task, hopefully these are anomalies and should trigger a constructive conversation around them. In some cases we may find ignoring the rule for a particular code block is all we need, in other circumstances we may find the rule does not work for us at all, in these cases the rules should be updated and an Architecture Decision Record, ADR (More on these in the next post) should be created to capture our discussions, highlighting the consequence of our change.
+
+#### Static code analysis
+
+There are many excellent paid static code analysis tools including [SonarQube](https://www.sonarsource.com/products/sonarqube/), [Klockwork](https://www.perforce.com/products/klocwork) [Snyk](https://snyk.io/) and [Embold](https://embold.io/product/) to name a few. When starting a project the approval times to get these setup might not be desirable, as a minimum I ask the team to implement code linting tools into their [pre-commit hooks](https://pre-commit.com/) and pipelines to ensure only high code quality can progress through our path to production. 
+There are many style guides and tools you may want to consider however it is easy to get bogged down trying to pick the perfect one. Picking a tool and tweaking the ruleset over time is more important than not having one at all. Below is a list of my go-to tools when starting up a project. I use these in my IDE, pre-commit hooks and pipeline to ensure alignment. 
+
+| Language | Tools |
+| -------- | ---------------- |
+| Java | [PMD](https://pmd.github.io/), [Checkstyle](https://checkstyle.sourceforge.io/) [SpotBugs](https://spotbugs.github.io/) |
+| C# | [Roslyn's built in NETAnalyzers](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-7) with [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/) |
+| Python | [Flake8](https://flake8.pycqa.org/en/latest/) |
+| JavaScript, JSX, Typescript | [ESLint](https://eslint.org/) |
+
+#### Vulnerabilities
+
+Pretty quickly your project will have dependencies, these come with some level of risk. Luckily NIST maintain the [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln/search), we also have many tools to stay on top of your dependency management including [Dependabot](https://github.com/dependabot) which has been acquired by GitHub and therefore Microsoft. I’d strongly recommend enabling Dependabot across all of your repositories if you’re using GitHub. It makes managing dependency vulnerabilities a breeze, once enabled and setup (By adding `/.github/dependabot.yml` file into your repository [following this guide](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file) ) You’ll start receiving alerts when vulnerabilities are detected and pull requests are automatically generated to reduce the burden on the team.
+
+There are also many tools we can use locally to highlight vulnerabilities including 
+
+| Language | Tools |
+| -------- | ---------------- |
+| Maven | [OWASP dependency check](https://jeremylong.github.io/DependencyCheck/dependency-check-maven/) |
+| NuGet | [dotnet CLI `dotnet list package --vulnerable`](https://devblogs.microsoft.com/nuget/how-to-scan-nuget-packages-for-security-vulnerabilities/) |
+| PyPI | [Trail of Bits pip-audit](https://pypi.org/project/pip-audit/) |
+| NPM | [NPM Audit](https://docs.npmjs.com/cli/v8/commands/npm-audit)  |
+
+
+There is also lots of discussion around dependency scanning in your pipeline. Some argue that adding dependency checking into your main pipeline will force developers to fix vulnerabilities before releasing any new code and without doing this dependency management priority will drop. I take a different view, of course there should be a priority on dependency management and should be baked into our ways of working. If there is a critical vulnerability detected it should be the team's top priority to fix the issue and release a new version of our code. However our main pipeline is triggered by a code change and vulnerabilities are raised outside of this, by tightly coupling these together we add unnecessary friction to our release process which can have negative impacts including mixing our feature updates and vulnerabilities fixes in the same releases increasing scope of our testing. When updating dependencies we should give these the same level of testing and scrutiny as our features, the authors have published a change to their package, those could impact how we use the dependency. By making our release process more difficult we may see teams rush through updates so they can push their current story through as quickly as possible. I believe we should give teams adequate time to test their changes and reduce the number of variables as much as possible. I prefer running a nightly dependency check, using the results as a talking point during standup to assign an owner to the packages that need to be updated, allowing our pipeline to flow and be releasable.
+
+#### Architecture
+
+In some circumstances there may be a need to keep a close architectural style in your codebase. These can be useful when working on large codebases with many teams working across them, however when working with smaller microservices I find these can be an overhead that doesn't tend to pay off with much benefit. When working in large multi-team monoliths having a tool like Java’s [ArchUnit](https://www.archunit.org/userguide/html/000_Index.html#_introduction) can help keep the codebase consistent.
 
 ### Accessibility
+
+[I’ve previously written about my love for semantic HTML](https://mzworthington.co.uk/guides/how-what-why). We can build anything with HTML but without understanding what features are on offer we run the risk of creating something beautiful for us and our machine only, leaving out those that require screen readers and other aids. [WCAG 2](https://www.w3.org/TR/WCAG20/) is a set of guidelines outlining best practice for web content. If I’m producing something for the web I feel a minimum is to align to these standards. 
 
 ### Resilience
 
@@ -104,3 +141,4 @@ I believe within a team code consistency is important. I’ve discussed the diff
 ### Compliance
 
 ### Disaster Recovery
+
