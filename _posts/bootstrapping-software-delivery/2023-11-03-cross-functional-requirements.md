@@ -155,7 +155,56 @@ describe('A11y passes', () => {
 
 > [https://github.com/cypress-io/cypress-example-recipes](https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/blogs__a11y/cypress/e2e/passing-spec.cy.js)
 
-### Resilience
+Adding accessibility testing into your code needn't be a heavy challenging task, by selecting the right tools we can ensure every commit remains accessible.
+
+### Cyber resilence
+
+The National Cyber Security Centre (NCSC) uses the term Cyber Resilience to group many groups cross functional requirements. We are able to qualify our resilience by assessing ourselves against the [Cyber Assessment Framework (CAF](https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework)). The CAF provides valuable insight on how to manage risk, protect against malicious attacks, detecting events and minimising impact. These objectives are appropriate for every product that provides a service to real users, not limited to Critical National Infrastructure (CNI).
+
+#### Automated governance
+
+With the rise of serverless, microservices, and nanoservices we’ve observed an increase in change rate of our infrastructure. An increased rate of change comes with a perception of increased risk. Without testing these changes this perception is not ill founded, a small change to our infrastructure-as-code has the potential to pull down services, block network connections or even destroy data. Our goal is to empower teams and increase delivery speed, but with so much on the line an easy suggestion would be to introduce lengthy peer reviews and release trains. There is a better way, we can automate our governance. By adopting compliance-as-code and policy-as-code we can give clear guidance of our constraints in code, guiding our engineers and automating alignment, giving us confidence to practise CI/CD.
+
+##### Open Policy Agent (OPA)
+
+[OPA](https://www.openpolicyagent.org/docs/latest/terraform/) uses the [Rego language](https://www.openpolicyagent.org/docs/latest/policy-language/) to write your policies. These are run against Terraform plans (And other providers) to ensure policy alignment. Running these in your path-to-production pipeline ensures policy alignment as a gate. 
+
+OPA is incredibly flexible. We are able to limit the blast radius of our proposed changes, restrict individual properties for newly provisioned infrastructure, enforce networking and security group rules and more, all in readable code that can be bundled and served as a static site.
+
+We may want to ensure security groups only use HTTPS.
+
+```rego
+deny[msg] {
+    desc := resources[r].values.description
+    contains(desc, "HTTP")
+    msg := sprintf("No security groups should be using HTTP. Resource in violation: %v", [r.address])
+}
+```
+>https://www.openpolicyagent.org/docs/latest/terraform/
+
+Or protect against over permissive CIDR ranges 
+```rego
+package terraform.policies.public_ingress
+
+import input.plan as tfplan
+
+deny[msg] {
+  r := tfplan.resource_changes[_]
+  r.type == "aws_security_group"
+  r.change.after.ingress[_].cidr_blocks[_] == "0.0.0.0/0"
+  msg := sprintf("%v has 0.0.0.0/0 as allowed ingress", [r.address])
+}
+```
+> https://www.openpolicyagent.org/docs/latest/terraform/
+
+##### AWS Config
+
+##### AWS Prowler
+
+##### IAM Policies
+
+##### SSM Policies
+
 
 ### Security
 
@@ -164,4 +213,6 @@ describe('A11y passes', () => {
 ### Compliance
 
 ### Disaster Recovery
+
+
 
