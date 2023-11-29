@@ -2,7 +2,7 @@
 layout: post
 title: Cross functional requirements
 date:   2023-11-03 07:00:00 +0000
-published: false
+published: true
 category: bootstrapping-software-delivery
 image: /assets/2023-10-22-bootstrapping-software-delivery/boot.webp
 tags:
@@ -196,6 +196,8 @@ deny[msg] {
 }
 ```
 > https://www.openpolicyagent.org/docs/latest/terraform/
+>
+> //Reduce noise here- focus on AWS config compliance packs and not in depth implementation
 
 ##### AWS Config
 
