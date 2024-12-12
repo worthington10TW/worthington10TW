@@ -4,6 +4,15 @@
   role: Multiple roles
   domain: Leading global technology consultancy 
   projects:
+  - name: UK leading online marketplace
+    location: UK
+    role: Technical Principal
+    description: |
+       Ongoing
+
+       Key contributor to overarching CX strategy.
+      
+       Responsible for crafting and implementing multi-team, multi-year tech strategies and vision, aligned to business value.
   - name: Public Sector Demand
     location: UK
     role: Technical Pre-Sales Partner
