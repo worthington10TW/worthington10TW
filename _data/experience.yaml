@@ -6,13 +6,18 @@
   projects:
   - name: UK leading online marketplace
     location: UK
-    role: Technical Principal
+    role: Technical Principal and leadership team
     description: |
-       Ongoing
+       Nov 2023- Ongoing
 
-       Key contributor to overarching CX strategy.
-      
-       Responsible for crafting and implementing multi-team, multi-year tech strategies and vision, aligned to business value.
+       Our initial discovery highlighted an opportunity to drastically improve customer experience. 
+
+       Key contributor to
+       - Development a CX strategy for their next multi-year transformation
+       - Identification of critical operational and marketing use cases
+       - Build vs buy analysis- including 20+ CRM suppliers and tech assessment for existing products
+       - Defined CX target architecture, backed by tech strategy and policies
+       - Leading implementation, including team shaping
   - name: Public Sector Demand
     location: UK
     role: Technical Pre-Sales Partner
