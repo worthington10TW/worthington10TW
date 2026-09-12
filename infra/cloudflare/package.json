@@ -7,7 +7,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pulumi/cloudflare": "6.19.0",
+    "@pulumi/cloudflare": "6.20.0",
     "@pulumi/pulumi": "3.256.0"
   },
   "devDependencies": {
