@@ -6,6 +6,7 @@ vendor/bundle/
 .bundle/
 *.gem
 .DS_Store
+.waykit/
 
 # Environment & secrets
 .env
